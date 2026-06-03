@@ -40,33 +40,6 @@
       background: #111111;
     }
 
-    .tooltip {
-      position: relative;
-      cursor: help;
-      border-bottom: 1px dotted #00dbaf;
-    }
-
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      opacity: 0;
-      position: absolute;
-      left: 0;
-      top: 120%;
-      min-width: 220px;
-      background: #1b1b1b;
-      color: #fff;
-      border: 1px solid #00dbaf;
-      border-radius: 8px;
-      padding: 10px;
-      z-index: 999999;
-      transition: opacity 0.15s;
-    }
-
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-
     .card {
       display: flex;
       gap: 12px;
@@ -140,53 +113,74 @@
       color: #00dbaf;
       font-size: 12px;
     }
-.sort-bar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: grid;
-  grid-template-columns: auto 1fr 1fr;
-  gap: 8px;
-  align-items: center;
-  padding: 12px;
-  background: #111111;
-  border-bottom: 1px solid #333;
-}
 
-.sort-bar label {
-  color: #aaa;
-  font-size: 12px;
-}
+    .sort-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: auto 1fr 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 12px;
+      background: #111111;
+      border-bottom: 1px solid #333;
+    }
 
-.sort-bar select {
-  background: #1c1c1c;
-  color: #eee;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 6px;
-}    
+    .sort-bar label {
+      color: #aaa;
+      font-size: 12px;
+    }
+
+    .sort-bar select {
+      background: #1c1c1c;
+      color: #eee;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 6px;
+    }
+
+    .card-popup .leaflet-popup-content-wrapper {
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .card-popup .leaflet-popup-content {
+      margin: 0;
+      width: 440px !important;
+    }
+
+    .card-popup .leaflet-popup-tip {
+      background: #1c1c1c;
+    }
+
+    .popup-card-wrap .card {
+      margin: 0;
+      cursor: default;
+    }
   </style>
 </head>
 
 <body>
   <div class="layout">
     <div class="sidebar">
-  <div class="sort-bar">
-    <label>Sort by</label>
-    <select id="sortField">
-      <option value="rating">Rating</option>
-      <option value="post_date" selected>Post Date</option>
-      <option value="post_date" selected>Post Date</option><option value="price">Price</option><option value="rooms">Rooms</option><option value="u_bahn">U-Bahn (Nearest)</option><option value="stop_dist_m">Distance from U-Bahn</option><option value="size_qm_capita">Size/Bedroom (m²)</option><option value="price_capita">Rent/Person</option><option value="rating">Overall Score (/5)</option>
-    </select>
+      <div class="sort-bar">
+        <label>Sort by</label>
+        <select id="sortField">
+          <option value="rating">Rating</option>
+          <option value="post_date" selected>Post Date</option>
+          <option value="post_date" selected>Post Date</option><option value="price">Price</option><option value="rooms">Rooms</option><option value="u_bahn">U-Bahn (Nearest)</option><option value="stop_dist_m">Distance from U-Bahn</option><option value="size_qm_capita">Size/Bedroom (m²)</option><option value="price_capita">Rent/Person</option><option value="rating">Overall Score (/5)</option>
+        </select>
 
-    <select id="sortDir">
-      <option value="desc" selected>High to low</option>
-      <option value="asc">Low to high</option>
-    </select>
-  </div>
+        <select id="sortDir">
+          <option value="desc" selected>High to low</option>
+          <option value="asc">Low to high</option>
+        </select>
+      </div>
 
-  <div id="cards">
-    
+      <div id="cards">
+        
     <div
       class="card"
       style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;"
@@ -5158,8 +5152,9 @@
       </div>
     </div>
     
-  </div>
-</div>
+      </div>
+    </div>
+
     <div id="map"></div>
   </div>
 
@@ -6386,50 +6381,81 @@
       "PLZ fallback areas": areaLayer,
       "Properties": markerLayer
     }).addTo(map);
-function sortCards() {
-  const field = document.getElementById("sortField").value;
-  const dir = document.getElementById("sortDir").value;
-  const container = document.getElementById("cards");
-  const cards = Array.from(container.querySelectorAll(".card"));
 
-  cards.sort((a, b) => {
-    const defaultSort =
-  field === "rating" &&
-  dir === "desc";
+    function popupFromCard(i) {
+      const card = document.querySelector(`.card[data-marker-index="${i}"]`);
+      if (!card) return "";
 
-if (defaultSort) {
-  const ah = Number(b.dataset.highlighted) - Number(a.dataset.highlighted);
-  if (ah !== 0) return ah;
-}
+      const clone = card.cloneNode(true);
+      clone.removeAttribute("onclick");
+      clone.onclick = null;
 
-    const avRaw = a.dataset[field] ?? "";
-    const bvRaw = b.dataset[field] ?? "";
+      clone.querySelectorAll("a").forEach(a => {
+        a.onclick = e => e.stopPropagation();
+      });
 
-    const avNum = Number(avRaw);
-    const bvNum = Number(bvRaw);
-
-    let cmp;
-
-    if (!Number.isNaN(avNum) && !Number.isNaN(bvNum)) {
-      cmp = avNum - bvNum;
-    } else {
-      cmp = String(avRaw).localeCompare(String(bvRaw));
+      return `<div class="popup-card-wrap">${clone.outerHTML}</div>`;
     }
 
-    return dir === "asc" ? cmp : -cmp;
-  });
+    function bindMarkerPopups() {
+      markers.forEach((m, i) => {
+        m.bindPopup(popupFromCard(i), {
+          maxWidth: 440,
+          className: "card-popup"
+        });
 
-  cards.forEach(card => container.appendChild(card));
-}
+        m.on("click", () => {
+          m.setPopupContent(popupFromCard(i));
+        });
+      });
+    }
 
-document.getElementById("sortField").addEventListener("change", sortCards);
-document.getElementById("sortDir").addEventListener("change", sortCards);
-sortCards();
+    function sortCards() {
+      const field = document.getElementById("sortField").value;
+      const dir = document.getElementById("sortDir").value;
+      const container = document.getElementById("cards");
+      const cards = Array.from(container.querySelectorAll(".card"));
+
+      cards.sort((a, b) => {
+        const defaultSort = field === "rating" && dir === "desc";
+
+        if (defaultSort) {
+          const ah = Number(b.dataset.highlighted) - Number(a.dataset.highlighted);
+          if (ah !== 0) return ah;
+        }
+
+        const avRaw = a.dataset[field] ?? "";
+        const bvRaw = b.dataset[field] ?? "";
+
+        const avNum = Number(avRaw);
+        const bvNum = Number(bvRaw);
+
+        let cmp;
+
+        if (!Number.isNaN(avNum) && !Number.isNaN(bvNum)) {
+          cmp = avNum - bvNum;
+        } else {
+          cmp = String(avRaw).localeCompare(String(bvRaw));
+        }
+
+        return dir === "asc" ? cmp : -cmp;
+      });
+
+      cards.forEach(card => container.appendChild(card));
+    }
+
     function focusMarker(i) {
       const m = markers[i];
+      m.setPopupContent(popupFromCard(i));
       map.setView(m.getLatLng(), 15);
       m.openPopup();
     }
+
+    document.getElementById("sortField").addEventListener("change", sortCards);
+    document.getElementById("sortDir").addEventListener("change", sortCards);
+
+    bindMarkerPopups();
+    sortCards();
 
     map.fitBounds(L.latLngBounds([[48.0928048, 11.6072429],[48.1296722, 11.6147692],[48.1490953, 11.548985],[48.0989297, 11.5135353],[48.182, 11.533],[48.197, 11.572],[48.1283377, 11.509999],[48.1359399, 11.5606827],[48.11, 11.618],[48.112, 11.531],[48.14, 11.68],[48.1518126, 11.5357575],[48.1479767, 11.526613],[48.0792825, 11.6623979],[48.15, 11.583],[48.215208, 11.4898617],[48.15, 11.583],[48.179, 11.562],[48.1321209, 11.6740683],[48.113, 11.647],[48.11, 11.618],[48.127, 11.632],[48.113, 11.647],[48.179, 11.562],[48.144161, 11.620593],[48.117, 11.539],[48.113, 11.647],[48.164, 11.622],[48.12, 11.573],[48.1385144, 11.5387824],[48.13, 11.573],[48.15, 11.583],[48.197, 11.572],[48.138, 11.615],[48.179, 11.562],[48.092, 11.539],[48.122, 11.545],[48.127, 11.632],[48.118, 11.661],[48.127, 11.632],[48.149, 11.533],[48.15, 11.583],[48.1518272, 11.4471196],[48.0981218, 11.49703],[48.199654, 11.5898509],[48.119, 11.492],[48.14, 11.68],[48.1649718, 11.6276777],[48.083, 11.504],[48.083, 11.562],[48.1445678, 11.4451348],[48.118, 11.661],[48.148, 11.463],[48.12, 11.5],[48.166, 11.467],[48.183, 11.478],[48.0866604, 11.5105489],[48.14, 11.68],[48.1793294, 11.5642899],[48.147, 11.451],[48.1066119, 11.672332],[48.204, 11.559],[48.147, 11.451],[48.166, 11.467],[48.115, 11.697],[48.222, 11.548],[48.185, 11.464],[48.185, 11.464],[48.148, 11.463]]).pad(0.2));
 

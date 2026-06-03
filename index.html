@@ -5105,7 +5105,10 @@
     ).addTo(map);
 
 const areaLayer = L.layerGroup().addTo(map);
+
+// OFF by default; checkbox turns it on
 const historyLayer = L.layerGroup();
+
 const markerLayer = L.layerGroup().addTo(map);
 const markers = [];
 
@@ -6310,20 +6313,29 @@ const layerControl = L.control.layers(null, {
   "Properties": markerLayer
 }).addTo(map);
 
+function showHistoryLegend() {
+  if (typeof historyLegend !== "undefined") {
+    historyLegend.addTo(map);
+  }
+}
+
+function hideHistoryLegend() {
+  if (typeof historyLegend !== "undefined") {
+    historyLegend.remove();
+  }
+}
+
 map.on("overlayadd", function(e) {
-    if (e.layer === historyLayer) {
-        historyLegend.addTo(map);
-    }
+  if (e.layer === historyLayer) {
+    showHistoryLegend();
+  }
 });
 
 map.on("overlayremove", function(e) {
-    if (e.layer === historyLayer) {
-        historyLegend.remove();
-    }
+  if (e.layer === historyLayer) {
+    hideHistoryLegend();
+  }
 });
-if (typeof historyLegend !== "undefined") {
-    historyLegend.addTo(map);
-}
     function popupFromCard(i) {
       const card = document.querySelector(`.card[data-marker-index="${i}"]`);
       if (!card) return "";

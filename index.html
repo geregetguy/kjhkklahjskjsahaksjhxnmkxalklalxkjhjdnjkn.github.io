@@ -6321,8 +6321,9 @@ map.on("overlayremove", function(e) {
         historyLegend.remove();
     }
 });
-historyLegend.addTo(map);
-
+if (typeof historyLegend !== "undefined") {
+    historyLegend.addTo(map);
+}
     function popupFromCard(i) {
       const card = document.querySelector(`.card[data-marker-index="${i}"]`);
       if (!card) return "";

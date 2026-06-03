@@ -140,14 +140,60 @@
       color: #00dbaf;
       font-size: 12px;
     }
+.sort-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 12px;
+  background: #111111;
+  border-bottom: 1px solid #333;
+}
+
+.sort-bar label {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.sort-bar select {
+  background: #1c1c1c;
+  color: #eee;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 6px;
+}    
   </style>
 </head>
 
 <body>
   <div class="layout">
     <div class="sidebar">
-      
-    <div class="card" style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;" onclick="focusMarker(0)">
+  <div class="sort-bar">
+    <label>Sort by</label>
+    <select id="sortField">
+      <option value="rating" selected>Rating</option>
+      <option value="post_date">Post Date</option><option value="title">Property Name</option><option value="price">Price</option><option value="size_qm">Size/Bedroom (m²)</option><option value="rooms">Rooms</option><option value="plz">Postal Code</option><option value="u_bahn">U-Bahn (Nearest)</option><option value="stop_dist_m">Distance from U-Bahn</option><option value="size_qm_capita">Size/Bedroom (m²)</option><option value="price_capita">Rent/Person</option><option value="rating">Overall Score (/5)</option><option value="rating_price">Price</option><option value="rating_plz">PLZ</option><option value="rating_size">Size</option><option value="rating_prox">Proximity</option><option value="cups">Cups</option><option value="fred">Fred</option><option value="ken">Ken</option><option value="ruby">Ruby</option>
+    </select>
+
+    <select id="sortDir">
+      <option value="desc" selected>High to low</option>
+      <option value="asc">Low to high</option>
+    </select>
+  </div>
+
+  <div id="cards">
+    
+    <div
+      class="card"
+      style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;"
+      data-marker-index="0"
+      data-highlighted="1"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2000.0" data-size_qm="105.0" data-rooms="4.0" data-lat="48.1490953" data-lon="11.548985" data-plz="80636.0" data-u_bahn="-999999" data-stop_dist_m="271.2570677344068" data-size_qm_capita="35.0" data-price_capita="666.6666666666666" data-rating="4.553734352515431" data-rating_price="4.174789454267907" data-rating_plz="4.88" data-rating_size="4.985358501525909" data-rating_prox="4.174789454267907" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(0)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57420828/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -219,7 +265,14 @@
       </div>
     </div>
     
-    <div class="card" style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;" onclick="focusMarker(1)">
+    <div
+      class="card"
+      style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;"
+      data-marker-index="1"
+      data-highlighted="1"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="1600.0" data-size_qm="75.0" data-rooms="4.0" data-lat="48.0989297" data-lon="11.5135353" data-plz="81379.0" data-u_bahn="-999999" data-stop_dist_m="194.3229778583968" data-size_qm_capita="25.0" data-price_capita="533.3333333333334" data-rating="4.482654583102375" data-rating_price="4.639068800202272" data-rating_plz="3.73" data-rating_size="4.922480732004954" data-rating_prox="4.639068800202272" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(1)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57353302/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -291,1327 +344,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(2)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57346529/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57346529/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Großzügige Altbauwohnung in Neuhausen Nymphenburger Straße 151, 80634 Neuhausen-Nymphenburg
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-30 05:13:56</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2170 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">U-Bahn (Nearest)</span>
-                <span class="meta-value">Rotkreuzplatz</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Distance from U-Bahn</span>
-                <span class="meta-value">265 m</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">37.7 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">723 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.864632537335878 / 5<br>
-    PLZ: 4.87 / 5<br>
-    Size: 4.990612158321186 / 5 <br>
-    Proximity: 3.864632537335878 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 4.397469308248236</span>
-            </div>
-            
-        </div>
-
-        
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(3)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57318201/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57318201/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          München Neuhausen praktisch und schön Arnulfstraße 169, 80634 Neuhausen-Nymphenburg
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-27 13:11:42</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2230 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">U-Bahn (Nearest)</span>
-                <span class="meta-value">Rotkreuzplatz</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Distance from U-Bahn</span>
-                <span class="meta-value">774 m</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">32.7 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">743 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.737242396921079 / 5<br>
-    PLZ: 4.87 / 5<br>
-    Size: 4.978398802629529 / 5 <br>
-    Proximity: 3.737242396921079 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 4.330720899117922</span>
-            </div>
-            
-        </div>
-
-        
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(4)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57413006/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57413006/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Waldperlach - große 4 Zimmer Penthouse-Wohnung mit direktem Lift in die Wohnung und Süd-West-Loggia Rotkäppchenstraße 104, 81739 München
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-06-02 08:15:03</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2300 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">U-Bahn (Nearest)</span>
-                <span class="meta-value">Neuperlach Süd</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Distance from U-Bahn</span>
-                <span class="meta-value">1733 m</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">37.7 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">767 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.577125013626543 / 5<br>
-    PLZ: 4.98 / 5<br>
-    Size: 4.990612158321186 / 5 <br>
-    Proximity: 3.577125013626543 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 4.281215546393568</span>
-            </div>
-            
-        </div>
-
-        
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(5)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57210450/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57210450/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          WG ZIMMER: Moderne WG in München Schwabing mit stilvoller Ausstattung Rheinstraße, 80803 Schwabing-West
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-20 11:13:33</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">830 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">21.7 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">277 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 4.936190896596909 / 5<br>
-    PLZ: 4.98 / 5<br>
-    Size: 4.864890970243954 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 4.195270466710216</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(6)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57411631/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57411631/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Schön geschnittene 4 Zimmer Wohnung. Smaragdstraße 15, 80995 Feldmoching-Hasenbergl
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-06-02 09:15:03</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">1115 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">U-Bahn (Nearest)</span>
-                <span class="meta-value">Feldmoching</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Distance from U-Bahn</span>
-                <span class="meta-value">3779 m</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">22.7 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">372 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 4.877480958295682 / 5<br>
-    PLZ: 1.37 / 5<br>
-    Size: 4.885632675443806 / 5 <br>
-    Proximity: 4.877480958295682 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 4.002648648008792</span>
-            </div>
-            
-        </div>
-
-        
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(7)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57218100/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57218100/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Zeitgemäß wohnen im BERGBLICK: 5-Zimmer-Wohnung mit klarer Familienzone Forst-Kasten-Allee 123b, 81475 München
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-21 09:12:51</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2930 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">5</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">30.0 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">732 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.807397222011822 / 5<br>
-    PLZ: 4.98 / 5<br>
-    Size: 4.966310265004573 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.938426871754099</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(8)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57280875/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57280875/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          traumhaft schöne Maisonettewohnung mit pfiffigem Grundriss Leonhardiweg 52, 81829 Trudering-Riem
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-26 10:12:31</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">1700 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">U-Bahn (Nearest)</span>
-                <span class="meta-value">Moosfeld</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Distance from U-Bahn</span>
-                <span class="meta-value">273 m</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">33.0 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">567 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 4.552795748392421 / 5<br>
-    PLZ: 1.58 / 5<br>
-    Size: 4.97956614280768 / 5 <br>
-    Proximity: 4.552795748392421 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.91628940989813</span>
-            </div>
-            
-        </div>
-
-        
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(9)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57396043/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57396043/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Neubau Erstbezug: 4-Zimmer-Wohnung mit Balkon 81673 Berg am Laim
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-06-01 18:14:25</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2150 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">28.3 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">717 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.905022983620837 / 5<br>
-    PLZ: 4.67 / 5<br>
-    Size: 4.95552305481478 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.882636509608904</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(10)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57325147/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57325147/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          WG-taugliche 4-Zimmer-Wohnung in Bogenhausen Buschingstraße 18, 81677 Bogenhausen
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-28 16:10:52</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2600 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">U-Bahn (Nearest)</span>
-                <span class="meta-value">Böhmerwaldplatz</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Distance from U-Bahn</span>
-                <span class="meta-value">383 m</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">22.0 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">867 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 2.777081083435351 / 5<br>
-    PLZ: 4.91 / 5<br>
-    Size: 4.872192333967463 / 5 <br>
-    Proximity: 2.777081083435351 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.834088625209541</span>
-            </div>
-            
-        </div>
-
-        
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(11)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57414146/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57414146/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München 80469 Ludwigs
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-06-02 19:15:03</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2600 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">36.3 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">867 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 2.777081083435351 / 5<br>
-    PLZ: 4.99 / 5<br>
-    Size: 4.988276004537046 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.688839271993099</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(12)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57311718/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57311718/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Luxuriöse 4-Zimmer Dachterrassenwohnung mit Alpenblick Fritz-Bauer-Straße 31, 81249 Aubing-Lochhausen-Langwied
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-27 19:11:42</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2600 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">32.3 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">867 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 2.777081083435351 / 5<br>
-    PLZ: 4.98 / 5<br>
-    Size: 4.977164774939634 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.683561464593747</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(13)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57210614/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57210614/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Schöne 5-Zimmer-Wohnung im Münchner Norden Graslilienanger 14, 80937 München
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-20 14:13:33</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">1745 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">5</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">24.2 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">436 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 4.810193234801559 / 5<br>
-    PLZ: 2.95 / 5<br>
-    Size: 4.91215916138854 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.668088099047525</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(14)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57282533/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57282533/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Erstbezug im Neubau in Bogenhausen 81677 Bogenhausen
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-26 13:12:31</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2600 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">33.3 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">867 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 2.777081083435351 / 5<br>
-    PLZ: 4.91 / 5<br>
-    Size: 4.980670399302635 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.666937870684497</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(15)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57395822/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57395822/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm! Schleißheimer Str. 252, 80809 Schwabing-West
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-06-01 12:14:25</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2488 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">35.3 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">829 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.093048767988908 / 5<br>
-    PLZ: 4.53 / 5<br>
-    Size: 4.98614973587945 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.65229962596709</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(16)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57387484/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57387484/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Schöne 5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage 81825 Trudering-Riem
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-06-01 13:14:25</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2600 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">5</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">33.2 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">650 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 4.251993003033019 / 5<br>
-    PLZ: 2.86 / 5<br>
-    Size: 4.980400059613053 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.523098265661518</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(17)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57370179/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57370179/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          4-Zimmer-Penthouse mit drei Himmelsrichtungen und großem Süd-Balkon 81673 Berg am Laim
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-30 17:08:10</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2720 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">34.7 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">907 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 2.428593136707911 / 5<br>
-    PLZ: 4.67 / 5<br>
-    Size: 4.984522065738174 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.520778800611521</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(18)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/7/1/25/57352706/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/7/1/25/57352706/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Helle 4-Zimmer-Altbauwohnung mit Balkon in Neuhausen 80634 Neuhausen-Nymphenburg
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-30 05:13:56</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2850 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">35.7 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">950 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 2.054590454585994 / 5<br>
-    PLZ: 4.87 / 5<br>
-    Size: 4.986898211508306 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.477872166523575</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(19)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57218101/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57218101/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Hoch hinaus wohnen - mit Fernblick über München Forst-Kasten-Allee 123b, 81475 München
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-21 10:12:51</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2900 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">38.7 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">967 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 1.915133023574195 / 5<br>
-    PLZ: 4.98 / 5<br>
-    Size: 4.992053363582717 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.471796596789228</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(20)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57235773/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57235773/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          frisch renovierte, helle 4-Zimmerwohnung Varnhagenstraße 41c, 81241 Aubing-Lochhausen-Langwied
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-22 14:12:21</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2172 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">U-Bahn (Nearest)</span>
-                <span class="meta-value">Laimer Platz</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Distance from U-Bahn</span>
-                <span class="meta-value">4454 m</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">36.3 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">724 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.860536164259122 / 5<br>
-    PLZ: 0.97 / 5<br>
-    Size: 4.988276004537046 / 5 <br>
-    Proximity: 3.860536164259122 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.419837083263823</span>
-            </div>
-            
-        </div>
-
-        
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(21)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57261973/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style=""
-          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57261973/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Viel Freiraum in Forstenried: 4-Zimmer-Loft mit Berg- und Weitblick Schaffhauser Straße 12, 81476 München
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-24 14:07:20</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2150 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">U-Bahn (Nearest)</span>
-                <span class="meta-value">Forstenrieder Allee</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Distance from U-Bahn</span>
-                <span class="meta-value">366 m</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">33.3 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">717 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.905022983620837 / 5<br>
-    PLZ: 0.86 / 5<br>
-    Size: 4.980670399302635 / 5 <br>
-    Proximity: 3.905022983620837 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.412679091636077</span>
-            </div>
-            
-        </div>
-
-        
-      </div>
-    </div>
-    
-    <div class="card" style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;" onclick="focusMarker(22)">
+    <div
+      class="card"
+      style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;"
+      data-marker-index="2"
+      data-highlighted="1"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="1950.0" data-size_qm="94.0" data-rooms="3.0" data-lat="48.1359399" data-lon="11.5606827" data-plz="80337.0" data-u_bahn="-999999" data-stop_dist_m="455.3325954919515" data-size_qm_capita="47.0" data-price_capita="975.0" data-rating="3.402885339776513" data-rating_price="1.846761435224525" data-rating_plz="4.92" data-rating_size="4.998018488657" data-rating_prox="1.846761435224525" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(2)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57280206/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -1683,7 +423,1543 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(23)">
+    <div
+      class="card"
+      style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;"
+      data-marker-index="3"
+      data-highlighted="1"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2300.0" data-size_qm="108.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81829.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="36.0" data-price_capita="766.6666666666666" data-rating="3.036182813185803" data-rating_price="3.577125013626543" data-rating_plz="1.58" data-rating_size="4.987606239116668" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(3)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57331759/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style="color:#FFAA00;"
+          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57331759/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Wunderschöne helle 4-Zimmer-Maisonette-Wohnung mit Dachterrasse (WG-geeignet) Maria-Montessori-Straße 43, 81829 München
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-28 10:10:52</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2300 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">36.0 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">767 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.577125013626543 / 5<br>
+    PLZ: 1.58 / 5<br>
+    Size: 4.987606239116668 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.036182813185803</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="4"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2170.0" data-size_qm="113.0" data-rooms="4.0" data-lat="48.1518126" data-lon="11.5357575" data-plz="80634.0" data-u_bahn="-999999" data-stop_dist_m="265.2483174748743" data-size_qm_capita="37.66666666666666" data-price_capita="723.3333333333334" data-rating="4.397469308248236" data-rating_price="3.864632537335878" data-rating_plz="4.87" data-rating_size="4.990612158321186" data-rating_prox="3.864632537335878" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(4)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57346529/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57346529/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Großzügige Altbauwohnung in Neuhausen Nymphenburger Straße 151, 80634 Neuhausen-Nymphenburg
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-30 05:13:56</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2170 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Rotkreuzplatz</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">265 m</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">37.7 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">723 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.864632537335878 / 5<br>
+    PLZ: 4.87 / 5<br>
+    Size: 4.990612158321186 / 5 <br>
+    Proximity: 3.864632537335878 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 4.397469308248236</span>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="5"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2230.0" data-size_qm="98.0" data-rooms="4.0" data-lat="48.1479767" data-lon="11.526613" data-plz="80634.0" data-u_bahn="-999999" data-stop_dist_m="774.4294763428604" data-size_qm_capita="32.66666666666666" data-price_capita="743.3333333333334" data-rating="4.330720899117922" data-rating_price="3.737242396921079" data-rating_plz="4.87" data-rating_size="4.978398802629529" data-rating_prox="3.737242396921079" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(5)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57318201/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57318201/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          München Neuhausen praktisch und schön Arnulfstraße 169, 80634 Neuhausen-Nymphenburg
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-27 13:11:42</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2230 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Rotkreuzplatz</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">774 m</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">32.7 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">743 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.737242396921079 / 5<br>
+    PLZ: 4.87 / 5<br>
+    Size: 4.978398802629529 / 5 <br>
+    Proximity: 3.737242396921079 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 4.330720899117922</span>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="6"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2300.0" data-size_qm="113.0" data-rooms="4.0" data-lat="48.0792825" data-lon="11.6623979" data-plz="81739.0" data-u_bahn="-999999" data-stop_dist_m="1733.373872121375" data-size_qm_capita="37.66666666666666" data-price_capita="766.6666666666666" data-rating="4.281215546393568" data-rating_price="3.577125013626543" data-rating_plz="4.98" data-rating_size="4.990612158321186" data-rating_prox="3.577125013626543" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(6)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57413006/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57413006/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Waldperlach - große 4 Zimmer Penthouse-Wohnung mit direktem Lift in die Wohnung und Süd-West-Loggia Rotkäppchenstraße 104, 81739 München
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 08:15:03</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2300 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Neuperlach Süd</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">1733 m</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">37.7 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">767 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.577125013626543 / 5<br>
+    PLZ: 4.98 / 5<br>
+    Size: 4.990612158321186 / 5 <br>
+    Proximity: 3.577125013626543 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 4.281215546393568</span>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="7"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="830.0" data-size_qm="65.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80803.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="21.66666666666667" data-price_capita="276.6666666666667" data-rating="4.195270466710216" data-rating_price="4.936190896596909" data-rating_plz="4.98" data-rating_size="4.864890970243954" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(7)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57210450/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57210450/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          WG ZIMMER: Moderne WG in München Schwabing mit stilvoller Ausstattung Rheinstraße, 80803 Schwabing-West
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-20 11:13:33</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">830 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">21.7 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">277 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 4.936190896596909 / 5<br>
+    PLZ: 4.98 / 5<br>
+    Size: 4.864890970243954 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 4.195270466710216</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="8"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="1115.0" data-size_qm="68.0" data-rooms="4.0" data-lat="48.215208" data-lon="11.4898617" data-plz="80995.0" data-u_bahn="-999999" data-stop_dist_m="3779.329174590116" data-size_qm_capita="22.66666666666667" data-price_capita="371.6666666666667" data-rating="4.002648648008792" data-rating_price="4.877480958295682" data-rating_plz="1.37" data-rating_size="4.885632675443806" data-rating_prox="4.877480958295682" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(8)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57411631/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57411631/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Schön geschnittene 4 Zimmer Wohnung. Smaragdstraße 15, 80995 Feldmoching-Hasenbergl
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 09:15:03</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1115 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Feldmoching</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">3779 m</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">22.7 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">372 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 4.877480958295682 / 5<br>
+    PLZ: 1.37 / 5<br>
+    Size: 4.885632675443806 / 5 <br>
+    Proximity: 4.877480958295682 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 4.002648648008792</span>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="9"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2930.0" data-size_qm="120.0" data-rooms="5.0" data-lat="nan" data-lon="nan" data-plz="81475.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="30.0" data-price_capita="732.5" data-rating="3.938426871754099" data-rating_price="3.807397222011822" data-rating_plz="4.98" data-rating_size="4.966310265004573" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(9)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57218100/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57218100/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Zeitgemäß wohnen im BERGBLICK: 5-Zimmer-Wohnung mit klarer Familienzone Forst-Kasten-Allee 123b, 81475 München
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-21 09:12:51</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2930 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">5</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">30.0 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">732 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.807397222011822 / 5<br>
+    PLZ: 4.98 / 5<br>
+    Size: 4.966310265004573 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.938426871754099</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="10"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="1700.0" data-size_qm="99.0" data-rooms="4.0" data-lat="48.1321209" data-lon="11.6740683" data-plz="81829.0" data-u_bahn="-999999" data-stop_dist_m="273.2049468107404" data-size_qm_capita="33.0" data-price_capita="566.6666666666666" data-rating="3.91628940989813" data-rating_price="4.552795748392421" data-rating_plz="1.58" data-rating_size="4.97956614280768" data-rating_prox="4.552795748392421" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(10)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57280875/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57280875/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          traumhaft schöne Maisonettewohnung mit pfiffigem Grundriss Leonhardiweg 52, 81829 Trudering-Riem
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-26 10:12:31</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1700 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Moosfeld</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">273 m</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33.0 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">567 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 4.552795748392421 / 5<br>
+    PLZ: 1.58 / 5<br>
+    Size: 4.97956614280768 / 5 <br>
+    Proximity: 4.552795748392421 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.91628940989813</span>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="11"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2150.0" data-size_qm="85.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81673.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="28.33333333333333" data-price_capita="716.6666666666666" data-rating="3.882636509608904" data-rating_price="3.905022983620837" data-rating_plz="4.67" data-rating_size="4.95552305481478" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(11)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57396043/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57396043/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Neubau Erstbezug: 4-Zimmer-Wohnung mit Balkon 81673 Berg am Laim
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-01 18:14:25</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2150 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">28.3 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">717 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.905022983620837 / 5<br>
+    PLZ: 4.67 / 5<br>
+    Size: 4.95552305481478 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.882636509608904</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="12"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2600.0" data-size_qm="66.0" data-rooms="4.0" data-lat="48.144161" data-lon="11.620593" data-plz="81677.0" data-u_bahn="-999999" data-stop_dist_m="383.1556268887263" data-size_qm_capita="22.0" data-price_capita="866.6666666666666" data-rating="3.834088625209541" data-rating_price="2.777081083435351" data-rating_plz="4.91" data-rating_size="4.872192333967463" data-rating_prox="2.777081083435351" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(12)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57325147/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57325147/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          WG-taugliche 4-Zimmer-Wohnung in Bogenhausen Buschingstraße 18, 81677 Bogenhausen
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-28 16:10:52</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Böhmerwaldplatz</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">383 m</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">22.0 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">867 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 2.777081083435351 / 5<br>
+    PLZ: 4.91 / 5<br>
+    Size: 4.872192333967463 / 5 <br>
+    Proximity: 2.777081083435351 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.834088625209541</span>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="13"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2600.0" data-size_qm="109.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80469.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="36.33333333333334" data-price_capita="866.6666666666666" data-rating="3.688839271993099" data-rating_price="2.777081083435351" data-rating_plz="4.99" data-rating_size="4.988276004537046" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(13)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57414146/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57414146/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München 80469 Ludwigs
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 19:15:03</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">36.3 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">867 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 2.777081083435351 / 5<br>
+    PLZ: 4.99 / 5<br>
+    Size: 4.988276004537046 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.688839271993099</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="14"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2600.0" data-size_qm="97.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81249.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="32.33333333333334" data-price_capita="866.6666666666666" data-rating="3.683561464593747" data-rating_price="2.777081083435351" data-rating_plz="4.98" data-rating_size="4.977164774939634" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(14)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57311718/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57311718/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Luxuriöse 4-Zimmer Dachterrassenwohnung mit Alpenblick Fritz-Bauer-Straße 31, 81249 Aubing-Lochhausen-Langwied
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-27 19:11:42</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">32.3 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">867 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 2.777081083435351 / 5<br>
+    PLZ: 4.98 / 5<br>
+    Size: 4.977164774939634 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.683561464593747</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="15"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="1745.0" data-size_qm="97.0" data-rooms="5.0" data-lat="nan" data-lon="nan" data-plz="80937.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="24.25" data-price_capita="436.25" data-rating="3.668088099047525" data-rating_price="4.810193234801559" data-rating_plz="2.95" data-rating_size="4.91215916138854" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(15)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57210614/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57210614/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Schöne 5-Zimmer-Wohnung im Münchner Norden Graslilienanger 14, 80937 München
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-20 14:13:33</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1745 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">5</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">24.2 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">436 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 4.810193234801559 / 5<br>
+    PLZ: 2.95 / 5<br>
+    Size: 4.91215916138854 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.668088099047525</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="16"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2600.0" data-size_qm="100.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81677.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="33.33333333333334" data-price_capita="866.6666666666666" data-rating="3.666937870684497" data-rating_price="2.777081083435351" data-rating_plz="4.91" data-rating_size="4.980670399302635" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(16)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57282533/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57282533/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Erstbezug im Neubau in Bogenhausen 81677 Bogenhausen
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-26 13:12:31</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33.3 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">867 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 2.777081083435351 / 5<br>
+    PLZ: 4.91 / 5<br>
+    Size: 4.980670399302635 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.666937870684497</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="17"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2488.0" data-size_qm="106.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80809.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="35.33333333333334" data-price_capita="829.3333333333334" data-rating="3.65229962596709" data-rating_price="3.093048767988908" data-rating_plz="4.53" data-rating_size="4.98614973587945" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(17)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57395822/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57395822/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm! Schleißheimer Str. 252, 80809 Schwabing-West
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-01 12:14:25</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2488 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">35.3 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">829 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.093048767988908 / 5<br>
+    PLZ: 4.53 / 5<br>
+    Size: 4.98614973587945 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.65229962596709</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="18"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2600.0" data-size_qm="133.0" data-rooms="5.0" data-lat="nan" data-lon="nan" data-plz="81825.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="33.25" data-price_capita="650.0" data-rating="3.523098265661518" data-rating_price="4.251993003033019" data-rating_plz="2.86" data-rating_size="4.980400059613053" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(18)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57387484/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57387484/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Schöne 5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage 81825 Trudering-Riem
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-01 13:14:25</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">5</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33.2 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">650 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 4.251993003033019 / 5<br>
+    PLZ: 2.86 / 5<br>
+    Size: 4.980400059613053 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.523098265661518</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="19"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2720.0" data-size_qm="104.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81673.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="34.66666666666666" data-price_capita="906.6666666666666" data-rating="3.520778800611521" data-rating_price="2.428593136707911" data-rating_plz="4.67" data-rating_size="4.984522065738174" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(19)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57370179/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57370179/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          4-Zimmer-Penthouse mit drei Himmelsrichtungen und großem Süd-Balkon 81673 Berg am Laim
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-30 17:08:10</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2720 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">34.7 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">907 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 2.428593136707911 / 5<br>
+    PLZ: 4.67 / 5<br>
+    Size: 4.984522065738174 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.520778800611521</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="20"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2850.0" data-size_qm="107.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80634.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="35.66666666666666" data-price_capita="950.0" data-rating="3.477872166523575" data-rating_price="2.054590454585994" data-rating_plz="4.87" data-rating_size="4.986898211508306" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(20)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/7/1/25/57352706/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/7/1/25/57352706/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Helle 4-Zimmer-Altbauwohnung mit Balkon in Neuhausen 80634 Neuhausen-Nymphenburg
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-30 05:13:56</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2850 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">35.7 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">950 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 2.054590454585994 / 5<br>
+    PLZ: 4.87 / 5<br>
+    Size: 4.986898211508306 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.477872166523575</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="21"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2900.0" data-size_qm="116.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81475.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="38.66666666666666" data-price_capita="966.6666666666666" data-rating="3.471796596789228" data-rating_price="1.915133023574195" data-rating_plz="4.98" data-rating_size="4.992053363582717" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(21)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57218101/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57218101/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Hoch hinaus wohnen - mit Fernblick über München Forst-Kasten-Allee 123b, 81475 München
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-21 10:12:51</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2900 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">38.7 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">967 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 1.915133023574195 / 5<br>
+    PLZ: 4.98 / 5<br>
+    Size: 4.992053363582717 / 5 <br>
+    Proximity: 2 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.471796596789228</span>
+            </div>
+            
+        </div>
+
+        <div class="fallback">PLZ fallback area</div>
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="22"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2172.0" data-size_qm="109.0" data-rooms="4.0" data-lat="48.1518272" data-lon="11.4471196" data-plz="81241.0" data-u_bahn="-999999" data-stop_dist_m="4454.855819794142" data-size_qm_capita="36.33333333333334" data-price_capita="724.0" data-rating="3.419837083263823" data-rating_price="3.860536164259122" data-rating_plz="0.97" data-rating_size="4.988276004537046" data-rating_prox="3.860536164259122" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(22)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57235773/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57235773/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          frisch renovierte, helle 4-Zimmerwohnung Varnhagenstraße 41c, 81241 Aubing-Lochhausen-Langwied
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-22 14:12:21</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2172 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Laimer Platz</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">4454 m</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">36.3 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">724 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.860536164259122 / 5<br>
+    PLZ: 0.97 / 5<br>
+    Size: 4.988276004537046 / 5 <br>
+    Proximity: 3.860536164259122 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.419837083263823</span>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="23"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2150.0" data-size_qm="100.0" data-rooms="4.0" data-lat="48.0981218" data-lon="11.49703" data-plz="81476.0" data-u_bahn="-999999" data-stop_dist_m="366.985323639663" data-size_qm_capita="33.33333333333334" data-price_capita="716.6666666666666" data-rating="3.412679091636077" data-rating_price="3.905022983620837" data-rating_plz="0.86" data-rating_size="4.980670399302635" data-rating_prox="3.905022983620837" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(23)"
+    >
+      <div class="img-placeholder">
+        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57261973/" target="_blank" onclick="event.stopPropagation()">open</a>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="name"
+          style=""
+          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57261973/"
+          target="_blank"
+          onclick="event.stopPropagation()"
+        >
+          Viel Freiraum in Forstenried: 4-Zimmer-Loft mit Berg- und Weitblick Schaffhauser Straße 12, 81476 München
+        </a>
+
+        <div class="metadata">
+          
+            <div class="meta-row">
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-24 14:07:20</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2150 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Forstenrieder Allee</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">366 m</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33.3 m²</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">717 €</span>
+            </div>
+            
+            <div class="meta-row">
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+    Price: 3.905022983620837 / 5<br>
+    PLZ: 0.86 / 5<br>
+    Size: 4.980670399302635 / 5 <br>
+    Proximity: 3.905022983620837 / 5
+    </span>
+                </span>
+                <span class="meta-value">⭐ 3.412679091636077</span>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <div
+      class="card"
+      style=""
+      data-marker-index="24"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2380.0" data-size_qm="131.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81375.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="43.66666666666666" data-price_capita="793.3333333333334" data-rating="3.369122966914325" data-rating_price="3.379945461607909" data-rating_plz="3.1" data-rating_size="4.996546406049392" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(24)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57280088/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -1745,7 +2021,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(24)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="25"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="3000.0" data-size_qm="114.0" data-rooms="4.0" data-lat="48.1649718" data-lon="11.6276777" data-plz="81925.0" data-u_bahn="-999999" data-stop_dist_m="1407.018613022037" data-size_qm_capita="38.0" data-price_capita="1000.0" data-rating="3.22187547632303" data-rating_price="1.648191211510396" data-rating_plz="4.6" data-rating_size="4.991119482271328" data-rating_prox="1.648191211510396" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(25)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57271149/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -1817,7 +2100,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(25)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="26"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2300.0" data-size_qm="126.0" data-rooms="5.0" data-lat="nan" data-lon="nan" data-plz="81477.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="31.5" data-price_capita="575.0" data-rating="3.203063397450213" data-rating_price="4.52849118179676" data-rating_plz="1.31" data-rating_size="4.973762408004093" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(26)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/25/25/57317273/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -1879,7 +2169,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(26)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="27"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2650.0" data-size_qm="115.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81825.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="38.33333333333334" data-price_capita="883.3333333333334" data-rating="3.121002943912246" data-rating_price="2.632412385483216" data-rating_plz="2.86" data-rating_size="4.991599390165769" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(27)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57332812/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -1941,7 +2238,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(27)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="28"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2750.0" data-size_qm="106.0" data-rooms="6.0" data-lat="nan" data-lon="nan" data-plz="81241.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="21.2" data-price_capita="550.0" data-rating="3.105500629790035" data-rating_price="4.598039496352612" data-rating_plz="0.97" data-rating_size="4.853963022807526" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(28)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57411891/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2003,7 +2307,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(28)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="29"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="3000.0" data-size_qm="126.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81377.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="42.0" data-price_capita="1000.0" data-rating="3.095907950420656" data-rating_price="1.648191211510396" data-rating_plz="3.74" data-rating_size="4.995440590172228" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(29)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57419533/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2065,69 +2376,14 @@
       </div>
     </div>
     
-    <div class="card" style="border-color:#FFAA00;box-shadow:0 0 0 2px #FFAA00 inset;" onclick="focusMarker(29)">
-      <div class="img-placeholder">
-        <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57331759/" target="_blank" onclick="event.stopPropagation()">open</a>
-      </div>
-
-      <div class="card-body">
-        <a
-          class="name"
-          style="color:#FFAA00;"
-          href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57331759/"
-          target="_blank"
-          onclick="event.stopPropagation()"
-        >
-          Wunderschöne helle 4-Zimmer-Maisonette-Wohnung mit Dachterrasse (WG-geeignet) Maria-Montessori-Straße 43, 81829 München
-        </a>
-
-        <div class="metadata">
-          
-            <div class="meta-row">
-                <span class="meta-key">Post Date</span>
-                <span class="meta-value">2026-05-28 10:10:52</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Price</span>
-                <span class="meta-value">2300 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rooms</span>
-                <span class="meta-value">4</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Size/Bedroom (m²)</span>
-                <span class="meta-value">36.0 m²</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key">Rent/Person</span>
-                <span class="meta-value">767 €</span>
-            </div>
-            
-            <div class="meta-row">
-                <span class="meta-key tooltip">
-                    Overall Score (/5)
-                    <span class="tooltiptext">
-    Price: 3.577125013626543 / 5<br>
-    PLZ: 1.58 / 5<br>
-    Size: 4.987606239116668 / 5 <br>
-    Proximity: 2 / 5
-    </span>
-                </span>
-                <span class="meta-value">⭐ 3.036182813185803</span>
-            </div>
-            
-        </div>
-
-        <div class="fallback">PLZ fallback area</div>
-      </div>
-    </div>
-    
-    <div class="card" style="" onclick="focusMarker(30)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="30"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="1950.0" data-size_qm="100.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80997.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="33.33333333333334" data-price_capita="650.0" data-rating="2.980665850583913" data-rating_price="4.251993003033019" data-rating_plz="0.69" data-rating_size="4.980670399302635" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(30)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57281359/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2189,7 +2445,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(31)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="31"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2460.0" data-size_qm="112.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81829.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="37.33333333333334" data-price_capita="820.0" data-rating="2.934875072224913" data-rating_price="3.169424436801743" data-rating_plz="1.58" data-rating_size="4.990075852097909" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(31)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57344634/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2251,7 +2514,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(32)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="32"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2160.0" data-size_qm="80.0" data-rooms="3.0" data-lat="48.1793294" data-lon="11.5642899" data-plz="80809.0" data-u_bahn="-999999" data-stop_dist_m="457.6767371913518" data-size_qm_capita="40.0" data-price_capita="1080.0" data-rating="2.929368131971151" data-rating_price="1.096917848445651" data-rating_plz="4.53" data-rating_size="4.993636830993301" data-rating_prox="1.096917848445651" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(32)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57255886/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2323,7 +2593,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(33)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="33"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="1920.0" data-size_qm="87.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="81243.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="29.0" data-price_capita="640.0" data-rating="2.928898728812551" data-rating_price="4.295394634493737" data-rating_plz="0.46" data-rating_size="4.960200280756467" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(33)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57217214/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2385,7 +2662,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(34)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="34"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2620.0" data-size_qm="125.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80935.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="41.66666666666666" data-price_capita="873.3333333333334" data-rating="2.898640843603348" data-rating_price="2.719383253042062" data-rating_plz="1.88" data-rating_size="4.995180121371329" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(34)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57200747/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2447,7 +2731,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(35)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="35"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2250.0" data-size_qm="108.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80933.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="36.0" data-price_capita="750.0" data-rating="2.755085274779914" data-rating_price="3.692734860002986" data-rating_plz="0.34" data-rating_size="4.987606239116668" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(35)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57385140/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2509,7 +2800,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(36)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="36"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2400.0" data-size_qm="94.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80999.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="31.33333333333333" data-price_capita="800.0" data-rating="2.645375108307471" data-rating_price="3.328477064135078" data-rating_plz="0.28" data-rating_size="4.973023369094806" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(36)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57235649/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2571,7 +2869,14 @@
       </div>
     </div>
     
-    <div class="card" style="" onclick="focusMarker(37)">
+    <div
+      class="card"
+      style=""
+      data-marker-index="37"
+      data-highlighted="0"
+      data-post_date="-999999" data-title="-999999" data-url="-999999" data-img="-999999" data-price="2600.0" data-size_qm="142.0" data-rooms="4.0" data-lat="nan" data-lon="nan" data-plz="80999.0" data-u_bahn="nan" data-stop_dist_m="nan" data-size_qm_capita="47.33333333333334" data-price_capita="866.6666666666666" data-rating="2.513801663504424" data-rating_price="2.777081083435351" data-rating_plz="0.28" data-rating_size="4.998125570582344" data-rating_prox="2.0" data-cups="nan" data-fred="nan" data-ken="nan" data-ruby="nan"
+      onclick="focusMarker(37)"
+    >
       <div class="img-placeholder">
         <a href=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57203196/" target="_blank" onclick="event.stopPropagation()">open</a>
       </div>
@@ -2633,7 +2938,8 @@
       </div>
     </div>
     
-    </div>
+  </div>
+</div>
     <div id="map"></div>
   </div>
 
@@ -2664,6 +2970,15 @@
     const markers = [];
 
     
+    L.circle([48.14, 11.68], {
+      radius: 900,
+      color: "#00dbaf",
+      fillColor: "#00dbaf",
+      fillOpacity: 0.10,
+      weight: 1
+    }).addTo(areaLayer).bindPopup("PLZ fallback area: 81829");
+    
+
     L.circle([48.15, 11.583], {
       radius: 900,
       color: "#00dbaf",
@@ -2817,15 +3132,6 @@
     }).addTo(areaLayer).bindPopup("PLZ fallback area: 81377");
     
 
-    L.circle([48.14, 11.68], {
-      radius: 900,
-      color: "#00dbaf",
-      fillColor: "#00dbaf",
-      fillOpacity: 0.10,
-      weight: 1
-    }).addTo(areaLayer).bindPopup("PLZ fallback area: 81829");
-    
-
     L.circle([48.183, 11.478], {
       radius: 900,
       color: "#00dbaf",
@@ -2911,227 +3217,7 @@
       })
     }).addTo(markerLayer).bindPopup('\n    <b>Geräumige 4 Zimmer Wohnung in Obersendling Mauthäuslstraße 25a, 81379 München</b><br>\n    Rating: 4.482654583102375<br>\n    PLZ: 81379\n    ');
     
-    markers[2] = L.marker([48.1518126, 11.5357575], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Großzügige Altbauwohnung in Neuhausen Nymphenburger Straße 151, 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 4.397469308248236<br>\n    PLZ: 80634\n    ');
-    
-    markers[3] = L.marker([48.1479767, 11.526613], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>München Neuhausen praktisch und schön Arnulfstraße 169, 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 4.330720899117922<br>\n    PLZ: 80634\n    ');
-    
-    markers[4] = L.marker([48.0792825, 11.6623979], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Waldperlach - große 4 Zimmer Penthouse-Wohnung mit direktem Lift in die Wohnung und Süd-West-Loggia Rotkäppchenstraße 104, 81739 München</b><br>\n    Rating: 4.281215546393568<br>\n    PLZ: 81739\n    ');
-    
-    markers[5] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>WG ZIMMER: Moderne WG in München Schwabing mit stilvoller Ausstattung Rheinstraße, 80803 Schwabing-West</b><br>\n    Rating: 4.195270466710216<br>\n    PLZ: 80803\n    ');
-    
-    markers[6] = L.marker([48.215208, 11.4898617], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schön geschnittene 4 Zimmer Wohnung. Smaragdstraße 15, 80995 Feldmoching-Hasenbergl</b><br>\n    Rating: 4.002648648008792<br>\n    PLZ: 80995\n    ');
-    
-    markers[7] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Zeitgemäß wohnen im BERGBLICK: 5-Zimmer-Wohnung mit klarer Familienzone Forst-Kasten-Allee 123b, 81475 München</b><br>\n    Rating: 3.938426871754099<br>\n    PLZ: 81475\n    ');
-    
-    markers[8] = L.marker([48.1321209, 11.6740683], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>traumhaft schöne Maisonettewohnung mit pfiffigem Grundriss Leonhardiweg 52, 81829 Trudering-Riem</b><br>\n    Rating: 3.91628940989813<br>\n    PLZ: 81829\n    ');
-    
-    markers[9] = L.marker([48.127, 11.632], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Neubau Erstbezug: 4-Zimmer-Wohnung mit Balkon 81673 Berg am Laim</b><br>\n    Rating: 3.882636509608904<br>\n    PLZ: 81673\n    ');
-    
-    markers[10] = L.marker([48.144161, 11.620593], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>WG-taugliche 4-Zimmer-Wohnung in Bogenhausen Buschingstraße 18, 81677 Bogenhausen</b><br>\n    Rating: 3.834088625209541<br>\n    PLZ: 81677\n    ');
-    
-    markers[11] = L.marker([48.13, 11.573], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München 80469 Ludwigs</b><br>\n    Rating: 3.688839271993099<br>\n    PLZ: 80469\n    ');
-    
-    markers[12] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Luxuriöse 4-Zimmer Dachterrassenwohnung mit Alpenblick Fritz-Bauer-Straße 31, 81249 Aubing-Lochhausen-Langwied</b><br>\n    Rating: 3.683561464593747<br>\n    PLZ: 81249\n    ');
-    
-    markers[13] = L.marker([48.197, 11.572], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schöne 5-Zimmer-Wohnung im Münchner Norden Graslilienanger 14, 80937 München</b><br>\n    Rating: 3.668088099047525<br>\n    PLZ: 80937\n    ');
-    
-    markers[14] = L.marker([48.138, 11.615], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug im Neubau in Bogenhausen 81677 Bogenhausen</b><br>\n    Rating: 3.666937870684497<br>\n    PLZ: 81677\n    ');
-    
-    markers[15] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm! Schleißheimer Str. 252, 80809 Schwabing-West</b><br>\n    Rating: 3.65229962596709<br>\n    PLZ: 80809\n    ');
-    
-    markers[16] = L.marker([48.118, 11.661], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schöne 5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage 81825 Trudering-Riem</b><br>\n    Rating: 3.523098265661518<br>\n    PLZ: 81825\n    ');
-    
-    markers[17] = L.marker([48.127, 11.632], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Penthouse mit drei Himmelsrichtungen und großem Süd-Balkon 81673 Berg am Laim</b><br>\n    Rating: 3.520778800611521<br>\n    PLZ: 81673\n    ');
-    
-    markers[18] = L.marker([48.149, 11.533], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Helle 4-Zimmer-Altbauwohnung mit Balkon in Neuhausen 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.477872166523575<br>\n    PLZ: 80634\n    ');
-    
-    markers[19] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Hoch hinaus wohnen - mit Fernblick über München Forst-Kasten-Allee 123b, 81475 München</b><br>\n    Rating: 3.471796596789228<br>\n    PLZ: 81475\n    ');
-    
-    markers[20] = L.marker([48.1518272, 11.4471196], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>frisch renovierte, helle 4-Zimmerwohnung Varnhagenstraße 41c, 81241 Aubing-Lochhausen-Langwied</b><br>\n    Rating: 3.419837083263823<br>\n    PLZ: 81241\n    ');
-    
-    markers[21] = L.marker([48.0981218, 11.49703], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Viel Freiraum in Forstenried: 4-Zimmer-Loft mit Berg- und Weitblick Schaffhauser Straße 12, 81476 München</b><br>\n    Rating: 3.412679091636077<br>\n    PLZ: 81476\n    ');
-    
-    markers[22] = L.marker([48.1359399, 11.5606827], {
+    markers[2] = L.marker([48.1359399, 11.5606827], {
       icon: L.divIcon({
         className: "",
         html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
@@ -3142,7 +3228,238 @@
       })
     }).addTo(markerLayer).bindPopup('\n    <b>Altbau * 3 Zimmer * WG geeignet * Ludwigs</b><br>\n    Rating: 3.402885339776513<br>\n    PLZ: 80337\n    ');
     
-    markers[23] = L.marker([48.119, 11.492], {
+    markers[3] = L.marker([48.14, 11.68], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Wunderschöne helle 4-Zimmer-Maisonette-Wohnung mit Dachterrasse (WG-geeignet) Maria-Montessori-Straße 43, 81829 München</b><br>\n    Rating: 3.036182813185803<br>\n    PLZ: 81829\n    ');
+    
+    markers[4] = L.marker([48.1518126, 11.5357575], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Großzügige Altbauwohnung in Neuhausen Nymphenburger Straße 151, 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 4.397469308248236<br>\n    PLZ: 80634\n    ');
+    
+    markers[5] = L.marker([48.1479767, 11.526613], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>München Neuhausen praktisch und schön Arnulfstraße 169, 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 4.330720899117922<br>\n    PLZ: 80634\n    ');
+    
+    markers[6] = L.marker([48.0792825, 11.6623979], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Waldperlach - große 4 Zimmer Penthouse-Wohnung mit direktem Lift in die Wohnung und Süd-West-Loggia Rotkäppchenstraße 104, 81739 München</b><br>\n    Rating: 4.281215546393568<br>\n    PLZ: 81739\n    ');
+    
+    markers[7] = L.marker([48.15, 11.583], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>WG ZIMMER: Moderne WG in München Schwabing mit stilvoller Ausstattung Rheinstraße, 80803 Schwabing-West</b><br>\n    Rating: 4.195270466710216<br>\n    PLZ: 80803\n    ');
+    
+    markers[8] = L.marker([48.215208, 11.4898617], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Schön geschnittene 4 Zimmer Wohnung. Smaragdstraße 15, 80995 Feldmoching-Hasenbergl</b><br>\n    Rating: 4.002648648008792<br>\n    PLZ: 80995\n    ');
+    
+    markers[9] = L.marker([48.15, 11.583], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Zeitgemäß wohnen im BERGBLICK: 5-Zimmer-Wohnung mit klarer Familienzone Forst-Kasten-Allee 123b, 81475 München</b><br>\n    Rating: 3.938426871754099<br>\n    PLZ: 81475\n    ');
+    
+    markers[10] = L.marker([48.1321209, 11.6740683], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>traumhaft schöne Maisonettewohnung mit pfiffigem Grundriss Leonhardiweg 52, 81829 Trudering-Riem</b><br>\n    Rating: 3.91628940989813<br>\n    PLZ: 81829\n    ');
+    
+    markers[11] = L.marker([48.127, 11.632], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Neubau Erstbezug: 4-Zimmer-Wohnung mit Balkon 81673 Berg am Laim</b><br>\n    Rating: 3.882636509608904<br>\n    PLZ: 81673\n    ');
+    
+    markers[12] = L.marker([48.144161, 11.620593], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>WG-taugliche 4-Zimmer-Wohnung in Bogenhausen Buschingstraße 18, 81677 Bogenhausen</b><br>\n    Rating: 3.834088625209541<br>\n    PLZ: 81677\n    ');
+    
+    markers[13] = L.marker([48.13, 11.573], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München 80469 Ludwigs</b><br>\n    Rating: 3.688839271993099<br>\n    PLZ: 80469\n    ');
+    
+    markers[14] = L.marker([48.15, 11.583], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Luxuriöse 4-Zimmer Dachterrassenwohnung mit Alpenblick Fritz-Bauer-Straße 31, 81249 Aubing-Lochhausen-Langwied</b><br>\n    Rating: 3.683561464593747<br>\n    PLZ: 81249\n    ');
+    
+    markers[15] = L.marker([48.197, 11.572], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Schöne 5-Zimmer-Wohnung im Münchner Norden Graslilienanger 14, 80937 München</b><br>\n    Rating: 3.668088099047525<br>\n    PLZ: 80937\n    ');
+    
+    markers[16] = L.marker([48.138, 11.615], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug im Neubau in Bogenhausen 81677 Bogenhausen</b><br>\n    Rating: 3.666937870684497<br>\n    PLZ: 81677\n    ');
+    
+    markers[17] = L.marker([48.179, 11.562], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm! Schleißheimer Str. 252, 80809 Schwabing-West</b><br>\n    Rating: 3.65229962596709<br>\n    PLZ: 80809\n    ');
+    
+    markers[18] = L.marker([48.118, 11.661], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Schöne 5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage 81825 Trudering-Riem</b><br>\n    Rating: 3.523098265661518<br>\n    PLZ: 81825\n    ');
+    
+    markers[19] = L.marker([48.127, 11.632], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Penthouse mit drei Himmelsrichtungen und großem Süd-Balkon 81673 Berg am Laim</b><br>\n    Rating: 3.520778800611521<br>\n    PLZ: 81673\n    ');
+    
+    markers[20] = L.marker([48.149, 11.533], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Helle 4-Zimmer-Altbauwohnung mit Balkon in Neuhausen 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.477872166523575<br>\n    PLZ: 80634\n    ');
+    
+    markers[21] = L.marker([48.15, 11.583], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Hoch hinaus wohnen - mit Fernblick über München Forst-Kasten-Allee 123b, 81475 München</b><br>\n    Rating: 3.471796596789228<br>\n    PLZ: 81475\n    ');
+    
+    markers[22] = L.marker([48.1518272, 11.4471196], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>frisch renovierte, helle 4-Zimmerwohnung Varnhagenstraße 41c, 81241 Aubing-Lochhausen-Langwied</b><br>\n    Rating: 3.419837083263823<br>\n    PLZ: 81241\n    ');
+    
+    markers[23] = L.marker([48.0981218, 11.49703], {
+      icon: L.divIcon({
+        className: "",
+        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        </svg>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      })
+    }).addTo(markerLayer).bindPopup('\n    <b>Viel Freiraum in Forstenried: 4-Zimmer-Loft mit Berg- und Weitblick Schaffhauser Straße 12, 81476 München</b><br>\n    Rating: 3.412679091636077<br>\n    PLZ: 81476\n    ');
+    
+    markers[24] = L.marker([48.119, 11.492], {
       icon: L.divIcon({
         className: "",
         html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
@@ -3153,7 +3470,7 @@
       })
     }).addTo(markerLayer).bindPopup('\n    <b>Wohnen auf der Sonnenseite: 4 Zimmer mit großer Dachterrasse Hans-Grässel-Weg 13b, 81375 Hadern</b><br>\n    Rating: 3.369122966914325<br>\n    PLZ: 81375\n    ');
     
-    markers[24] = L.marker([48.1649718, 11.6276777], {
+    markers[25] = L.marker([48.1649718, 11.6276777], {
       icon: L.divIcon({
         className: "",
         html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
@@ -3164,7 +3481,7 @@
       })
     }).addTo(markerLayer).bindPopup('\n    <b>Helle, ruhige 114qm 4 Zimmer in Oberfoehring incl Garage – Quiet 114sqm 4 room top floor Wesendonkstrasse 15a, 81925 Bogenhausen</b><br>\n    Rating: 3.22187547632303<br>\n    PLZ: 81925\n    ');
     
-    markers[25] = L.marker([48.083, 11.504], {
+    markers[26] = L.marker([48.083, 11.504], {
       icon: L.divIcon({
         className: "",
         html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
@@ -3175,7 +3492,7 @@
       })
     }).addTo(markerLayer).bindPopup('\n    <b>Großzügige 5-Zimmer-Wohnung mit zwei Balkonen in ruhiger Lage von München-Solln 81477 München regionalimmobilien24.de</b><br>\n    Rating: 3.203063397450213<br>\n    PLZ: 81477\n    ');
     
-    markers[26] = L.marker([48.118, 11.661], {
+    markers[27] = L.marker([48.118, 11.661], {
       icon: L.divIcon({
         className: "",
         html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
@@ -3186,7 +3503,7 @@
       })
     }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug 4,5-Zimmer-Wohnung in München-Trudering Hochkönigstraße, 81825 Trudering-Riem</b><br>\n    Rating: 3.121002943912246<br>\n    PLZ: 81825\n    ');
     
-    markers[27] = L.marker([48.148, 11.463], {
+    markers[28] = L.marker([48.148, 11.463], {
       icon: L.divIcon({
         className: "",
         html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
@@ -3197,7 +3514,7 @@
       })
     }).addTo(markerLayer).bindPopup('\n    <b>Maisonettewohnung mit 6 Zimmern in Pasing 81241 Pasing-Obermenzing</b><br>\n    Rating: 3.105500629790035<br>\n    PLZ: 81241\n    ');
     
-    markers[28] = L.marker([48.12, 11.5], {
+    markers[29] = L.marker([48.12, 11.5], {
       icon: L.divIcon({
         className: "",
         html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
@@ -3207,17 +3524,6 @@
         iconAnchor: [15, 30]
       })
     }).addTo(markerLayer).bindPopup('\n    <b>4 Zi Luxus DG Wohnung in Großhadern, Terrasse, voll möbliert, Duplex Chrysanthemenstraße, 81377 Hadern</b><br>\n    Rating: 3.095907950420656<br>\n    PLZ: 81377\n    ');
-    
-    markers[29] = L.marker([48.14, 11.68], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wunderschöne helle 4-Zimmer-Maisonette-Wohnung mit Dachterrasse (WG-geeignet) Maria-Montessori-Straße 43, 81829 München</b><br>\n    Rating: 3.036182813185803<br>\n    PLZ: 81829\n    ');
     
     markers[30] = L.marker([48.183, 11.478], {
       icon: L.divIcon({
@@ -3312,14 +3618,46 @@
       "PLZ fallback areas": areaLayer,
       "Properties": markerLayer
     }).addTo(map);
+function sortCards() {
+  const field = document.getElementById("sortField").value;
+  const dir = document.getElementById("sortDir").value;
+  const container = document.getElementById("cards");
+  const cards = Array.from(container.querySelectorAll(".card"));
 
+  cards.sort((a, b) => {
+    const ah = Number(b.dataset.highlighted) - Number(a.dataset.highlighted);
+    if (ah !== 0) return ah;
+
+    const avRaw = a.dataset[field] ?? "";
+    const bvRaw = b.dataset[field] ?? "";
+
+    const avNum = Number(avRaw);
+    const bvNum = Number(bvRaw);
+
+    let cmp;
+
+    if (!Number.isNaN(avNum) && !Number.isNaN(bvNum)) {
+      cmp = avNum - bvNum;
+    } else {
+      cmp = String(avRaw).localeCompare(String(bvRaw));
+    }
+
+    return dir === "asc" ? cmp : -cmp;
+  });
+
+  cards.forEach(card => container.appendChild(card));
+}
+
+document.getElementById("sortField").addEventListener("change", sortCards);
+document.getElementById("sortDir").addEventListener("change", sortCards);
+sortCards();
     function focusMarker(i) {
       const m = markers[i];
       map.setView(m.getLatLng(), 15);
       m.openPopup();
     }
 
-    map.fitBounds(L.latLngBounds([[48.1490953, 11.548985],[48.0989297, 11.5135353],[48.1518126, 11.5357575],[48.1479767, 11.526613],[48.0792825, 11.6623979],[48.15, 11.583],[48.215208, 11.4898617],[48.15, 11.583],[48.1321209, 11.6740683],[48.127, 11.632],[48.144161, 11.620593],[48.13, 11.573],[48.15, 11.583],[48.197, 11.572],[48.138, 11.615],[48.179, 11.562],[48.118, 11.661],[48.127, 11.632],[48.149, 11.533],[48.15, 11.583],[48.1518272, 11.4471196],[48.0981218, 11.49703],[48.1359399, 11.5606827],[48.119, 11.492],[48.1649718, 11.6276777],[48.083, 11.504],[48.118, 11.661],[48.148, 11.463],[48.12, 11.5],[48.14, 11.68],[48.183, 11.478],[48.14, 11.68],[48.1793294, 11.5642899],[48.147, 11.451],[48.204, 11.559],[48.222, 11.548],[48.185, 11.464],[48.185, 11.464]]).pad(0.2));
+    map.fitBounds(L.latLngBounds([[48.1490953, 11.548985],[48.0989297, 11.5135353],[48.1359399, 11.5606827],[48.14, 11.68],[48.1518126, 11.5357575],[48.1479767, 11.526613],[48.0792825, 11.6623979],[48.15, 11.583],[48.215208, 11.4898617],[48.15, 11.583],[48.1321209, 11.6740683],[48.127, 11.632],[48.144161, 11.620593],[48.13, 11.573],[48.15, 11.583],[48.197, 11.572],[48.138, 11.615],[48.179, 11.562],[48.118, 11.661],[48.127, 11.632],[48.149, 11.533],[48.15, 11.583],[48.1518272, 11.4471196],[48.0981218, 11.49703],[48.119, 11.492],[48.1649718, 11.6276777],[48.083, 11.504],[48.118, 11.661],[48.148, 11.463],[48.12, 11.5],[48.183, 11.478],[48.14, 11.68],[48.1793294, 11.5642899],[48.147, 11.451],[48.204, 11.559],[48.222, 11.548],[48.185, 11.464],[48.185, 11.464]]).pad(0.2));
 
     setTimeout(() => {
       map.invalidateSize();

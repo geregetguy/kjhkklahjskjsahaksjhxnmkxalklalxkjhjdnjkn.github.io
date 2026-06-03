@@ -39,7 +39,38 @@
       height: 100%;
       background: #111111;
     }
+.tooltip {
+    position: relative;
+    cursor: help;
+    border-bottom: 1px dotted #00dbaf;
+}
 
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    left: 0;
+    top: 120%;
+
+    min-width: 180px;
+
+    background: #1b1b1b;
+    color: #fff;
+
+    border: 1px solid #00dbaf;
+    border-radius: 8px;
+
+    padding: 10px;
+    z-index: 9999;
+
+    transition: opacity 0.15s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
     .card {
       display: flex;
       gap: 12px;
@@ -174,78 +205,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-02 12:15:03</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 12:15:03</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Helle 4 Zimmerwohnung in Maxvor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Helle 4 Zimmerwohnung in Maxvor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2000</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2000</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">105</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">105</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80636</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80636</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Mailingerstraße</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Mailingerstraße</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">271.2570677344068</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">271.2570677344068</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">35</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">35</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">666.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">666.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">4.553734352515431</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.174789454267907</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.88</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.985358501525909</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">4.174789454267907</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.174789454267907<br>
+    PLZ: 4.88<br>
+    Size: 4.985358501525909<br>
+    Proximity: 4.174789454267907
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 4.553734352515431
+                </span>
             </div>
             
         </div>
@@ -297,78 +320,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-30 05:13:56</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-30 05:13:56</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Geräumige 4 Zimmer Wohnung in Obersendling Mauthäuslstraße 25a, 81379 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Geräumige 4 Zimmer Wohnung in Obersendling Mauthäuslstraße 25a, 81379 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">1600</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1600</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">75</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">75</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81379</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81379</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Machtlfinger Straße</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Machtlfinger Straße</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">194.3229778583968</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">194.3229778583968</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">25</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">25</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">533.3333333333334</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">533.3333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">4.482654583102375</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.639068800202272</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">3.73</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.922480732004954</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">4.639068800202272</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.639068800202272<br>
+    PLZ: 3.73<br>
+    Size: 4.922480732004954<br>
+    Proximity: 4.639068800202272
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 4.482654583102375
+                </span>
             </div>
             
         </div>
@@ -420,78 +435,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-30 05:13:56</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-30 05:13:56</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Großzügige Altbauwohnung in Neuhausen Nymphenburger Straße 151, 80634 Neuhausen-Nymphenburg vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Großzügige Altbauwohnung in Neuhausen Nymphenburger Straße 151, 80634 Neuhausen-Nymphenburg vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2170</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2170</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">113</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">113</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80634</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80634</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Rotkreuzplatz</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Rotkreuzplatz</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">265.2483174748743</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">265.2483174748743</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">37.66666666666666</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">37.66666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">723.3333333333334</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">723.3333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">4.397469308248236</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.864632537335878</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.87</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.990612158321186</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">3.864632537335878</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.864632537335878<br>
+    PLZ: 4.87<br>
+    Size: 4.990612158321186<br>
+    Proximity: 3.864632537335878
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 4.397469308248236
+                </span>
             </div>
             
         </div>
@@ -543,78 +550,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-27 13:11:42</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-27 13:11:42</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">München Neuhausen praktisch und schön Arnulfstraße 169, 80634 Neuhausen-Nymphenburg vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">München Neuhausen praktisch und schön Arnulfstraße 169, 80634 Neuhausen-Nymphenburg vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2230</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2230</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">98</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">98</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80634</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80634</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Rotkreuzplatz</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Rotkreuzplatz</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">774.4294763428604</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">774.4294763428604</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">32.66666666666666</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">32.66666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">743.3333333333334</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">743.3333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">4.330720899117922</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.737242396921079</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.87</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.978398802629529</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">3.737242396921079</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.737242396921079<br>
+    PLZ: 4.87<br>
+    Size: 4.978398802629529<br>
+    Proximity: 3.737242396921079
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 4.330720899117922
+                </span>
             </div>
             
         </div>
@@ -666,78 +665,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-02 08:15:03</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 08:15:03</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Waldperlach - große 4 Zimmer Penthouse-Wohnung mit direktem Lift in die Wohnung und Süd-West-Loggia Rotkäppchenstraße 104, 81739 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Waldperlach - große 4 Zimmer Penthouse-Wohnung mit direktem Lift in die Wohnung und Süd-West-Loggia Rotkäppchenstraße 104, 81739 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2300</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2300</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">113</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">113</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81739</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81739</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Neuperlach Süd</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Neuperlach Süd</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">1733.373872121375</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">1733.373872121375</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">37.66666666666666</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">37.66666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">766.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">766.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">4.281215546393568</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.577125013626543</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.98</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.990612158321186</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">3.577125013626543</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.577125013626543<br>
+    PLZ: 4.98<br>
+    Size: 4.990612158321186<br>
+    Proximity: 3.577125013626543
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 4.281215546393568
+                </span>
             </div>
             
         </div>
@@ -789,68 +780,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-20 11:13:33</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-20 11:13:33</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">WG ZIMMER: Moderne WG in München Schwabing mit stilvoller Ausstattung Rheinstraße, 80803 Schwabing-West vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">WG ZIMMER: Moderne WG in München Schwabing mit stilvoller Ausstattung Rheinstraße, 80803 Schwabing-West vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">830</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">830</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">65</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">65</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80803</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80803</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">21.66666666666667</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">21.66666666666667</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">276.6666666666667</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">276.6666666666667</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">4.195270466710216</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.936190896596909</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.98</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.864890970243954</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.936190896596909<br>
+    PLZ: 4.98<br>
+    Size: 4.864890970243954<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 4.195270466710216
+                </span>
             </div>
             
         </div>
@@ -902,78 +885,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-02 09:15:03</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 09:15:03</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Schön geschnittene 4 Zimmer Wohnung. Smaragdstraße 15, 80995 Feldmoching-Hasenbergl vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Schön geschnittene 4 Zimmer Wohnung. Smaragdstraße 15, 80995 Feldmoching-Hasenbergl vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">1115</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1115</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">68</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">68</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80995</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80995</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Feldmoching</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Feldmoching</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">3779.329174590116</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">3779.329174590116</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">22.66666666666667</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">22.66666666666667</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">371.6666666666667</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">371.6666666666667</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">4.002648648008792</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.877480958295682</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">1.37</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.885632675443806</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">4.877480958295682</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.877480958295682<br>
+    PLZ: 1.37<br>
+    Size: 4.885632675443806<br>
+    Proximity: 4.877480958295682
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 4.002648648008792
+                </span>
             </div>
             
         </div>
@@ -1025,68 +1000,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-27 08:11:42</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-27 08:11:42</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Wohnungstausch: Veit-Stoß-Straße 4 Veit-Stoß-Straße, 80687 Laim vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Wohnungstausch: Veit-Stoß-Straße 4 Veit-Stoß-Straße, 80687 Laim vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">1540</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1540</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">96</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">96</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80687</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80687</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">32</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">32</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">513.3333333333334</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">513.3333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.944763242171397</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.683192718654744</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.12</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.975860250030843</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.683192718654744<br>
+    PLZ: 4.12<br>
+    Size: 4.975860250030843<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.944763242171397
+                </span>
             </div>
             
         </div>
@@ -1138,68 +1105,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-21 09:12:51</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-21 09:12:51</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Zeitgemäß wohnen im BERGBLICK: 5-Zimmer-Wohnung mit klarer Familienzone Forst-Kasten-Allee 123b, 81475 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Zeitgemäß wohnen im BERGBLICK: 5-Zimmer-Wohnung mit klarer Familienzone Forst-Kasten-Allee 123b, 81475 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2930</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2930</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">120</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">120</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">5</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">5</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81475</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81475</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">30</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">30</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">732.5</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">732.5</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.938426871754099</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.807397222011822</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.98</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.966310265004573</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.807397222011822<br>
+    PLZ: 4.98<br>
+    Size: 4.966310265004573<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.938426871754099
+                </span>
             </div>
             
         </div>
@@ -1251,78 +1210,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-26 10:12:31</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-26 10:12:31</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">traumhaft schöne Maisonettewohnung mit pfiffigem Grundriss Leonhardiweg 52, 81829 Trudering-Riem vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">traumhaft schöne Maisonettewohnung mit pfiffigem Grundriss Leonhardiweg 52, 81829 Trudering-Riem vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">1700</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1700</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">99</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">99</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81829</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81829</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Moosfeld</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Moosfeld</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">273.2049468107404</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">273.2049468107404</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">33</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">566.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">566.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.91628940989813</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.552795748392421</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">1.58</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.97956614280768</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">4.552795748392421</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.552795748392421<br>
+    PLZ: 1.58<br>
+    Size: 4.97956614280768<br>
+    Proximity: 4.552795748392421
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.91628940989813
+                </span>
             </div>
             
         </div>
@@ -1374,68 +1325,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-01 18:14:25</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-01 18:14:25</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Neubau Erstbezug: 4-Zimmer-Wohnung mit Balkon 81673 Berg am Laim vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Neubau Erstbezug: 4-Zimmer-Wohnung mit Balkon 81673 Berg am Laim vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2150</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2150</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">85</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">85</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81673</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81673</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">28.33333333333333</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">28.33333333333333</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">716.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">716.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.882636509608904</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.905022983620837</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.67</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.95552305481478</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.905022983620837<br>
+    PLZ: 4.67<br>
+    Size: 4.95552305481478<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.882636509608904
+                </span>
             </div>
             
         </div>
@@ -1487,78 +1430,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-28 16:10:52</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-28 16:10:52</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">WG-taugliche 4-Zimmer-Wohnung in Bogenhausen Buschingstraße 18, 81677 Bogenhausen vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">WG-taugliche 4-Zimmer-Wohnung in Bogenhausen Buschingstraße 18, 81677 Bogenhausen vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2600</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">66</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">66</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81677</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81677</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Böhmerwaldplatz</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Böhmerwaldplatz</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">383.1556268887263</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">383.1556268887263</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">22</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">22</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">866.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">866.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.834088625209541</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.777081083435351</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.91</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.872192333967463</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2.777081083435351</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.777081083435351<br>
+    PLZ: 4.91<br>
+    Size: 4.872192333967463<br>
+    Proximity: 2.777081083435351
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.834088625209541
+                </span>
             </div>
             
         </div>
@@ -1610,68 +1545,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-02 19:15:03</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 19:15:03</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München 80469 Ludwigsvor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München 80469 Ludwigsvor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2600</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">109</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">109</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80469</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80469</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">36.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">36.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">866.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">866.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.688839271993099</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.777081083435351</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.99</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.988276004537046</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.777081083435351<br>
+    PLZ: 4.99<br>
+    Size: 4.988276004537046<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.688839271993099
+                </span>
             </div>
             
         </div>
@@ -1723,68 +1650,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-27 19:11:42</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-27 19:11:42</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Luxuriöse 4-Zimmer Dachterrassenwohnung mit Alpenblick Fritz-Bauer-Straße 31, 81249 Aubing-Lochhausen-Langwied vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Luxuriöse 4-Zimmer Dachterrassenwohnung mit Alpenblick Fritz-Bauer-Straße 31, 81249 Aubing-Lochhausen-Langwied vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2600</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">97</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">97</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81249</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81249</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">32.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">32.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">866.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">866.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.683561464593747</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.777081083435351</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.98</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.977164774939634</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.777081083435351<br>
+    PLZ: 4.98<br>
+    Size: 4.977164774939634<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.683561464593747
+                </span>
             </div>
             
         </div>
@@ -1836,68 +1755,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-20 14:13:33</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-20 14:13:33</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Schöne 5-Zimmer-Wohnung im Münchner Norden Graslilienanger 14, 80937 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Schöne 5-Zimmer-Wohnung im Münchner Norden Graslilienanger 14, 80937 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">1745</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1745</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">97</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">97</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">5</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">5</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80937</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80937</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">24.25</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">24.25</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">436.25</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">436.25</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.668088099047525</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.810193234801559</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">2.95</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.91215916138854</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.810193234801559<br>
+    PLZ: 2.95<br>
+    Size: 4.91215916138854<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.668088099047525
+                </span>
             </div>
             
         </div>
@@ -1949,68 +1860,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-26 13:12:31</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-26 13:12:31</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Erstbezug im Neubau in Bogenhausen 81677 Bogenhausen vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Erstbezug im Neubau in Bogenhausen 81677 Bogenhausen vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2600</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">100</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">100</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81677</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81677</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">33.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">866.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">866.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.666937870684497</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.777081083435351</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.91</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.980670399302635</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.777081083435351<br>
+    PLZ: 4.91<br>
+    Size: 4.980670399302635<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.666937870684497
+                </span>
             </div>
             
         </div>
@@ -2062,68 +1965,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-01 12:14:25</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-01 12:14:25</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm! Schleißheimer Str. 252, 80809 Schwabing-West vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm! Schleißheimer Str. 252, 80809 Schwabing-West vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2488</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2488</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">106</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">106</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80809</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80809</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">35.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">35.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">829.3333333333334</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">829.3333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.65229962596709</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.093048767988908</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.53</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.98614973587945</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.093048767988908<br>
+    PLZ: 4.53<br>
+    Size: 4.98614973587945<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.65229962596709
+                </span>
             </div>
             
         </div>
@@ -2175,68 +2070,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-01 13:14:25</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-01 13:14:25</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Schöne 5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage 81825 Trudering-Riem vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Schöne 5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage 81825 Trudering-Riem vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2600</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">133</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">133</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">5</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">5</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81825</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81825</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">33.25</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33.25</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">650</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">650</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.523098265661518</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.251993003033019</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">2.86</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.980400059613053</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.251993003033019<br>
+    PLZ: 2.86<br>
+    Size: 4.980400059613053<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.523098265661518
+                </span>
             </div>
             
         </div>
@@ -2288,68 +2175,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-30 17:08:10</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-30 17:08:10</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">4-Zimmer-Penthouse mit drei Himmelsrichtungen und großem Süd-Balkon 81673 Berg am Laim vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">4-Zimmer-Penthouse mit drei Himmelsrichtungen und großem Süd-Balkon 81673 Berg am Laim vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2720</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2720</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">104</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">104</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81673</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81673</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">34.66666666666666</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">34.66666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">906.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">906.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.520778800611521</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.428593136707911</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.67</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.984522065738174</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.428593136707911<br>
+    PLZ: 4.67<br>
+    Size: 4.984522065738174<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.520778800611521
+                </span>
             </div>
             
         </div>
@@ -2401,68 +2280,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-30 05:13:56</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-30 05:13:56</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Helle 4-Zimmer-Altbauwohnung mit Balkon in Neuhausen 80634 Neuhausen-Nymphenburg vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Helle 4-Zimmer-Altbauwohnung mit Balkon in Neuhausen 80634 Neuhausen-Nymphenburg vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2850</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2850</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">107</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">107</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80634</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80634</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">35.66666666666666</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">35.66666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">950</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">950</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.477872166523575</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.054590454585994</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.87</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.986898211508306</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.054590454585994<br>
+    PLZ: 4.87<br>
+    Size: 4.986898211508306<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.477872166523575
+                </span>
             </div>
             
         </div>
@@ -2514,68 +2385,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-21 10:12:51</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-21 10:12:51</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Hoch hinaus wohnen - mit Fernblick über München Forst-Kasten-Allee 123b, 81475 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Hoch hinaus wohnen - mit Fernblick über München Forst-Kasten-Allee 123b, 81475 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2900</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2900</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">116</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">116</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81475</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81475</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">38.66666666666666</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">38.66666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">966.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">966.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.471796596789228</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">1.915133023574195</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.98</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.992053363582717</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 1.915133023574195<br>
+    PLZ: 4.98<br>
+    Size: 4.992053363582717<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.471796596789228
+                </span>
             </div>
             
         </div>
@@ -2627,78 +2490,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-22 14:12:21</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-22 14:12:21</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">frisch renovierte, helle 4-Zimmerwohnung Varnhagenstraße 41c, 81241 Aubing-Lochhausen-Langwied vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">frisch renovierte, helle 4-Zimmerwohnung Varnhagenstraße 41c, 81241 Aubing-Lochhausen-Langwied vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2172</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2172</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">109</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">109</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81241</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81241</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Laimer Platz</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Laimer Platz</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">4454.855819794142</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">4454.855819794142</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">36.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">36.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">724</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">724</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.419837083263823</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.860536164259122</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">0.97</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.988276004537046</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">3.860536164259122</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.860536164259122<br>
+    PLZ: 0.97<br>
+    Size: 4.988276004537046<br>
+    Proximity: 3.860536164259122
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.419837083263823
+                </span>
             </div>
             
         </div>
@@ -2750,78 +2605,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-24 14:07:20</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-24 14:07:20</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Viel Freiraum in Forstenried: 4-Zimmer-Loft mit Berg- und Weitblick Schaffhauser Straße 12, 81476 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Viel Freiraum in Forstenried: 4-Zimmer-Loft mit Berg- und Weitblick Schaffhauser Straße 12, 81476 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2150</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2150</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">100</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">100</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81476</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81476</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Forstenrieder Allee</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Forstenrieder Allee</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">366.985323639663</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">366.985323639663</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">33.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">716.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">716.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.412679091636077</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.905022983620837</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">0.86</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.980670399302635</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">3.905022983620837</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.905022983620837<br>
+    PLZ: 0.86<br>
+    Size: 4.980670399302635<br>
+    Proximity: 3.905022983620837
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.412679091636077
+                </span>
             </div>
             
         </div>
@@ -2873,78 +2720,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-26 13:12:31</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-26 13:12:31</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Altbau * 3 Zimmer * WG geeignet * Ludwigsvor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Altbau * 3 Zimmer * WG geeignet * Ludwigsvor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">1950</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1950</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">94</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">94</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">3</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">3</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80337</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80337</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Hauptbahnhof</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Hauptbahnhof</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">455.3325954919515</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">455.3325954919515</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">47</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">47</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">975</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">975</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.402885339776513</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">1.846761435224525</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.92</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.998018488657</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">1.846761435224525</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 1.846761435224525<br>
+    PLZ: 4.92<br>
+    Size: 4.998018488657<br>
+    Proximity: 1.846761435224525
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.402885339776513
+                </span>
             </div>
             
         </div>
@@ -2996,68 +2835,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-26 12:12:31</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-26 12:12:31</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Wohnen auf der Sonnenseite: 4 Zimmer mit großer Dachterrasse Hans-Grässel-Weg 13b, 81375 Hadern vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Wohnen auf der Sonnenseite: 4 Zimmer mit großer Dachterrasse Hans-Grässel-Weg 13b, 81375 Hadern vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2380</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2380</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">131</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">131</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81375</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81375</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">43.66666666666666</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">43.66666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">793.3333333333334</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">793.3333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.369122966914325</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.379945461607909</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">3.1</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.996546406049392</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.379945461607909<br>
+    PLZ: 3.1<br>
+    Size: 4.996546406049392<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.369122966914325
+                </span>
             </div>
             
         </div>
@@ -3109,78 +2940,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-25 19:07:34</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-25 19:07:34</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Helle, ruhige 114qm 4 Zimmer in Oberfoehring incl Garage – Quiet 114sqm 4 room top floor Wesendonkstrasse 15a, 81925 Bogenhausen vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Helle, ruhige 114qm 4 Zimmer in Oberfoehring incl Garage – Quiet 114sqm 4 room top floor Wesendonkstrasse 15a, 81925 Bogenhausen vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">3000</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">3000</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">114</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">114</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81925</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81925</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Arabellapark</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Arabellapark</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">1407.018613022037</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">1407.018613022037</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">38</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">38</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">1000</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">1000</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.22187547632303</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">1.648191211510396</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.6</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.991119482271328</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">1.648191211510396</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 1.648191211510396<br>
+    PLZ: 4.6<br>
+    Size: 4.991119482271328<br>
+    Proximity: 1.648191211510396
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.22187547632303
+                </span>
             </div>
             
         </div>
@@ -3232,68 +3055,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-27 23:11:42</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-27 23:11:42</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Großzügige 5-Zimmer-Wohnung mit zwei Balkonen in ruhiger Lage von München-Solln 81477 München regionalimmobilien24.de vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Großzügige 5-Zimmer-Wohnung mit zwei Balkonen in ruhiger Lage von München-Solln 81477 München regionalimmobilien24.de vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2300</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2300</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">126</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">126</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">5</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">5</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81477</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81477</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">31.5</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">31.5</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">575</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">575</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.203063397450213</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.52849118179676</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">1.31</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.973762408004093</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.52849118179676<br>
+    PLZ: 1.31<br>
+    Size: 4.973762408004093<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.203063397450213
+                </span>
             </div>
             
         </div>
@@ -3345,68 +3160,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-28 21:10:52</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-28 21:10:52</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Erstbezug 4,5-Zimmer-Wohnung in München-Trudering Hochkönigstraße, 81825 Trudering-Riem vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Erstbezug 4,5-Zimmer-Wohnung in München-Trudering Hochkönigstraße, 81825 Trudering-Riem vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2650</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2650</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">115</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">115</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81825</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81825</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">38.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">38.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">883.3333333333334</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">883.3333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.121002943912246</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.632412385483216</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">2.86</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.991599390165769</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.632412385483216<br>
+    PLZ: 2.86<br>
+    Size: 4.991599390165769<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.121002943912246
+                </span>
             </div>
             
         </div>
@@ -3458,68 +3265,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-02 10:15:03</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 10:15:03</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Maisonettewohnung mit 6 Zimmern in Pasing 81241 Pasing-Obermenzing vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Maisonettewohnung mit 6 Zimmern in Pasing 81241 Pasing-Obermenzing vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2750</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2750</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">106</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">106</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">6</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">6</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81241</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81241</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">21.2</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">21.2</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">550</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">550</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.105500629790035</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.598039496352612</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">0.97</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.853963022807526</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.598039496352612<br>
+    PLZ: 0.97<br>
+    Size: 4.853963022807526<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.105500629790035
+                </span>
             </div>
             
         </div>
@@ -3571,68 +3370,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-03 00:15:03</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-03 00:15:03</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">4 Zi Luxus DG Wohnung in Großhadern, Terrasse, voll möbliert, Duplex Chrysanthemenstraße, 81377 Hadern vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">4 Zi Luxus DG Wohnung in Großhadern, Terrasse, voll möbliert, Duplex Chrysanthemenstraße, 81377 Hadern vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">3000</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">3000</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">126</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">126</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81377</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81377</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">42</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">42</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">1000</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">1000</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.095907950420656</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">1.648191211510396</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">3.74</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.995440590172228</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 1.648191211510396<br>
+    PLZ: 3.74<br>
+    Size: 4.995440590172228<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.095907950420656
+                </span>
             </div>
             
         </div>
@@ -3684,68 +3475,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-28 10:10:52</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-28 10:10:52</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Wunderschöne helle 4-Zimmer-Maisonette-Wohnung mit Dachterrasse (WG-geeignet) Maria-Montessori-Straße 43, 81829 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Wunderschöne helle 4-Zimmer-Maisonette-Wohnung mit Dachterrasse (WG-geeignet) Maria-Montessori-Straße 43, 81829 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2300</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2300</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">108</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">108</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81829</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81829</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">36</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">36</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">766.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">766.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">3.036182813185803</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.577125013626543</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">1.58</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.987606239116668</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.577125013626543<br>
+    PLZ: 1.58<br>
+    Size: 4.987606239116668<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 3.036182813185803
+                </span>
             </div>
             
         </div>
@@ -3797,68 +3580,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-26 14:12:31</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-26 14:12:31</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">4-Zimmer-Penthouse mit großer Dachterrasse und Hobbyraum Am Hartmannshofer Bächl, 80997 Moosach vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">4-Zimmer-Penthouse mit großer Dachterrasse und Hobbyraum Am Hartmannshofer Bächl, 80997 Moosach vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">1950</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1950</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">100</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">100</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80997</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80997</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">33.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">33.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">650</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">650</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">2.980665850583913</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.251993003033019</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">0.69</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.980670399302635</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.251993003033019<br>
+    PLZ: 0.69<br>
+    Size: 4.980670399302635<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 2.980665850583913
+                </span>
             </div>
             
         </div>
@@ -3910,68 +3685,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-30 05:13:56</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-30 05:13:56</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Lichtdurchflutete 4-Zimmer-Maisonette mit großer Dachterrasse 81829 Trudering-Riem vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Lichtdurchflutete 4-Zimmer-Maisonette mit großer Dachterrasse 81829 Trudering-Riem vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2460</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2460</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">112</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">112</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81829</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81829</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">37.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">37.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">820</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">820</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">2.934875072224913</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.169424436801743</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">1.58</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.990075852097909</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.169424436801743<br>
+    PLZ: 1.58<br>
+    Size: 4.990075852097909<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 2.934875072224913
+                </span>
             </div>
             
         </div>
@@ -4023,78 +3790,70 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-23 22:05:52</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-23 22:05:52</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Top WG-Wohnung für 3 Studierende oder junge Berufstätige. Frei ab 1. Juli. Riesenfeldstraße 30, 80809 Milbertshofen-Am Hart vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Top WG-Wohnung für 3 Studierende oder junge Berufstätige. Frei ab 1. Juli. Riesenfeldstraße 30, 80809 Milbertshofen-Am Hart vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2160</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2160</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">80</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">80</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">3</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">3</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80809</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80809</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">u_bahn</span>
-              <span class="meta-value">Petuelring</span>
+                <span class="meta-key">U-Bahn (Nearest)</span>
+                <span class="meta-value">Petuelring</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">stop_dist_m</span>
-              <span class="meta-value">457.6767371913518</span>
+                <span class="meta-key">Distance from U-Bahn</span>
+                <span class="meta-value">457.6767371913518</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">40</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">40</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">1080</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">1080</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">2.929368131971151</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">1.096917848445651</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">4.53</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.993636830993301</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">1.096917848445651</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 1.096917848445651<br>
+    PLZ: 4.53<br>
+    Size: 4.993636830993301<br>
+    Proximity: 1.096917848445651
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 2.929368131971151
+                </span>
             </div>
             
         </div>
@@ -4146,68 +3905,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-21 10:12:51</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-21 10:12:51</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Am Pasinger Stadtpark- 4- Zi. Whg.- grün und ruhig wohnen Pfeivestlstraße, 81243 Pasing-Obermenzing vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Am Pasinger Stadtpark- 4- Zi. Whg.- grün und ruhig wohnen Pfeivestlstraße, 81243 Pasing-Obermenzing vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">1920</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">1920</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">87</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">87</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">81243</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">81243</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">29</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">29</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">640</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">640</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">2.928898728812551</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">4.295394634493737</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">0.46</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.960200280756467</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 4.295394634493737<br>
+    PLZ: 0.46<br>
+    Size: 4.960200280756467<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 2.928898728812551
+                </span>
             </div>
             
         </div>
@@ -4259,68 +4010,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-20 17:13:33</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-20 17:13:33</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Gemütliche Familienwohnung mit Garten im Münchner Norden 80935 Feldmoching-Hasenbergl vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Gemütliche Familienwohnung mit Garten im Münchner Norden 80935 Feldmoching-Hasenbergl vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2620</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2620</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">125</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">125</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80935</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80935</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">41.66666666666666</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">41.66666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">873.3333333333334</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">873.3333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">2.898640843603348</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.719383253042062</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">1.88</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.995180121371329</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.719383253042062<br>
+    PLZ: 1.88<br>
+    Size: 4.995180121371329<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 2.898640843603348
+                </span>
             </div>
             
         </div>
@@ -4372,68 +4115,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-06-02 03:14:25</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-06-02 03:14:25</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">4-Zimmer-Wohnung mit 2 Terrassen in München-Feldmoching 80933 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">4-Zimmer-Wohnung mit 2 Terrassen in München-Feldmoching 80933 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2250</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2250</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">108</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">108</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80933</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80933</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">36</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">36</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">750</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">750</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">2.755085274779914</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.692734860002986</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">0.34</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.987606239116668</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.692734860002986<br>
+    PLZ: 0.34<br>
+    Size: 4.987606239116668<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 2.755085274779914
+                </span>
             </div>
             
         </div>
@@ -4485,68 +4220,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-22 13:12:21</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-22 13:12:21</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">lichtdurchflutete 4-Zi.-Dachterrassenwohng. im Forum Allach Maria-Sibylla-Merian-Straße 12, 80999 München vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">lichtdurchflutete 4-Zi.-Dachterrassenwohng. im Forum Allach Maria-Sibylla-Merian-Straße 12, 80999 München vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2400</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2400</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">94</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">94</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80999</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80999</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">31.33333333333333</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">31.33333333333333</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">800</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">800</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">2.645375108307471</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">3.328477064135078</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">0.28</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.973023369094806</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 3.328477064135078<br>
+    PLZ: 0.28<br>
+    Size: 4.973023369094806<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 2.645375108307471
+                </span>
             </div>
             
         </div>
@@ -4598,68 +4325,60 @@
         <div class="metadata">
           
             <div class="meta-row">
-              <span class="meta-key">post_date</span>
-              <span class="meta-value">2026-05-20 14:13:33</span>
+                <span class="meta-key">Post Date</span>
+                <span class="meta-value">2026-05-20 14:13:33</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">title</span>
-              <span class="meta-value">Herrlicher Blick über die Baumwipfel 80999 Allach-Untermenzing vor</span>
+                <span class="meta-key">Property Name</span>
+                <span class="meta-value">Herrlicher Blick über die Baumwipfel 80999 Allach-Untermenzing vor</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price</span>
-              <span class="meta-value">2600</span>
+                <span class="meta-key">Price</span>
+                <span class="meta-value">2600</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm</span>
-              <span class="meta-value">142</span>
+                <span class="meta-key">Size Qm</span>
+                <span class="meta-value">142</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rooms</span>
-              <span class="meta-value">4</span>
+                <span class="meta-key">Rooms</span>
+                <span class="meta-value">4</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">plz</span>
-              <span class="meta-value">80999</span>
+                <span class="meta-key">Postal Code</span>
+                <span class="meta-value">80999</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">size_qm_capita</span>
-              <span class="meta-value">47.33333333333334</span>
+                <span class="meta-key">Size/Bedroom (m²)</span>
+                <span class="meta-value">47.33333333333334</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">price_capita</span>
-              <span class="meta-value">866.6666666666666</span>
+                <span class="meta-key">Rent/Person</span>
+                <span class="meta-value">866.6666666666666</span>
             </div>
             
             <div class="meta-row">
-              <span class="meta-key">rating</span>
-              <span class="meta-value">2.513801663504424</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_price</span>
-              <span class="meta-value">2.777081083435351</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_plz</span>
-              <span class="meta-value">0.28</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_size</span>
-              <span class="meta-value">4.998125570582344</span>
-            </div>
-            
-            <div class="meta-row">
-              <span class="meta-key">rating_prox</span>
-              <span class="meta-value">2</span>
+                <span class="meta-key tooltip">
+                    Overall Score (/5)
+                    <span class="tooltiptext">
+                        
+    Price: 2.777081083435351<br>
+    PLZ: 0.28<br>
+    Size: 4.998125570582344<br>
+    Proximity: 2
+    
+                    </span>
+                </span>
+                <span class="meta-value">
+                    ⭐ 2.513801663504424
+                </span>
             </div>
             
         </div>

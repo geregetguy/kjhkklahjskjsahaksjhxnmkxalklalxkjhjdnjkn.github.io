@@ -5106,7 +5106,7 @@
 
 const areaLayer = L.layerGroup().addTo(map);
 
-// ON by default so you can verify it works
+// DEBUG: visible by default
 const historyLayer = L.layerGroup().addTo(map);
 
 const markerLayer = L.layerGroup().addTo(map);
@@ -5544,8 +5544,6 @@ const markers = [];
       weight: 1
     }).addTo(areaLayer).bindPopup("PLZ fallback area: 81241");
     
-
-console.warn("Historical overlay not generated.");
 
 
 
@@ -6315,32 +6313,26 @@ const layerControl = L.control.layers(null, {
   "Properties": markerLayer
 }).addTo(map);
 
-function showHistoryLegend() {
-  if (typeof historyLegend !== "undefined") {
+if (typeof historyLegend !== "undefined") {
     historyLegend.addTo(map);
-  }
-}
-
-function hideHistoryLegend() {
-  if (typeof historyLegend !== "undefined") {
-    historyLegend.remove();
-  }
-}
-
-if (map.hasLayer(historyLayer)) {
-  showHistoryLegend();
 }
 
 map.on("overlayadd", function(e) {
-  if (e.layer === historyLayer) {
-    showHistoryLegend();
-  }
+    if (
+        e.layer === historyLayer &&
+        typeof historyLegend !== "undefined"
+    ) {
+        historyLegend.addTo(map);
+    }
 });
 
 map.on("overlayremove", function(e) {
-  if (e.layer === historyLayer) {
-    hideHistoryLegend();
-  }
+    if (
+        e.layer === historyLayer &&
+        typeof historyLegend !== "undefined"
+    ) {
+        historyLegend.remove();
+    }
 });
     function popupFromCard(i) {
       const card = document.querySelector(`.card[data-marker-index="${i}"]`);

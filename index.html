@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>asaskdhfkjahskfjhajsdfgsdgfkjgjkhgasdgasdg</title>
+  <title>Property Preview</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -39,38 +39,34 @@
       height: 100%;
       background: #111111;
     }
-.tooltip {
-    position: relative;
-    cursor: help;
-    border-bottom: 1px dotted #00dbaf;
-}
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-    opacity: 0;
+    .tooltip {
+      position: relative;
+      cursor: help;
+      border-bottom: 1px dotted #00dbaf;
+    }
 
-    position: absolute;
-    left: 0;
-    top: 120%;
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 120%;
+      min-width: 220px;
+      background: #1b1b1b;
+      color: #fff;
+      border: 1px solid #00dbaf;
+      border-radius: 8px;
+      padding: 10px;
+      z-index: 999999;
+      transition: opacity 0.15s;
+    }
 
-    min-width: 180px;
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
 
-    background: #1b1b1b;
-    color: #fff;
-
-    border: 1px solid #00dbaf;
-    border-radius: 8px;
-
-    padding: 10px;
-    z-index: 9999;
-
-    transition: opacity 0.15s;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
     .card {
       display: flex;
       gap: 12px;
@@ -119,6 +115,7 @@
       display: flex;
       gap: 10px;
       margin: 10px 0;
+      flex-wrap: wrap;
     }
 
     .choice {
@@ -174,30 +171,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(36, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="36"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57420828/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(36, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="36"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57420828/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(36, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="36"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57420828/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(36, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="36"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57420828/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -258,17 +263,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.174789454267907<br>
-    PLZ: 4.88<br>
-    Size: 4.985358501525909<br>
-    Proximity: 4.174789454267907
-    
-                    </span>
+    Rating (Price): 4.174789454267907<br>
+    Rating (PLZ): 4.88<br>
+    Rating (Size): 4.985358501525909<br>
+    Rating (Proximity): 4.174789454267907
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 4.553734352515431
-                </span>
+                <span class="meta-value">⭐ 4.553734352515431</span>
             </div>
             
         </div>
@@ -289,30 +290,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(25, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="25"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57353302/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(25, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="25"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57353302/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(25, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="25"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57353302/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(25, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="25"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57353302/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -373,17 +382,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.639068800202272<br>
-    PLZ: 3.73<br>
-    Size: 4.922480732004954<br>
-    Proximity: 4.639068800202272
-    
-                    </span>
+    Rating (Price): 4.639068800202272<br>
+    Rating (PLZ): 3.73<br>
+    Rating (Size): 4.922480732004954<br>
+    Rating (Proximity): 4.639068800202272
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 4.482654583102375
-                </span>
+                <span class="meta-value">⭐ 4.482654583102375</span>
             </div>
             
         </div>
@@ -404,30 +409,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(26, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="26"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57346529/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(26, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="26"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57346529/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(26, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="26"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57346529/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(26, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="26"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57346529/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -488,17 +501,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.864632537335878<br>
-    PLZ: 4.87<br>
-    Size: 4.990612158321186<br>
-    Proximity: 3.864632537335878
-    
-                    </span>
+    Rating (Price): 3.864632537335878<br>
+    Rating (PLZ): 4.87<br>
+    Rating (Size): 4.990612158321186<br>
+    Rating (Proximity): 3.864632537335878
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 4.397469308248236
-                </span>
+                <span class="meta-value">⭐ 4.397469308248236</span>
             </div>
             
         </div>
@@ -519,30 +528,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(19, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="19"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57318201/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(19, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="19"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57318201/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(19, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="19"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57318201/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(19, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="19"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57318201/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -603,17 +620,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.737242396921079<br>
-    PLZ: 4.87<br>
-    Size: 4.978398802629529<br>
-    Proximity: 3.737242396921079
-    
-                    </span>
+    Rating (Price): 3.737242396921079<br>
+    Rating (PLZ): 4.87<br>
+    Rating (Size): 4.978398802629529<br>
+    Rating (Proximity): 3.737242396921079
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 4.330720899117922
-                </span>
+                <span class="meta-value">⭐ 4.330720899117922</span>
             </div>
             
         </div>
@@ -634,30 +647,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(39, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="39"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57413006/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(39, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="39"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57413006/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(39, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="39"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57413006/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(39, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="39"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57413006/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -718,17 +739,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.577125013626543<br>
-    PLZ: 4.98<br>
-    Size: 4.990612158321186<br>
-    Proximity: 3.577125013626543
-    
-                    </span>
+    Rating (Price): 3.577125013626543<br>
+    Rating (PLZ): 4.98<br>
+    Rating (Size): 4.990612158321186<br>
+    Rating (Proximity): 3.577125013626543
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 4.281215546393568
-                </span>
+                <span class="meta-value">⭐ 4.281215546393568</span>
             </div>
             
         </div>
@@ -749,30 +766,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(3, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="3"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57210450/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(3, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="3"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57210450/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(3, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="3"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57210450/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(3, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="3"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57210450/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -823,17 +848,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.936190896596909<br>
-    PLZ: 4.98<br>
-    Size: 4.864890970243954<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 4.936190896596909<br>
+    Rating (PLZ): 4.98<br>
+    Rating (Size): 4.864890970243954<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 4.195270466710216
-                </span>
+                <span class="meta-value">⭐ 4.195270466710216</span>
             </div>
             
         </div>
@@ -854,30 +875,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(38, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="38"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57411631/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(38, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="38"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57411631/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(38, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="38"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57411631/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(38, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="38"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57411631/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -938,17 +967,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.877480958295682<br>
-    PLZ: 1.37<br>
-    Size: 4.885632675443806<br>
-    Proximity: 4.877480958295682
-    
-                    </span>
+    Rating (Price): 4.877480958295682<br>
+    Rating (PLZ): 1.37<br>
+    Rating (Size): 4.885632675443806<br>
+    Rating (Proximity): 4.877480958295682
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 4.002648648008792
-                </span>
+                <span class="meta-value">⭐ 4.002648648008792</span>
             </div>
             
         </div>
@@ -969,30 +994,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(20, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="20"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57310013/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(20, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="20"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57310013/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(20, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="20"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57310013/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(20, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="20"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57310013/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1043,17 +1076,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.683192718654744<br>
-    PLZ: 4.12<br>
-    Size: 4.975860250030843<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 4.683192718654744<br>
+    Rating (PLZ): 4.12<br>
+    Rating (Size): 4.975860250030843<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.944763242171397
-                </span>
+                <span class="meta-value">⭐ 3.944763242171397</span>
             </div>
             
         </div>
@@ -1074,30 +1103,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(6, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="6"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57218100/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(6, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="6"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57218100/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(6, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="6"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57218100/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(6, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="6"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57218100/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1148,17 +1185,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.807397222011822<br>
-    PLZ: 4.98<br>
-    Size: 4.966310265004573<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 3.807397222011822<br>
+    Rating (PLZ): 4.98<br>
+    Rating (Size): 4.966310265004573<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.938426871754099
-                </span>
+                <span class="meta-value">⭐ 3.938426871754099</span>
             </div>
             
         </div>
@@ -1179,30 +1212,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(15, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="15"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57280875/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(15, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="15"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57280875/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(15, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="15"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57280875/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(15, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="15"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57280875/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1263,17 +1304,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.552795748392421<br>
-    PLZ: 1.58<br>
-    Size: 4.97956614280768<br>
-    Proximity: 4.552795748392421
-    
-                    </span>
+    Rating (Price): 4.552795748392421<br>
+    Rating (PLZ): 1.58<br>
+    Rating (Size): 4.97956614280768<br>
+    Rating (Proximity): 4.552795748392421
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.91628940989813
-                </span>
+                <span class="meta-value">⭐ 3.91628940989813</span>
             </div>
             
         </div>
@@ -1294,30 +1331,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(31, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="31"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57396043/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(31, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="31"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57396043/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(31, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="31"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57396043/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(31, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="31"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57396043/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1368,17 +1413,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.905022983620837<br>
-    PLZ: 4.67<br>
-    Size: 4.95552305481478<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 3.905022983620837<br>
+    Rating (PLZ): 4.67<br>
+    Rating (Size): 4.95552305481478<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.882636509608904
-                </span>
+                <span class="meta-value">⭐ 3.882636509608904</span>
             </div>
             
         </div>
@@ -1399,30 +1440,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(22, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="22"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57325147/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(22, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="22"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57325147/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(22, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="22"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57325147/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(22, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="22"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57325147/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1483,17 +1532,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.777081083435351<br>
-    PLZ: 4.91<br>
-    Size: 4.872192333967463<br>
-    Proximity: 2.777081083435351
-    
-                    </span>
+    Rating (Price): 2.777081083435351<br>
+    Rating (PLZ): 4.91<br>
+    Rating (Size): 4.872192333967463<br>
+    Rating (Proximity): 2.777081083435351
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.834088625209541
-                </span>
+                <span class="meta-value">⭐ 3.834088625209541</span>
             </div>
             
         </div>
@@ -1514,30 +1559,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(35, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="35"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57414146/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(35, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="35"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57414146/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(35, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="35"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57414146/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(35, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="35"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57414146/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1588,17 +1641,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.777081083435351<br>
-    PLZ: 4.99<br>
-    Size: 4.988276004537046<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 2.777081083435351<br>
+    Rating (PLZ): 4.99<br>
+    Rating (Size): 4.988276004537046<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.688839271993099
-                </span>
+                <span class="meta-value">⭐ 3.688839271993099</span>
             </div>
             
         </div>
@@ -1619,30 +1668,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(18, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="18"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57311718/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(18, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="18"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57311718/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(18, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="18"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57311718/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(18, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="18"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57311718/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1693,17 +1750,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.777081083435351<br>
-    PLZ: 4.98<br>
-    Size: 4.977164774939634<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 2.777081083435351<br>
+    Rating (PLZ): 4.98<br>
+    Rating (Size): 4.977164774939634<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.683561464593747
-                </span>
+                <span class="meta-value">⭐ 3.683561464593747</span>
             </div>
             
         </div>
@@ -1724,30 +1777,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(2, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="2"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57210614/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(2, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="2"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57210614/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(2, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="2"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57210614/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(2, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="2"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57210614/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1798,17 +1859,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.810193234801559<br>
-    PLZ: 2.95<br>
-    Size: 4.91215916138854<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 4.810193234801559<br>
+    Rating (PLZ): 2.95<br>
+    Rating (Size): 4.91215916138854<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.668088099047525
-                </span>
+                <span class="meta-value">⭐ 3.668088099047525</span>
             </div>
             
         </div>
@@ -1829,30 +1886,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(13, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="13"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57282533/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(13, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="13"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57282533/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(13, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="13"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57282533/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(13, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="13"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57282533/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -1903,17 +1968,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.777081083435351<br>
-    PLZ: 4.91<br>
-    Size: 4.980670399302635<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 2.777081083435351<br>
+    Rating (PLZ): 4.91<br>
+    Rating (Size): 4.980670399302635<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.666937870684497
-                </span>
+                <span class="meta-value">⭐ 3.666937870684497</span>
             </div>
             
         </div>
@@ -1934,30 +1995,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(33, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="33"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57395822/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(33, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="33"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57395822/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(33, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="33"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57395822/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(33, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="33"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57395822/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2008,17 +2077,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.093048767988908<br>
-    PLZ: 4.53<br>
-    Size: 4.98614973587945<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 3.093048767988908<br>
+    Rating (PLZ): 4.53<br>
+    Rating (Size): 4.98614973587945<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.65229962596709
-                </span>
+                <span class="meta-value">⭐ 3.65229962596709</span>
             </div>
             
         </div>
@@ -2039,30 +2104,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(32, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="32"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57387484/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(32, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="32"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57387484/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(32, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="32"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57387484/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(32, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="32"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57387484/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2113,17 +2186,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.251993003033019<br>
-    PLZ: 2.86<br>
-    Size: 4.980400059613053<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 4.251993003033019<br>
+    Rating (PLZ): 2.86<br>
+    Rating (Size): 4.980400059613053<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.523098265661518
-                </span>
+                <span class="meta-value">⭐ 3.523098265661518</span>
             </div>
             
         </div>
@@ -2144,30 +2213,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(29, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="29"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57370179/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(29, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="29"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57370179/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(29, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="29"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57370179/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(29, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="29"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57370179/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2218,17 +2295,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.428593136707911<br>
-    PLZ: 4.67<br>
-    Size: 4.984522065738174<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 2.428593136707911<br>
+    Rating (PLZ): 4.67<br>
+    Rating (Size): 4.984522065738174<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.520778800611521
-                </span>
+                <span class="meta-value">⭐ 3.520778800611521</span>
             </div>
             
         </div>
@@ -2249,30 +2322,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(27, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="27"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/7/1/25/57352706/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(27, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="27"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/7/1/25/57352706/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(27, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="27"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/7/1/25/57352706/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(27, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="27"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/7/1/25/57352706/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2323,17 +2404,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.054590454585994<br>
-    PLZ: 4.87<br>
-    Size: 4.986898211508306<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 2.054590454585994<br>
+    Rating (PLZ): 4.87<br>
+    Rating (Size): 4.986898211508306<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.477872166523575
-                </span>
+                <span class="meta-value">⭐ 3.477872166523575</span>
             </div>
             
         </div>
@@ -2354,30 +2431,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(5, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="5"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57218101/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(5, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="5"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57218101/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(5, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="5"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57218101/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(5, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="5"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57218101/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2428,17 +2513,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 1.915133023574195<br>
-    PLZ: 4.98<br>
-    Size: 4.992053363582717<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 1.915133023574195<br>
+    Rating (PLZ): 4.98<br>
+    Rating (Size): 4.992053363582717<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.471796596789228
-                </span>
+                <span class="meta-value">⭐ 3.471796596789228</span>
             </div>
             
         </div>
@@ -2459,30 +2540,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(7, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="7"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57235773/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(7, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="7"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57235773/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(7, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="7"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57235773/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(7, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="7"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57235773/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2543,17 +2632,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.860536164259122<br>
-    PLZ: 0.97<br>
-    Size: 4.988276004537046<br>
-    Proximity: 3.860536164259122
-    
-                    </span>
+    Rating (Price): 3.860536164259122<br>
+    Rating (PLZ): 0.97<br>
+    Rating (Size): 4.988276004537046<br>
+    Rating (Proximity): 3.860536164259122
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.419837083263823
-                </span>
+                <span class="meta-value">⭐ 3.419837083263823</span>
             </div>
             
         </div>
@@ -2574,30 +2659,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(10, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="10"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57261973/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(10, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="10"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57261973/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(10, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="10"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57261973/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(10, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="10"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57261973/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2658,17 +2751,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.905022983620837<br>
-    PLZ: 0.86<br>
-    Size: 4.980670399302635<br>
-    Proximity: 3.905022983620837
-    
-                    </span>
+    Rating (Price): 3.905022983620837<br>
+    Rating (PLZ): 0.86<br>
+    Rating (Size): 4.980670399302635<br>
+    Rating (Proximity): 3.905022983620837
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.412679091636077
-                </span>
+                <span class="meta-value">⭐ 3.412679091636077</span>
             </div>
             
         </div>
@@ -2689,30 +2778,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(16, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="16"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57280206/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(16, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="16"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57280206/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(16, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="16"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57280206/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(16, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="16"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57280206/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2773,17 +2870,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 1.846761435224525<br>
-    PLZ: 4.92<br>
-    Size: 4.998018488657<br>
-    Proximity: 1.846761435224525
-    
-                    </span>
+    Rating (Price): 1.846761435224525<br>
+    Rating (PLZ): 4.92<br>
+    Rating (Size): 4.998018488657<br>
+    Rating (Proximity): 1.846761435224525
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.402885339776513
-                </span>
+                <span class="meta-value">⭐ 3.402885339776513</span>
             </div>
             
         </div>
@@ -2804,30 +2897,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(14, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="14"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57280088/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(14, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="14"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57280088/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(14, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="14"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57280088/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(14, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="14"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57280088/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2878,17 +2979,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.379945461607909<br>
-    PLZ: 3.1<br>
-    Size: 4.996546406049392<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 3.379945461607909<br>
+    Rating (PLZ): 3.1<br>
+    Rating (Size): 4.996546406049392<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.369122966914325
-                </span>
+                <span class="meta-value">⭐ 3.369122966914325</span>
             </div>
             
         </div>
@@ -2909,30 +3006,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(11, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="11"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57271149/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(11, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="11"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57271149/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(11, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="11"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57271149/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(11, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="11"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57271149/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -2993,17 +3098,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 1.648191211510396<br>
-    PLZ: 4.6<br>
-    Size: 4.991119482271328<br>
-    Proximity: 1.648191211510396
-    
-                    </span>
+    Rating (Price): 1.648191211510396<br>
+    Rating (PLZ): 4.6<br>
+    Rating (Size): 4.991119482271328<br>
+    Rating (Proximity): 1.648191211510396
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.22187547632303
-                </span>
+                <span class="meta-value">⭐ 3.22187547632303</span>
             </div>
             
         </div>
@@ -3024,30 +3125,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(17, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="17"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/25/25/57317273/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(17, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="17"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/25/25/57317273/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(17, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="17"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/25/25/57317273/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(17, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="17"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/25/25/57317273/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3098,17 +3207,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.52849118179676<br>
-    PLZ: 1.31<br>
-    Size: 4.973762408004093<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 4.52849118179676<br>
+    Rating (PLZ): 1.31<br>
+    Rating (Size): 4.973762408004093<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.203063397450213
-                </span>
+                <span class="meta-value">⭐ 3.203063397450213</span>
             </div>
             
         </div>
@@ -3129,30 +3234,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(21, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="21"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57332812/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(21, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="21"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57332812/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(21, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="21"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57332812/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(21, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="21"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57332812/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3203,17 +3316,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.632412385483216<br>
-    PLZ: 2.86<br>
-    Size: 4.991599390165769<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 2.632412385483216<br>
+    Rating (PLZ): 2.86<br>
+    Rating (Size): 4.991599390165769<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.121002943912246
-                </span>
+                <span class="meta-value">⭐ 3.121002943912246</span>
             </div>
             
         </div>
@@ -3234,30 +3343,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(37, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="37"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57411891/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(37, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="37"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57411891/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(37, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="37"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57411891/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(37, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="37"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/5/1/25/57411891/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3308,17 +3425,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.598039496352612<br>
-    PLZ: 0.97<br>
-    Size: 4.853963022807526<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 4.598039496352612<br>
+    Rating (PLZ): 0.97<br>
+    Rating (Size): 4.853963022807526<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.105500629790035
-                </span>
+                <span class="meta-value">⭐ 3.105500629790035</span>
             </div>
             
         </div>
@@ -3339,30 +3452,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(34, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="34"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57419533/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(34, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="34"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57419533/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(34, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="34"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57419533/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(34, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="34"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57419533/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3413,17 +3534,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 1.648191211510396<br>
-    PLZ: 3.74<br>
-    Size: 4.995440590172228<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 1.648191211510396<br>
+    Rating (PLZ): 3.74<br>
+    Rating (Size): 4.995440590172228<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.095907950420656
-                </span>
+                <span class="meta-value">⭐ 3.095907950420656</span>
             </div>
             
         </div>
@@ -3444,30 +3561,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(23, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="23"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57331759/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(23, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="23"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57331759/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(23, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="23"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57331759/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(23, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="23"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57331759/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3518,17 +3643,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.577125013626543<br>
-    PLZ: 1.58<br>
-    Size: 4.987606239116668<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 3.577125013626543<br>
+    Rating (PLZ): 1.58<br>
+    Rating (Size): 4.987606239116668<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 3.036182813185803
-                </span>
+                <span class="meta-value">⭐ 3.036182813185803</span>
             </div>
             
         </div>
@@ -3549,30 +3670,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(12, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="12"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57281359/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(12, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="12"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57281359/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(12, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="12"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57281359/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(12, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="12"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57281359/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3623,17 +3752,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.251993003033019<br>
-    PLZ: 0.69<br>
-    Size: 4.980670399302635<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 4.251993003033019<br>
+    Rating (PLZ): 0.69<br>
+    Rating (Size): 4.980670399302635<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 2.980665850583913
-                </span>
+                <span class="meta-value">⭐ 2.980665850583913</span>
             </div>
             
         </div>
@@ -3654,30 +3779,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(28, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="28"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57344634/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(28, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="28"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57344634/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(28, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="28"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57344634/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(28, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="28"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/6/1/25/57344634/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3728,17 +3861,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.169424436801743<br>
-    PLZ: 1.58<br>
-    Size: 4.990075852097909<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 3.169424436801743<br>
+    Rating (PLZ): 1.58<br>
+    Rating (Size): 4.990075852097909<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 2.934875072224913
-                </span>
+                <span class="meta-value">⭐ 2.934875072224913</span>
             </div>
             
         </div>
@@ -3759,30 +3888,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(9, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="9"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57255886/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(9, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="9"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57255886/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(9, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="9"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57255886/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(9, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="9"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297981/1/1/25/57255886/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3843,17 +3980,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 1.096917848445651<br>
-    PLZ: 4.53<br>
-    Size: 4.993636830993301<br>
-    Proximity: 1.096917848445651
-    
-                    </span>
+    Rating (Price): 1.096917848445651<br>
+    Rating (PLZ): 4.53<br>
+    Rating (Size): 4.993636830993301<br>
+    Rating (Proximity): 1.096917848445651
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 2.929368131971151
-                </span>
+                <span class="meta-value">⭐ 2.929368131971151</span>
             </div>
             
         </div>
@@ -3874,30 +4007,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(4, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="4"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57217214/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(4, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="4"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57217214/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(4, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="4"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57217214/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(4, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="4"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57217214/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -3948,17 +4089,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 4.295394634493737<br>
-    PLZ: 0.46<br>
-    Size: 4.960200280756467<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 4.295394634493737<br>
+    Rating (PLZ): 0.46<br>
+    Rating (Size): 4.960200280756467<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 2.928898728812551
-                </span>
+                <span class="meta-value">⭐ 2.928898728812551</span>
             </div>
             
         </div>
@@ -3979,30 +4116,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(0, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="0"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57200747/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(0, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="0"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57200747/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(0, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="0"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57200747/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(0, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="0"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/2/1/25/57200747/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -4053,17 +4198,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.719383253042062<br>
-    PLZ: 1.88<br>
-    Size: 4.995180121371329<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 2.719383253042062<br>
+    Rating (PLZ): 1.88<br>
+    Rating (Size): 4.995180121371329<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 2.898640843603348
-                </span>
+                <span class="meta-value">⭐ 2.898640843603348</span>
             </div>
             
         </div>
@@ -4084,30 +4225,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(30, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="30"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57385140/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(30, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="30"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57385140/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(30, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="30"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57385140/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(30, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="30"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/4/1/25/57385140/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -4158,17 +4307,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.692734860002986<br>
-    PLZ: 0.34<br>
-    Size: 4.987606239116668<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 3.692734860002986<br>
+    Rating (PLZ): 0.34<br>
+    Rating (Size): 4.987606239116668<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 2.755085274779914
-                </span>
+                <span class="meta-value">⭐ 2.755085274779914</span>
             </div>
             
         </div>
@@ -4189,30 +4334,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(8, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="8"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57235649/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(8, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="8"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57235649/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(8, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="8"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57235649/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(8, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="8"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/1/1/25/57235649/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -4263,17 +4416,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 3.328477064135078<br>
-    PLZ: 0.28<br>
-    Size: 4.973023369094806<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 3.328477064135078<br>
+    Rating (PLZ): 0.28<br>
+    Rating (Size): 4.973023369094806<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 2.645375108307471
-                </span>
+                <span class="meta-value">⭐ 2.645375108307471</span>
             </div>
             
         </div>
@@ -4294,30 +4443,38 @@
           
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(1, 'cups', this.checked)"
-                 >
-          cups
+                 data-row="1"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57203196/"
+                 data-col="cups"
+                 onchange="saveChoice(this)">
+          C
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(1, 'fred', this.checked)"
-                 >
-          fred
+                 data-row="1"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57203196/"
+                 data-col="fred"
+                 onchange="saveChoice(this)">
+          F
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(1, 'ken', this.checked)"
-                 >
-          ken
+                 data-row="1"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57203196/"
+                 data-col="ken"
+                 onchange="saveChoice(this)">
+          K
         </label>
         
         <label class="choice">
           <input type="checkbox"
-                 onchange="saveChoice(1, 'ruby', this.checked)"
-                 >
-          ruby
+                 data-row="1"
+                 data-key=" https://www.immosuchmaschine.de/suchagent/297502/3/1/25/57203196/"
+                 data-col="ruby"
+                 onchange="saveChoice(this)">
+          R
         </label>
         
         </div>
@@ -4368,17 +4525,13 @@
                 <span class="meta-key tooltip">
                     Overall Score (/5)
                     <span class="tooltiptext">
-                        
-    Price: 2.777081083435351<br>
-    PLZ: 0.28<br>
-    Size: 4.998125570582344<br>
-    Proximity: 2
-    
-                    </span>
+    Rating (Price): 2.777081083435351<br>
+    Rating (PLZ): 0.28<br>
+    Rating (Size): 4.998125570582344<br>
+    Rating (Proximity): 2
+    </span>
                 </span>
-                <span class="meta-value">
-                    ⭐ 2.513801663504424
-                </span>
+                <span class="meta-value">⭐ 2.513801663504424</span>
             </div>
             
         </div>
@@ -4392,6 +4545,46 @@
   </div>
 
   <script>
+    const STORAGE_KEY = "propertySelections";
+
+    function loadSelections() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveSelections(data) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    }
+
+    function saveChoice(el) {
+      const data = loadSelections();
+      const key = el.dataset.key || el.dataset.row;
+      const col = el.dataset.col;
+
+      if (!data[key]) data[key] = {};
+      data[key][col] = el.checked;
+
+      saveSelections(data);
+    }
+
+    function restoreChoices() {
+      const data = loadSelections();
+
+      document
+        .querySelectorAll("input[type='checkbox'][data-col]")
+        .forEach(el => {
+          const key = el.dataset.key || el.dataset.row;
+          const col = el.dataset.col;
+
+          if (data[key] && col in data[key]) {
+            el.checked = data[key][col];
+          }
+        });
+    }
+
     const map = L.map("map", {
       zoomControl: true,
       attributionControl: true,
@@ -5093,20 +5286,11 @@
       m.openPopup();
     }
 
-    async function saveChoice(rowIndex, column, checked) {
-      await fetch("http://localhost:3000/save-choice", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({rowIndex, column, checked})
-      });
-    }
-
-    map.fitBounds(L.latLngBounds([
-      [48.1490953, 11.548985],[48.0989297, 11.5135353],[48.1518126, 11.5357575],[48.1479767, 11.526613],[48.0792825, 11.6623979],[48.15, 11.583],[48.215208, 11.4898617],[48.141, 11.502],[48.15, 11.583],[48.1321209, 11.6740683],[48.127, 11.632],[48.144161, 11.620593],[48.13, 11.573],[48.15, 11.583],[48.197, 11.572],[48.138, 11.615],[48.179, 11.562],[48.118, 11.661],[48.127, 11.632],[48.149, 11.533],[48.15, 11.583],[48.1518272, 11.4471196],[48.0981218, 11.49703],[48.1359399, 11.5606827],[48.119, 11.492],[48.1649718, 11.6276777],[48.083, 11.504],[48.118, 11.661],[48.148, 11.463],[48.12, 11.5],[48.14, 11.68],[48.183, 11.478],[48.14, 11.68],[48.1793294, 11.5642899],[48.147, 11.451],[48.204, 11.559],[48.222, 11.548],[48.185, 11.464],[48.185, 11.464]
-    ]).pad(0.2));
+    map.fitBounds(L.latLngBounds([[48.1490953, 11.548985],[48.0989297, 11.5135353],[48.1518126, 11.5357575],[48.1479767, 11.526613],[48.0792825, 11.6623979],[48.15, 11.583],[48.215208, 11.4898617],[48.141, 11.502],[48.15, 11.583],[48.1321209, 11.6740683],[48.127, 11.632],[48.144161, 11.620593],[48.13, 11.573],[48.15, 11.583],[48.197, 11.572],[48.138, 11.615],[48.179, 11.562],[48.118, 11.661],[48.127, 11.632],[48.149, 11.533],[48.15, 11.583],[48.1518272, 11.4471196],[48.0981218, 11.49703],[48.1359399, 11.5606827],[48.119, 11.492],[48.1649718, 11.6276777],[48.083, 11.504],[48.118, 11.661],[48.148, 11.463],[48.12, 11.5],[48.14, 11.68],[48.183, 11.478],[48.14, 11.68],[48.1793294, 11.5642899],[48.147, 11.451],[48.204, 11.559],[48.222, 11.548],[48.185, 11.464],[48.185, 11.464]]).pad(0.2));
 
     setTimeout(() => {
       map.invalidateSize();
+      restoreChoices();
     }, 200);
   </script>
 </body>

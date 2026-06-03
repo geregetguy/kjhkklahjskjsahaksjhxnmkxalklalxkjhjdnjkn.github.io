@@ -5545,6 +5545,19 @@ const markers = [];
     }).addTo(areaLayer).bindPopup("PLZ fallback area: 81241");
     
 
+console.log("historyLayer count:", historyLayer.getLayers().length);
+
+L.rectangle(
+  [[48.10, 11.45], [48.20, 11.65]],
+  {
+    color: "red",
+    fillColor: "red",
+    fillOpacity: 0.35,
+    weight: 2
+  }
+).addTo(historyLayer);
+
+console.log("historyLayer count after test:", historyLayer.getLayers().length);
 
 
     markers[0] = L.marker([48.0928048, 11.6072429], {

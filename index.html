@@ -5106,8 +5106,8 @@
 
 const areaLayer = L.layerGroup().addTo(map);
 
-// OFF by default; checkbox turns it on
-const historyLayer = L.layerGroup();
+// ON by default so you can verify it works
+const historyLayer = L.layerGroup().addTo(map);
 
 const markerLayer = L.layerGroup().addTo(map);
 const markers = [];
@@ -5544,6 +5544,8 @@ const markers = [];
       weight: 1
     }).addTo(areaLayer).bindPopup("PLZ fallback area: 81241");
     
+
+console.warn("Historical overlay not generated.");
 
 
 
@@ -6323,6 +6325,10 @@ function hideHistoryLegend() {
   if (typeof historyLegend !== "undefined") {
     historyLegend.remove();
   }
+}
+
+if (map.hasLayer(historyLayer)) {
+  showHistoryLegend();
 }
 
 map.on("overlayadd", function(e) {

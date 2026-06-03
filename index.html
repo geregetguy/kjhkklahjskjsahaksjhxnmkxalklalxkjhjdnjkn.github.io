@@ -3625,8 +3625,14 @@ function sortCards() {
   const cards = Array.from(container.querySelectorAll(".card"));
 
   cards.sort((a, b) => {
-    const ah = Number(b.dataset.highlighted) - Number(a.dataset.highlighted);
-    if (ah !== 0) return ah;
+    const defaultSort =
+  field === "rating" &&
+  dir === "desc";
+
+if (defaultSort) {
+  const ah = Number(b.dataset.highlighted) - Number(a.dataset.highlighted);
+  if (ah !== 0) return ah;
+}
 
     const avRaw = a.dataset[field] ?? "";
     const bvRaw = b.dataset[field] ?? "";

@@ -40,7 +40,27 @@
 .img-placeholder {
     position: relative;
 }
+.marker-wrapper {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
 
+.marker-new-badge {
+    position: absolute;
+    top: -8px;
+    right: -18px;
+    background: #e53935;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    border-radius: 999px;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    pointer-events: none;
+}
 .new-badge {
     position: absolute;
     top: 8px;
@@ -12205,1590 +12225,2382 @@ const markers = [];
         };
         
 
-    markers[0] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München</b><br>\n    Rating: 4.80819713422542<br>\n    PLZ: 80809\n    ');
-    
-    markers[1] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Hochwertiges 4-Zimmer-Apartment im neuen Hochpunkt von München</b><br>\n    Rating: 4.80819713422542<br>\n    PLZ: 80809\n    ');
-    
-    markers[2] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Ein Neubau für das Leben im Quartier mit großzügigem Wohnbereich und Balkon</b><br>\n    Rating: 4.807767320092832<br>\n    PLZ: 80809\n    ');
-    
-    markers[3] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Jetzt einziehen: Neubau für Familien zwei Balkone und Mieter Apps</b><br>\n    Rating: 4.807767320092832<br>\n    PLZ: 80809\n    ');
-    
-    markers[4] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zi-DG-Wohnung mit EBK, Stellplatz und hochwertiger Ausstattung</b><br>\n    Rating: 4.805344450854583<br>\n    PLZ: 80809\n    ');
-    
-    markers[5] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zi-Wohnung mit EBK, Stellplatz und hochwertiger Ausstattung</b><br>\n    Rating: 4.805344450854583<br>\n    PLZ: 80809\n    ');
-    
-    markers[6] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zi-Wohnung mit EBK, Stellplatz und hochwertiger Ausstattung</b><br>\n    Rating: 4.803207109294635<br>\n    PLZ: 80809\n    ');
-    
-    markers[7] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Traumhafte 4-Zimmer-Wohnung mit zwei Balkonen und moderner Raumaufteilung</b><br>\n    Rating: 4.803207109294635<br>\n    PLZ: 80809\n    ');
-    
-    markers[8] = L.marker([48.0928048, 11.6072429], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Viel Platz für den Alltag: 4-Zimmer-Wohnung in Obergiesing/Fasangarten Arzberger Straße 17, 81549 Obergiesing</b><br>\n    Rating: 4.75934675703537<br>\n    PLZ: 81549\n    ');
-    
-    markers[9] = L.marker([48.112, 11.531], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4,5-Zimmer-Wohnung in der Baubergerstraße</b><br>\n    Rating: 4.649425970151111<br>\n    PLZ: 81369\n    ');
-    
-    markers[10] = L.marker([48.112, 11.531], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wohnen mit Charakter: 4,5-Zimmer-Wohnung in der Grünstraße</b><br>\n    Rating: 4.649425970151111<br>\n    PLZ: 81369\n    ');
-    
-    markers[11] = L.marker([48.1296722, 11.6147692], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Teilmöblierte 4-Zi.-Wohnung mit EBK, Waschmaschine &amp; Trockner | Nähe Ostbahnhof Ampfingstraße 45, 81671 Berg am Laim</b><br>\n    Rating: 4.598574120359019<br>\n    PLZ: 81671\n    ');
-    
-    markers[12] = L.marker([48.1773359, 11.4170637], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>LOCHHAUSEN: Modernes Stadthaus mit Garten! Leinweberweg 39, 81249 München</b><br>\n    Rating: 4.557946250276627<br>\n    PLZ: 81249\n    ');
-    
-    markers[13] = L.marker([48.1490953, 11.548985], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Helle 4 Zimmerwohnung in Max</b><br>\n    Rating: 4.553734352515431<br>\n    PLZ: 80636\n    ');
-    
-    markers[14] = L.marker([48.0989297, 11.5135353], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Geräumige 4 Zimmer Wohnung in Obersendling Mauthäuslstraße 25a, 81379 München</b><br>\n    Rating: 4.482654583102375<br>\n    PLZ: 81379\n    ');
-    
-    markers[15] = L.marker([48.182, 11.533], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Wohnung in München Moosach / WG geeignet Jakob-Hagenbucher-Straße 14, 80993 Moosach</b><br>\n    Rating: 3.825231656142134<br>\n    PLZ: 80993\n    ');
-    
-    markers[16] = L.marker([48.112, 11.531], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>3-Zim.-Dg Wohnung als WG geeignet in München Sendling-Westpark Albert-Roßhaupter-Straße 106, 81369 Sendling-Westpark</b><br>\n    Rating: 3.645060706503736<br>\n    PLZ: 81369\n    ');
-    
-    markers[17] = L.marker([48.197, 11.572], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wohnung Nähe U2 und BMW (WG-geeignet) Frauenmantelanger 26, 80937 München</b><br>\n    Rating: 3.524067927319468<br>\n    PLZ: 80937\n    ');
-    
-    markers[18] = L.marker([48.1283377, 11.509999], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Möblierte 4-Zi Whg mit Balkon, WG geeignet Neubeuerner Straße 10, 80686 Laim</b><br>\n    Rating: 3.509526879588662<br>\n    PLZ: 80686\n    ');
-    
-    markers[19] = L.marker([48.122, 11.545], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Altbau * 3 Zimmer * WG geeignet * Ludwigs</b><br>\n    Rating: 3.441194980970382<br>\n    PLZ: 80337\n    ');
-    
-    markers[20] = L.marker([48.11, 11.618], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>ALPEN-WEITBLICK! Moderne DG-Wohnung, WG-geeignet, teil-möbliert - zunächst auf 3 Jahre befristet! Margarethe-Selenka-Str. 14, 81737 München</b><br>\n    Rating: 3.328626761225104<br>\n    PLZ: 81737\n    ');
-    
-    markers[21] = L.marker([48.112, 11.531], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Modernisierte 3,5 Zi WG-geeignet - 2 Bäder - ruhig sonnig - genialer Grundriss - Nähe U6/S7/S20/BRB Gottfried-Böhm-Ring 23, 81369 Sendling-Westpark</b><br>\n    Rating: 3.060773902898474<br>\n    PLZ: 81369\n    ');
-    
-    markers[22] = L.marker([48.14, 11.68], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wunderschöne helle 4-Zimmer-Maisonette-Wohnung mit Dachterrasse (WG-geeignet) Maria-Montessori-Straße 43, 81829 München</b><br>\n    Rating: 3.036182813185803<br>\n    PLZ: 81829\n    ');
-    
-    markers[23] = L.marker([48.1504604, 11.5415489], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Nymphenburgerstr * 3 Zimmerwohnung* WG geeignet * Altbau * Balkon Nymphenburgerstraße 107, 80636 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.032687778300817<br>\n    PLZ: 80636\n    ');
-    
-    markers[24] = L.marker([48.166, 11.467], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Großes möbiliertes Zimmer im Obermenzing/Large Furnished Room in Obermenzing Bauseweinallee 26, 81247 München</b><br>\n    Rating: <br>\n    PLZ: 81247\n    ');
-    
-    markers[25] = L.marker([48.0989297, 11.5135353], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>lichtdurchflutete 4-Zi.-Dachterrassenwohng. im Forum Allach</b><br>\n    Rating: 4.444018828500854<br>\n    PLZ: 81379\n    ');
-    
-    markers[26] = L.marker([48.1266988, 11.6414206], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Stilvolle 5-Zimmer-Dachgeschosswohnung mit 2 Dachterrassen und Penthouse-Charakter Kreillerstraße 65, 81673 Berg am Laim</b><br>\n    Rating: 4.413705833679826<br>\n    PLZ: 81673\n    ');
-    
-    markers[27] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zi-Wohnung mit EBK, Stellplatz und hochwertiger Ausstattung</b><br>\n    Rating: 4.412314593798638<br>\n    PLZ: 80809\n    ');
-    
-    markers[28] = L.marker([48.1518126, 11.5357575], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Großzügige Altbauwohnung in Neuhausen Nymphenburger Straße 151, 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 4.397469308248236<br>\n    PLZ: 80634\n    ');
-    
-    markers[29] = L.marker([48.1223295, 11.5906377], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Moderne 4-Zimmer-Erdgeschosswohnung mit Balkon in Haidhausen Welfenstrasse 64, 81541 München</b><br>\n    Rating: 4.385617478580343<br>\n    PLZ: 81541\n    ');
-    
-    markers[30] = L.marker([48.1735767, 11.6415899], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Wohnung - Bogenhausen Preziosastraße 45, 81927 Bogenhausen</b><br>\n    Rating: 4.384783506136348<br>\n    PLZ: 81927\n    ');
-    
-    markers[31] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>AIGNER - Großzügig geschnittene 4-Zimmer-Wohnung mit zwei Balkonen in Perlach!</b><br>\n    Rating: 4.370320957217559<br>\n    PLZ: 81475\n    ');
-    
-    markers[32] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Moderne 4-Zimmer Erdgeschosswohnung mit Terrasse und Loggia</b><br>\n    Rating: 4.370320957217559<br>\n    PLZ: 81475\n    ');
-    
-    markers[33] = L.marker([48.098, 11.582], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Zuhause mit 4 Zimmern in München</b><br>\n    Rating: 4.369775621293328<br>\n    PLZ: 81547\n    ');
-    
-    markers[34] = L.marker([48.1478184, 11.6264886], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>großzügige Fünf-Zimmer-Wohnung in München -Bogenhausen</b><br>\n    Rating: 4.334676400749061<br>\n    PLZ: 81925\n    ');
-    
-    markers[35] = L.marker([48.1479767, 11.526613], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>München Neuhausen praktisch und schön Arnulfstraße 169, 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 4.330720899117922<br>\n    PLZ: 80634\n    ');
-    
-    markers[36] = L.marker([48.0792825, 11.6623979], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Waldperlach - große 4 Zimmer Penthouse-Wohnung mit direktem Lift in die Wohnung und Süd-West-Loggia Rotkäppchenstraße 104, 81739 München</b><br>\n    Rating: 4.281215546393568<br>\n    PLZ: 81739\n    ');
-    
-    markers[37] = L.marker([48.0989297, 11.5135353], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>AIGNER - Idyllische 4-Zimmer-Wohnung in der Messestadt Riem!</b><br>\n    Rating: 4.270717589951145<br>\n    PLZ: 81379\n    ');
-    
-    markers[38] = L.marker([48.073117, 11.5271897], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Neu renovierte Penthousewohnung in Sollner Bestlage incl. Wallbox Bertelestraße 69, 81479 München</b><br>\n    Rating: 4.261038799182395<br>\n    PLZ: 81479\n    ');
-    
-    markers[39] = L.marker([48.178, 11.517], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Stilvolle, sanierte 4-Raum-Wohnung mit geh. Innenausstattung mit Balkon und EBK</b><br>\n    Rating: 4.222759303484446<br>\n    PLZ: 80992\n    ');
-    
-    markers[40] = L.marker([48.138, 11.615], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Möblierte WG in Bogenhausen - Einzug 01.06 Beblostraße, 81677 Bogenhausen</b><br>\n    Rating: 4.181901324012677<br>\n    PLZ: 81677\n    ');
-    
-    markers[41] = L.marker([48.0949529, 11.4766194], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Maisonettewohnung mit 6 Zimmern in Pasing</b><br>\n    Rating: 4.164476253145972<br>\n    PLZ: 81475\n    ');
-    
-    markers[42] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>München Max Vorstadt 80798 Max</b><br>\n    Rating: 4.08100619145319<br>\n    PLZ: 80798\n    ');
-    
-    markers[43] = L.marker([48.13, 11.573], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm!</b><br>\n    Rating: 4.058415588148447<br>\n    PLZ: 80469\n    ');
-    
-    markers[44] = L.marker([48.0949529, 11.4766194], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Geräumige 4 Zimmer Wohnung in Obersendling</b><br>\n    Rating: 4.046223428645086<br>\n    PLZ: 81475\n    ');
-    
-    markers[45] = L.marker([48.0949529, 11.4766194], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schön geschnittene 4 Zimmer Wohnung.</b><br>\n    Rating: 4.011210833923132<br>\n    PLZ: 81475\n    ');
-    
-    markers[46] = L.marker([48.215208, 11.4898617], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schön geschnittene 4 Zimmer Wohnung. Smaragdstraße 15, 80995 Feldmoching-Hasenbergl</b><br>\n    Rating: 4.002648648008792<br>\n    PLZ: 80995\n    ');
-    
-    markers[47] = L.marker([48.0949529, 11.4766194], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Stilvoll modernisierte 4-Zimmer-Wohnung in München</b><br>\n    Rating: 4.001141156587107<br>\n    PLZ: 81475\n    ');
-    
-    markers[48] = L.marker([48.112, 11.531], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wohnen mit Charakter: 4-Zimmer-Wohnung in Sendling-Westpark Andechser Straße, 81369 Sendling-Westpark</b><br>\n    Rating: 3.968072292167288<br>\n    PLZ: 81369\n    ');
-    
-    markers[49] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Zeitgemäß wohnen im BERGBLICK: 5-Zimmer-Wohnung mit klarer Familienzone Forst-Kasten-Allee 123b, 81475 München</b><br>\n    Rating: 3.938426871754099<br>\n    PLZ: 81475\n    ');
-    
-    markers[50] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>**Erstbezug nach Renovierung: 5-Zimmer-Wohnung in Citylage** Schleißheimer Straße 266, 80809 Schwabing-West</b><br>\n    Rating: 3.928314321525685<br>\n    PLZ: 80809\n    ');
-    
-    markers[51] = L.marker([48.1523153, 11.5507269], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Exklusiver Altbau-Erstbezug mit Balkon in ruhiger Bestlage Max</b><br>\n    Rating: 3.926101746825679<br>\n    PLZ: 80335\n    ');
-    
-    markers[52] = L.marker([48.0949529, 11.4766194], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schöne  5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage</b><br>\n    Rating: 3.922521215547468<br>\n    PLZ: 81475\n    ');
-    
-    markers[53] = L.marker([48.1321209, 11.6740683], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>traumhaft schöne Maisonettewohnung mit pfiffigem Grundriss Leonhardiweg 52, 81829 Trudering-Riem</b><br>\n    Rating: 3.91628940989813<br>\n    PLZ: 81829\n    ');
-    
-    markers[54] = L.marker([48.113, 11.647], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>WG Neugründung - 4 Schlafzimmer - Ramersdorf Zieglerstraße xx, 81735 München</b><br>\n    Rating: 3.90826318176259<br>\n    PLZ: 81735\n    ');
-    
-    markers[55] = L.marker([48.1106688, 11.6068616], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Großzügige 5-Zimmer-Wohnung mit zwei Balkonen in ruhiger Lage von München-Solln</b><br>\n    Rating: 3.900885547958511<br>\n    PLZ: 81669\n    ');
-    
-    markers[56] = L.marker([48.11, 11.618], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Sonniger Wohntraum mit Alpenblick: 4 Zimmer, Pool &amp; Sauna inklusive! 81737 München</b><br>\n    Rating: 3.889035616473041<br>\n    PLZ: 81737\n    ');
-    
-    markers[57] = L.marker([48.0949529, 11.4766194], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Exklusive Mietwohnung mit Dachterrasse &amp; Parkblick in ruhiger Lage in Pasing</b><br>\n    Rating: 3.888709511503984<br>\n    PLZ: 81475\n    ');
-    
-    markers[58] = L.marker([48.127, 11.632], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Neubau Erstbezug: 4-Zimmer-Wohnung mit Balkon 81673 Berg am Laim</b><br>\n    Rating: 3.882636509608904<br>\n    PLZ: 81673\n    ');
-    
-    markers[59] = L.marker([48.172, 11.528], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Möblierte 5-Zimmer-Wohnung mit Balkon auf 130qm in Neuhausen - für Familien, Home Office, WGs 80637 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.879375051982282<br>\n    PLZ: 80637\n    ');
-    
-    markers[60] = L.marker([48.113, 11.647], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Befristete 4-Zimmer-Wohnung mit Balkon Karl-Marx-Ring, 81735 München</b><br>\n    Rating: 3.874114921616547<br>\n    PLZ: 81735\n    ');
-    
-    markers[61] = L.marker([48.118, 11.661], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug nach Sanierung - moderne 4-Zimmer-Dachgeschosswohnung mit Dachterrasse</b><br>\n    Rating: 3.866505458259633<br>\n    PLZ: 81825\n    ');
-    
-    markers[62] = L.marker([48.141, 11.502], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Laim: Große 4-Zimmer-Wohnung mit Balkon Agnes-Bernauer-Str. 65, 80687 Laim</b><br>\n    Rating: 3.851270110292191<br>\n    PLZ: 80687\n    ');
-    
-    markers[63] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4 Zi-Whg nahe BMW und Luitpoldpark Hanselmannstraße, 80809 Milbertshofen-Am Hart</b><br>\n    Rating: 3.847636509608904<br>\n    PLZ: 80809\n    ');
-    
-    markers[64] = L.marker([48.144161, 11.620593], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>WG-taugliche 4-Zimmer-Wohnung in Bogenhausen Buschingstraße 18, 81677 Bogenhausen</b><br>\n    Rating: 3.834088625209541<br>\n    PLZ: 81677\n    ');
-    
-    markers[65] = L.marker([48.113, 11.647], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Großzügige 4 Zimmer Wohnung mit Wohnküche – hell &amp; ruhig in München Ramersdorf Segenstraße, 81735 München gestern Details anzeigen</b><br>\n    Rating: 3.831083978969088<br>\n    PLZ: 81735\n    ');
-    
-    markers[66] = L.marker([48.117, 11.539], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Deine neue WG in München: 4 Zimmer komplett möbliert | Nahe Festwiese 81373 Sendling</b><br>\n    Rating: 3.819262347984527<br>\n    PLZ: 81373\n    ');
-    
-    markers[67] = L.marker([48.127, 11.632], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Urbaner Wohntraum – Möblierte 4-Zimmer-Wohnung mit Dachterrasse &amp; stilvollem Ambiente</b><br>\n    Rating: 3.812106998800253<br>\n    PLZ: 81673\n    ');
-    
-    markers[68] = L.marker([48.113, 11.647], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Moderne 4-Zimmer Wohnung in München mit Balkon! Karl-Marx-Ring 55, 81735 München</b><br>\n    Rating: 3.807525613900737<br>\n    PLZ: 81735\n    ');
-    
-    markers[69] = L.marker([48.1106688, 11.6068616], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Stilvoll modernisierte 4-Zimmer-Wohnung in München Görzerstraße 28, 81669 Ramersdorf-Perlach</b><br>\n    Rating: 3.80093109185869<br>\n    PLZ: 81669\n    ');
-    
-    markers[70] = L.marker([48.164, 11.622], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schöne 4-Zimmer-Wohnung mit sonnigem Balkon und viel Raum zum Leben 81925 Bogenhausen</b><br>\n    Rating: 3.797410911261328<br>\n    PLZ: 81925\n    ');
-    
-    markers[71] = L.marker([48.164, 11.622], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schöne 4-Zimmer-Wohnung mit sonnigem Balkon und viel Raum zum Leben 81925 München regionalimmobilien24.de</b><br>\n    Rating: 3.797410911261328<br>\n    PLZ: 81925\n    ');
-    
-    markers[72] = L.marker([48.12, 11.573], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Befristet 1 Jahr: Exklusive 4-Zimmer-Erdgeschosswohnung mit großer Terrasse in München-Harlaching 81543 Untergiesing-Harlaching</b><br>\n    Rating: 3.755895119641873<br>\n    PLZ: 81543\n    ');
-    
-    markers[73] = L.marker([48.113, 11.647], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>KOPIE - 3,5 Zimmer Whg. An Studenten-WG zu vermieten! Bürgschaft der Eltern erforderlich! Kurt-Eisner-Straße 44, 81735 München</b><br>\n    Rating: 3.731759340506946<br>\n    PLZ: 81735\n    ');
-    
-    markers[74] = L.marker([48.149, 11.533], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Charmante 4-Zi.-Altbauwohnung mit Fischgrätparkett, 2 Bädern, Hobbyraum nähe Hirschgarten 80634 München regionalimmobilien24.de</b><br>\n    Rating: 3.727914657191084<br>\n    PLZ: 80634\n    ');
-    
-    markers[75] = L.marker([48.13, 11.573], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-EG-Wohnung mit Terrasse nahe Roecklplatz /Dreimühlen 80469 Ludwigs</b><br>\n    Rating: 3.72314955250344<br>\n    PLZ: 80469\n    ');
-    
-    markers[76] = L.marker([48.1385144, 11.5387824], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Großzügige Altbauwohnung Fäustlestraße 14, 80339 Schwanthalerhöhe</b><br>\n    Rating: 3.71812398222983<br>\n    PLZ: 80339\n    ');
-    
-    markers[77] = L.marker([48.13, 11.573], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München 80469 Ludwigs</b><br>\n    Rating: 3.688839271993099<br>\n    PLZ: 80469\n    ');
-    
-    markers[78] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Luxuriöse 4-Zimmer Dachterrassenwohnung mit Alpenblick Fritz-Bauer-Straße 31, 81249 Aubing-Lochhausen-Langwied</b><br>\n    Rating: 3.683561464593747<br>\n    PLZ: 81249\n    ');
-    
-    markers[79] = L.marker([48.197, 11.572], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schöne 5-Zimmer-Wohnung im Münchner Norden Graslilienanger 14, 80937 München</b><br>\n    Rating: 3.668088099047525<br>\n    PLZ: 80937\n    ');
-    
-    markers[80] = L.marker([48.138, 11.615], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug im Neubau in Bogenhausen 81677 Bogenhausen</b><br>\n    Rating: 3.666937870684497<br>\n    PLZ: 81677\n    ');
-    
-    markers[81] = L.marker([48.179, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm! Schleißheimer Str. 252, 80809 Schwabing-West</b><br>\n    Rating: 3.65229962596709<br>\n    PLZ: 80809\n    ');
-    
-    markers[82] = L.marker([48.1106688, 11.6068616], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4 Zimmer Penthouse-Wohnung mit großer Dachterrasse im schönen Obermenzing</b><br>\n    Rating: 3.628754752214497<br>\n    PLZ: 81669\n    ');
-    
-    markers[83] = L.marker([48.148, 11.463], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Möbliert: Stimmiges Wohnambiente mit überwiegend neuer Möblierung</b><br>\n    Rating: 3.624516182193012<br>\n    PLZ: 81241\n    ');
-    
-    markers[84] = L.marker([48.148, 11.463], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Stilvoll renovierte 4-Zimmer-Wohnung mit Garten</b><br>\n    Rating: 3.624516182193012<br>\n    PLZ: 81241\n    ');
-    
-    markers[85] = L.marker([48.092, 11.539], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Familien-Wohnung mit zwei Balkonen Becker-Gundahl-Str. 20, 81479 München</b><br>\n    Rating: 3.622162688461308<br>\n    PLZ: 81479\n    ');
-    
-    markers[86] = L.marker([48.122, 11.545], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>NEU: Büro/ Atelierräume/Ladengeschäft/ Loft (Souterrain) im Schlachthofviertel 80337 Ludwigs</b><br>\n    Rating: 3.596003415772586<br>\n    PLZ: 80337\n    ');
-    
-    markers[87] = L.marker([48.2091245, 11.5596368], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wunderschöne 4-Zimmer-Wohnung mit Dachterrasse in München Reschreiterstraße 12, 80933 München</b><br>\n    Rating: 3.588096314901641<br>\n    PLZ: 80933\n    ');
-    
-    markers[88] = L.marker([48.215822, 11.5462481], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Moderne 5-Zimmer DG-Wohnung in Feldmoching Morigglstraße 12, 80995 Feldmoching-Hasenbergl</b><br>\n    Rating: 3.57253682084595<br>\n    PLZ: 80995\n    ');
-    
-    markers[89] = L.marker([48.116, 11.579], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Helle 4 Zimmer Helle 4 Zimmer Wohnung - Loggia mit Ausblick über ruhigen grünen Innenhof Watzmannstraße, 81541 Obergiesing</b><br>\n    Rating: 3.560299024358475<br>\n    PLZ: 81541\n    ');
-    
-    markers[90] = L.marker([48.127, 11.632], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Teilmöblierte, top ausgestattete 4-Zimmer-Wohnung mit traumhafter Terrasse Hermann-Weinhauser-Str. 41, 81673 Berg am Laim</b><br>\n    Rating: 3.551007125250931<br>\n    PLZ: 81673\n    ');
-    
-    markers[91] = L.marker([48.118, 11.661], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Schöne 5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage 81825 Trudering-Riem</b><br>\n    Rating: 3.523098265661518<br>\n    PLZ: 81825\n    ');
-    
-    markers[92] = L.marker([48.127, 11.632], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Penthouse mit drei Himmelsrichtungen und großem Süd-Balkon 81673 Berg am Laim</b><br>\n    Rating: 3.520778800611521<br>\n    PLZ: 81673\n    ');
-    
-    markers[93] = L.marker([48.2143282, 11.5611369], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>*Platz für die ganze Familie im Neubau* Harpprechtstraße 13, 80933 München</b><br>\n    Rating: 3.483290230819559<br>\n    PLZ: 80933\n    ');
-    
-    markers[94] = L.marker([48.149, 11.533], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Helle 4-Zimmer-Altbauwohnung mit Balkon in Neuhausen 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.477872166523575<br>\n    PLZ: 80634\n    ');
-    
-    markers[95] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Hoch hinaus wohnen - mit Fernblick über München Forst-Kasten-Allee 123b, 81475 München</b><br>\n    Rating: 3.471796596789228<br>\n    PLZ: 81475\n    ');
-    
-    markers[96] = L.marker([48.148, 11.463], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Helle, familienfreundliche Wohnung in ruhiger Lage Münchens</b><br>\n    Rating: 3.426380982862679<br>\n    PLZ: 81241\n    ');
-    
-    markers[97] = L.marker([48.0983263, 11.5286777], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Familientraum * 4,5-Zi. mit 2 Bädern und Terrasse * Baujahr 2024 * 105 m² Hofmannstraße 33, 81379 München gestern Details anzeigen</b><br>\n    Rating: 3.422461878045217<br>\n    PLZ: 81379\n    ');
-    
-    markers[98] = L.marker([48.1518272, 11.4471196], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>frisch renovierte, helle 4-Zimmerwohnung Varnhagenstraße 41c, 81241 Aubing-Lochhausen-Langwied</b><br>\n    Rating: 3.419837083263823<br>\n    PLZ: 81241\n    ');
-    
-    markers[99] = L.marker([48.0981218, 11.49703], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Viel Freiraum in Forstenried: 4-Zimmer-Loft mit Berg- und Weitblick Schaffhauser Straße 12, 81476 München</b><br>\n    Rating: 3.412679091636077<br>\n    PLZ: 81476\n    ');
-    
-    markers[100] = L.marker([48.15, 11.583], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>*Erstbezug* - A+ 4-Zimmer Reihenhaus nahe U5, Smart Home, PV-Anlage mit 9,6 Kwh Batterie, Wallbox, 81739 München</b><br>\n    Rating: 3.411164939612633<br>\n    PLZ: 81739\n    ');
-    
-    markers[101] = L.marker([48.199654, 11.5898509], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Gepflegte 4-Zimmer-Wohnung in München Am Hart Paracelsusstraße 14, 80939 München</b><br>\n    Rating: 3.389391162401238<br>\n    PLZ: 80939\n    ');
-    
-    markers[102] = L.marker([48.138, 11.507], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung über den Dächern der Stadt 80686 Sendling-Westpark</b><br>\n    Rating: 3.372700399291173<br>\n    PLZ: 80686\n    ');
-    
-    markers[103] = L.marker([48.119, 11.492], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wohnen auf der Sonnenseite: 4 Zimmer mit großer Dachterrasse Hans-Grässel-Weg 13b, 81375 Hadern</b><br>\n    Rating: 3.369122966914325<br>\n    PLZ: 81375\n    ');
-    
-    markers[104] = L.marker([48.14, 11.68], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Viel Platz für den Alltag in dieser 4-Zimmer-Wohnung in Trudering 81829 Trudering-Riem</b><br>\n    Rating: 3.327412588201367<br>\n    PLZ: 81829\n    ');
-    
-    markers[105] = L.marker([48.171807, 11.594109], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Soxhletstraße 6, 80805 München Soxhletstraße, 80805 Schwabing-Freimann</b><br>\n    Rating: 3.321910930600703<br>\n    PLZ: 80805\n    ');
-    
-    markers[106] = L.marker([48.1649718, 11.6276777], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Helle, ruhige 114qm 4 Zimmer in Oberfoehring incl Garage – Quiet 114sqm 4 room top floor Wesendonkstrasse 15a, 81925 Bogenhausen</b><br>\n    Rating: 3.22187547632303<br>\n    PLZ: 81925\n    ');
-    
-    markers[107] = L.marker([48.083, 11.504], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Großzügige 5-Zimmer-Wohnung mit zwei Balkonen in ruhiger Lage von München-Solln 81477 München regionalimmobilien24.de</b><br>\n    Rating: 3.203063397450213<br>\n    PLZ: 81477\n    ');
-    
-    markers[108] = L.marker([48.083, 11.562], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Gartentraum: 4-Zimmer-EG-Wohnung mit parkähnlichem Garten Benediktenwandstraße, 81545 München</b><br>\n    Rating: 3.194930495909123<br>\n    PLZ: 81545\n    ');
-    
-    markers[109] = L.marker([48.16, 11.493], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Viel Platz mit 4 Zimmern in Nederling Stuberstraße, 80638 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.169419097466425<br>\n    PLZ: 80638\n    ');
-    
-    markers[110] = L.marker([48.1445678, 11.4451348], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Viel Platz auf 4,5 Zimmern in Pasing Neufeldstraße 81243, 81243 Pasing-Obermenzing</b><br>\n    Rating: 3.151971714561597<br>\n    PLZ: 81243\n    ');
-    
-    markers[111] = L.marker([48.118, 11.661], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug 4,5-Zimmer-Wohnung in München-Trudering Hochkönigstraße, 81825 Trudering-Riem</b><br>\n    Rating: 3.121002943912246<br>\n    PLZ: 81825\n    ');
-    
-    markers[112] = L.marker([48.185, 11.464], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Möblierte 5-Zimmer-Wohnung mit Balkon auf 130qm in Neuhausen - für Familien, Home Office, WGs</b><br>\n    Rating: 3.113724513146348<br>\n    PLZ: 80999\n    ');
-    
-    markers[113] = L.marker([48.148, 11.463], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Maisonettewohnung mit 6 Zimmern in Pasing 81241 Pasing-Obermenzing</b><br>\n    Rating: 3.105500629790035<br>\n    PLZ: 81241\n    ');
-    
-    markers[114] = L.marker([48.12, 11.5], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4 Zi Luxus DG Wohnung in Großhadern, Terrasse, voll möbliert, Duplex Chrysanthemenstraße, 81377 Hadern</b><br>\n    Rating: 3.095907950420656<br>\n    PLZ: 81377\n    ');
-    
-    markers[115] = L.marker([48.166, 11.467], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Von Privat zu Vermieten: TOP drei Zimmer + Wohnküche und Privatgarten 81247 München</b><br>\n    Rating: 3.010752520324805<br>\n    PLZ: 81247\n    ');
-    
-    markers[116] = L.marker([48.1480379, 11.4623899], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Helle, großzügige 4-Zimmer Wohnung mit Dachterrasse Am Schützeneck 4a, 81241 Pasing-Obermenzing</b><br>\n    Rating: 3.000130668912956<br>\n    PLZ: 81241\n    ');
-    
-    markers[117] = L.marker([48.1971407, 11.4620936], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Stilvolle 4-Zimmer-Wohnung in familienfreundlichem Quartier! Jetzt Umzugsbonus sichern Am Kesselhaus 10, 80999 Allach-Untermenzing</b><br>\n    Rating: 2.996502882141589<br>\n    PLZ: 80999\n    ');
-    
-    markers[118] = L.marker([48.1971407, 11.4620936], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Umzugsbonus sichern - Wohntraum in familiärer Lage! Am Kesselhaus 10, 80999 Allach-Untermenzing</b><br>\n    Rating: 2.996192012114022<br>\n    PLZ: 80999\n    ');
-    
-    markers[119] = L.marker([48.185, 11.464], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Helle 4-Zimmer Dachgeschosswohnung, ruhige Lage in Allach Franz-Albert-Str. 31a, 80999 München</b><br>\n    Rating: 2.983553600359741<br>\n    PLZ: 80999\n    ');
-    
-    markers[120] = L.marker([48.183, 11.478], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Penthouse mit großer Dachterrasse und Hobbyraum Am Hartmannshofer Bächl, 80997 Moosach</b><br>\n    Rating: 2.980665850583913<br>\n    PLZ: 80997\n    ');
-    
-    markers[121] = L.marker([48.14, 11.68], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Maisonette-Wohnung mit Dachterrasse Maria-Montessori-Strasse 39, 81829 München</b><br>\n    Rating: 2.974020825812937<br>\n    PLZ: 81829\n    ');
-    
-    markers[122] = L.marker([48.0866604, 11.5105489], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung mit 310qm Privatgarten Glötzleweg 13, 81477 München</b><br>\n    Rating: 2.968398318367028<br>\n    PLZ: 81477\n    ');
-    
-    markers[123] = L.marker([48.14, 11.68], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Lichtdurchflutete 4-Zimmer-Maisonette mit großer Dachterrasse 81829 Trudering-Riem</b><br>\n    Rating: 2.934875072224913<br>\n    PLZ: 81829\n    ');
-    
-    markers[124] = L.marker([48.1793294, 11.5642899], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Top WG-Wohnung für 3 Studierende oder junge Berufstätige. Frei ab 1. Juli. Riesenfeldstraße 30, 80809 Milbertshofen-Am Hart</b><br>\n    Rating: 2.929368131971151<br>\n    PLZ: 80809\n    ');
-    
-    markers[125] = L.marker([48.147, 11.451], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Am Pasinger Stadtpark- 4- Zi. Whg.- grün und ruhig wohnen Pfeivestlstraße, 81243 Pasing-Obermenzing</b><br>\n    Rating: 2.928898728812551<br>\n    PLZ: 81243\n    ');
-    
-    markers[126] = L.marker([48.1066119, 11.672332], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug: sehr attraktive 4 Zimmerwohnung plus Hobbyraum und Privatgarten in Trudering Mondseestraße 11, 81827 Trudering-Riem</b><br>\n    Rating: 2.906576506368724<br>\n    PLZ: 81827\n    ');
-    
-    markers[127] = L.marker([48.204, 11.559], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Gemütliche Familienwohnung mit Garten im Münchner Norden 80935 Feldmoching-Hasenbergl</b><br>\n    Rating: 2.898640843603348<br>\n    PLZ: 80935\n    ');
-    
-    markers[128] = L.marker([48.147, 11.451], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wunderschöne, ruhige 4,5-Zimmer-Wohnung mit Balkon für 2 Jahre 81243 Pasing-Obermenzing</b><br>\n    Rating: 2.886625140064334<br>\n    PLZ: 81243\n    ');
-    
-    markers[129] = L.marker([48.166, 11.467], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4 Zimmer Penthouse-Wohnung mit großer Dachterrasse im schönen Obermenzing 81247 München</b><br>\n    Rating: 2.870283415658129<br>\n    PLZ: 81247\n    ');
-    
-    markers[130] = L.marker([48.204, 11.559], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Ruhige Garten Wohnung in München-Lerchenau 80935 Feldmoching-Hasenbergl</b><br>\n    Rating: 2.82594331451981<br>\n    PLZ: 80935\n    ');
-    
-    markers[131] = L.marker([48.115, 11.697], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Gepflegte 4-Zimmer-Wohnung mit Balkon und Einbauküche in Waldtrudering, München 81827 Trudering-Riem</b><br>\n    Rating: 2.776593176565809<br>\n    PLZ: 81827\n    ');
-    
-    markers[132] = L.marker([48.222, 11.548], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Wohnung mit 2 Terrassen in München-Feldmoching 80933 München</b><br>\n    Rating: 2.755085274779914<br>\n    PLZ: 80933\n    ');
-    
-    markers[133] = L.marker([48.148, 11.463], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Laim: Große 4-Zimmer-Wohnung mit Balkon</b><br>\n    Rating: 2.719363414059874<br>\n    PLZ: 81241\n    ');
-    
-    markers[134] = L.marker([48.215208, 11.4898617], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>*Erstbezug - Whg. 2 - EG* Raum für Familie &amp; Leben – elegante 4-Zimmer-Wohnung im EG</b><br>\n    Rating: 2.71088554795851<br>\n    PLZ: 80995\n    ');
-    
-    markers[135] = L.marker([48.185, 11.464], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>lichtdurchflutete 4-Zi.-Dachterrassenwohng. im Forum Allach Maria-Sibylla-Merian-Straße 12, 80999 München</b><br>\n    Rating: 2.645375108307471<br>\n    PLZ: 80999\n    ');
-    
-    markers[136] = L.marker([48.185, 11.464], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Wohnung Dachgeschosswohnung in München-Allach 80999 Allach-Untermenzing</b><br>\n    Rating: 2.642569387434887<br>\n    PLZ: 80999\n    ');
-    
-    markers[137] = L.marker([48.14, 11.68], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>***Modern möblierte 4-Zimmer-Wohnung mit Balkon in Riem 81829 München immobilo</b><br>\n    Rating: 2.591985867754878<br>\n    PLZ: 81829\n    ');
-    
-    markers[138] = L.marker([48.185, 11.464], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Herrlicher Blick über die Baumwipfel 80999 Allach-Untermenzing</b><br>\n    Rating: 2.513801663504424<br>\n    PLZ: 80999\n    ');
-    
-    markers[139] = L.marker([48.148, 11.463], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Zuhause mit vier Zimmern in München Pasing Landsbergerstr 435, 81241 Pasing-Obermenzing</b><br>\n    Rating: 2.501315213472157<br>\n    PLZ: 81241\n    ');
-    
-    markers[140] = L.marker([48.166, 11.467], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Neuwertige 4-Zimmer-Dachgeschosswohnung mit Balkon und Loggia in grüner Lage 81247 München</b><br>\n    Rating: 2.376179392001415<br>\n    PLZ: 81247\n    ');
-    
-    markers[141] = L.marker([48.185, 11.464], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Design trifft Komfort: Neubau-Maisonette mit 4 Zimmern &amp; großer Terrasse Achwaldstraße, 80999 Allach-Untermenzing</b><br>\n    Rating: 2.264270476458548<br>\n    PLZ: 80999\n    ');
-    
-    markers[142] = L.marker([48.1702436, 11.4821179], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Wohnen mit Charakter: Großzügige 4-Zimmer-Wohnung in Obermenzing Menzinger Str. 115, 80999 München</b><br>\n    Rating: 2.209410930600703<br>\n    PLZ: 80999\n    ');
-    
-    markers[143] = L.marker([48.215208, 11.4898617], {
-      icon: L.divIcon({
-        className: "",
-        html: `<svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        </svg>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 30]
-      })
-    }).addTo(markerLayer).bindPopup('\n    <b>Traumhaftes (Wohn-) Loft/ Atelierräume/Ladengeschäft/Büro (Souterrain) im Schlachthofviertel</b><br>\n    Rating: 2.033164163196025<br>\n    PLZ: 80995\n    ');
-    
+        markers[0] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München</b><br>\n    Rating: 4.80819713422542<br>\n    PLZ: 80809\n    ');
+        
+        markers[1] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Hochwertiges 4-Zimmer-Apartment im neuen Hochpunkt von München</b><br>\n    Rating: 4.80819713422542<br>\n    PLZ: 80809\n    ');
+        
+        markers[2] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Ein Neubau für das Leben im Quartier mit großzügigem Wohnbereich und Balkon</b><br>\n    Rating: 4.807767320092832<br>\n    PLZ: 80809\n    ');
+        
+        markers[3] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Jetzt einziehen: Neubau für Familien zwei Balkone und Mieter Apps</b><br>\n    Rating: 4.807767320092832<br>\n    PLZ: 80809\n    ');
+        
+        markers[4] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zi-DG-Wohnung mit EBK, Stellplatz und hochwertiger Ausstattung</b><br>\n    Rating: 4.805344450854583<br>\n    PLZ: 80809\n    ');
+        
+        markers[5] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zi-Wohnung mit EBK, Stellplatz und hochwertiger Ausstattung</b><br>\n    Rating: 4.805344450854583<br>\n    PLZ: 80809\n    ');
+        
+        markers[6] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zi-Wohnung mit EBK, Stellplatz und hochwertiger Ausstattung</b><br>\n    Rating: 4.803207109294635<br>\n    PLZ: 80809\n    ');
+        
+        markers[7] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Traumhafte 4-Zimmer-Wohnung mit zwei Balkonen und moderner Raumaufteilung</b><br>\n    Rating: 4.803207109294635<br>\n    PLZ: 80809\n    ');
+        
+        markers[8] = L.marker([48.0928048, 11.6072429], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Viel Platz für den Alltag: 4-Zimmer-Wohnung in Obergiesing/Fasangarten Arzberger Straße 17, 81549 Obergiesing</b><br>\n    Rating: 4.75934675703537<br>\n    PLZ: 81549\n    ');
+        
+        markers[9] = L.marker([48.112, 11.531], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4,5-Zimmer-Wohnung in der Baubergerstraße</b><br>\n    Rating: 4.649425970151111<br>\n    PLZ: 81369\n    ');
+        
+        markers[10] = L.marker([48.112, 11.531], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wohnen mit Charakter: 4,5-Zimmer-Wohnung in der Grünstraße</b><br>\n    Rating: 4.649425970151111<br>\n    PLZ: 81369\n    ');
+        
+        markers[11] = L.marker([48.1296722, 11.6147692], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Teilmöblierte 4-Zi.-Wohnung mit EBK, Waschmaschine &amp; Trockner | Nähe Ostbahnhof Ampfingstraße 45, 81671 Berg am Laim</b><br>\n    Rating: 4.598574120359019<br>\n    PLZ: 81671\n    ');
+        
+        markers[12] = L.marker([48.1773359, 11.4170637], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>LOCHHAUSEN: Modernes Stadthaus mit Garten! Leinweberweg 39, 81249 München</b><br>\n    Rating: 4.557946250276627<br>\n    PLZ: 81249\n    ');
+        
+        markers[13] = L.marker([48.1490953, 11.548985], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Helle 4 Zimmerwohnung in Max</b><br>\n    Rating: 4.553734352515431<br>\n    PLZ: 80636\n    ');
+        
+        markers[14] = L.marker([48.0989297, 11.5135353], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Geräumige 4 Zimmer Wohnung in Obersendling Mauthäuslstraße 25a, 81379 München</b><br>\n    Rating: 4.482654583102375<br>\n    PLZ: 81379\n    ');
+        
+        markers[15] = L.marker([48.182, 11.533], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Wohnung in München Moosach / WG geeignet Jakob-Hagenbucher-Straße 14, 80993 Moosach</b><br>\n    Rating: 3.825231656142134<br>\n    PLZ: 80993\n    ');
+        
+        markers[16] = L.marker([48.112, 11.531], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>3-Zim.-Dg Wohnung als WG geeignet in München Sendling-Westpark Albert-Roßhaupter-Straße 106, 81369 Sendling-Westpark</b><br>\n    Rating: 3.645060706503736<br>\n    PLZ: 81369\n    ');
+        
+        markers[17] = L.marker([48.197, 11.572], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wohnung Nähe U2 und BMW (WG-geeignet) Frauenmantelanger 26, 80937 München</b><br>\n    Rating: 3.524067927319468<br>\n    PLZ: 80937\n    ');
+        
+        markers[18] = L.marker([48.1283377, 11.509999], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Möblierte 4-Zi Whg mit Balkon, WG geeignet Neubeuerner Straße 10, 80686 Laim</b><br>\n    Rating: 3.509526879588662<br>\n    PLZ: 80686\n    ');
+        
+        markers[19] = L.marker([48.122, 11.545], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Altbau * 3 Zimmer * WG geeignet * Ludwigs</b><br>\n    Rating: 3.441194980970382<br>\n    PLZ: 80337\n    ');
+        
+        markers[20] = L.marker([48.11, 11.618], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>ALPEN-WEITBLICK! Moderne DG-Wohnung, WG-geeignet, teil-möbliert - zunächst auf 3 Jahre befristet! Margarethe-Selenka-Str. 14, 81737 München</b><br>\n    Rating: 3.328626761225104<br>\n    PLZ: 81737\n    ');
+        
+        markers[21] = L.marker([48.112, 11.531], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Modernisierte 3,5 Zi WG-geeignet - 2 Bäder - ruhig sonnig - genialer Grundriss - Nähe U6/S7/S20/BRB Gottfried-Böhm-Ring 23, 81369 Sendling-Westpark</b><br>\n    Rating: 3.060773902898474<br>\n    PLZ: 81369\n    ');
+        
+        markers[22] = L.marker([48.14, 11.68], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wunderschöne helle 4-Zimmer-Maisonette-Wohnung mit Dachterrasse (WG-geeignet) Maria-Montessori-Straße 43, 81829 München</b><br>\n    Rating: 3.036182813185803<br>\n    PLZ: 81829\n    ');
+        
+        markers[23] = L.marker([48.1504604, 11.5415489], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FFAA00">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Nymphenburgerstr * 3 Zimmerwohnung* WG geeignet * Altbau * Balkon Nymphenburgerstraße 107, 80636 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.032687778300817<br>\n    PLZ: 80636\n    ');
+        
+        markers[24] = L.marker([48.166, 11.467], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Großes möbiliertes Zimmer im Obermenzing/Large Furnished Room in Obermenzing Bauseweinallee 26, 81247 München</b><br>\n    Rating: <br>\n    PLZ: 81247\n    ');
+        
+        markers[25] = L.marker([48.0989297, 11.5135353], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>lichtdurchflutete 4-Zi.-Dachterrassenwohng. im Forum Allach</b><br>\n    Rating: 4.444018828500854<br>\n    PLZ: 81379\n    ');
+        
+        markers[26] = L.marker([48.1266988, 11.6414206], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Stilvolle 5-Zimmer-Dachgeschosswohnung mit 2 Dachterrassen und Penthouse-Charakter Kreillerstraße 65, 81673 Berg am Laim</b><br>\n    Rating: 4.413705833679826<br>\n    PLZ: 81673\n    ');
+        
+        markers[27] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zi-Wohnung mit EBK, Stellplatz und hochwertiger Ausstattung</b><br>\n    Rating: 4.412314593798638<br>\n    PLZ: 80809\n    ');
+        
+        markers[28] = L.marker([48.1518126, 11.5357575], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Großzügige Altbauwohnung in Neuhausen Nymphenburger Straße 151, 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 4.397469308248236<br>\n    PLZ: 80634\n    ');
+        
+        markers[29] = L.marker([48.1223295, 11.5906377], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Moderne 4-Zimmer-Erdgeschosswohnung mit Balkon in Haidhausen Welfenstrasse 64, 81541 München</b><br>\n    Rating: 4.385617478580343<br>\n    PLZ: 81541\n    ');
+        
+        markers[30] = L.marker([48.1735767, 11.6415899], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Wohnung - Bogenhausen Preziosastraße 45, 81927 Bogenhausen</b><br>\n    Rating: 4.384783506136348<br>\n    PLZ: 81927\n    ');
+        
+        markers[31] = L.marker([48.15, 11.583], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>AIGNER - Großzügig geschnittene 4-Zimmer-Wohnung mit zwei Balkonen in Perlach!</b><br>\n    Rating: 4.370320957217559<br>\n    PLZ: 81475\n    ');
+        
+        markers[32] = L.marker([48.15, 11.583], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Moderne 4-Zimmer Erdgeschosswohnung mit Terrasse und Loggia</b><br>\n    Rating: 4.370320957217559<br>\n    PLZ: 81475\n    ');
+        
+        markers[33] = L.marker([48.098, 11.582], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Zuhause mit 4 Zimmern in München</b><br>\n    Rating: 4.369775621293328<br>\n    PLZ: 81547\n    ');
+        
+        markers[34] = L.marker([48.1478184, 11.6264886], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>großzügige Fünf-Zimmer-Wohnung in München -Bogenhausen</b><br>\n    Rating: 4.334676400749061<br>\n    PLZ: 81925\n    ');
+        
+        markers[35] = L.marker([48.1479767, 11.526613], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>München Neuhausen praktisch und schön Arnulfstraße 169, 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 4.330720899117922<br>\n    PLZ: 80634\n    ');
+        
+        markers[36] = L.marker([48.0792825, 11.6623979], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Waldperlach - große 4 Zimmer Penthouse-Wohnung mit direktem Lift in die Wohnung und Süd-West-Loggia Rotkäppchenstraße 104, 81739 München</b><br>\n    Rating: 4.281215546393568<br>\n    PLZ: 81739\n    ');
+        
+        markers[37] = L.marker([48.0989297, 11.5135353], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>AIGNER - Idyllische 4-Zimmer-Wohnung in der Messestadt Riem!</b><br>\n    Rating: 4.270717589951145<br>\n    PLZ: 81379\n    ');
+        
+        markers[38] = L.marker([48.073117, 11.5271897], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Neu renovierte Penthousewohnung in Sollner Bestlage incl. Wallbox Bertelestraße 69, 81479 München</b><br>\n    Rating: 4.261038799182395<br>\n    PLZ: 81479\n    ');
+        
+        markers[39] = L.marker([48.178, 11.517], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Stilvolle, sanierte 4-Raum-Wohnung mit geh. Innenausstattung mit Balkon und EBK</b><br>\n    Rating: 4.222759303484446<br>\n    PLZ: 80992\n    ');
+        
+        markers[40] = L.marker([48.138, 11.615], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Möblierte WG in Bogenhausen - Einzug 01.06 Beblostraße, 81677 Bogenhausen</b><br>\n    Rating: 4.181901324012677<br>\n    PLZ: 81677\n    ');
+        
+        markers[41] = L.marker([48.0949529, 11.4766194], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Maisonettewohnung mit 6 Zimmern in Pasing</b><br>\n    Rating: 4.164476253145972<br>\n    PLZ: 81475\n    ');
+        
+        markers[42] = L.marker([48.15, 11.583], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>München Max Vorstadt 80798 Max</b><br>\n    Rating: 4.08100619145319<br>\n    PLZ: 80798\n    ');
+        
+        markers[43] = L.marker([48.13, 11.573], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm!</b><br>\n    Rating: 4.058415588148447<br>\n    PLZ: 80469\n    ');
+        
+        markers[44] = L.marker([48.0949529, 11.4766194], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Geräumige 4 Zimmer Wohnung in Obersendling</b><br>\n    Rating: 4.046223428645086<br>\n    PLZ: 81475\n    ');
+        
+        markers[45] = L.marker([48.0949529, 11.4766194], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Schön geschnittene 4 Zimmer Wohnung.</b><br>\n    Rating: 4.011210833923132<br>\n    PLZ: 81475\n    ');
+        
+        markers[46] = L.marker([48.215208, 11.4898617], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Schön geschnittene 4 Zimmer Wohnung. Smaragdstraße 15, 80995 Feldmoching-Hasenbergl</b><br>\n    Rating: 4.002648648008792<br>\n    PLZ: 80995\n    ');
+        
+        markers[47] = L.marker([48.0949529, 11.4766194], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Stilvoll modernisierte 4-Zimmer-Wohnung in München</b><br>\n    Rating: 4.001141156587107<br>\n    PLZ: 81475\n    ');
+        
+        markers[48] = L.marker([48.112, 11.531], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wohnen mit Charakter: 4-Zimmer-Wohnung in Sendling-Westpark Andechser Straße, 81369 Sendling-Westpark</b><br>\n    Rating: 3.968072292167288<br>\n    PLZ: 81369\n    ');
+        
+        markers[49] = L.marker([48.15, 11.583], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Zeitgemäß wohnen im BERGBLICK: 5-Zimmer-Wohnung mit klarer Familienzone Forst-Kasten-Allee 123b, 81475 München</b><br>\n    Rating: 3.938426871754099<br>\n    PLZ: 81475\n    ');
+        
+        markers[50] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>**Erstbezug nach Renovierung: 5-Zimmer-Wohnung in Citylage** Schleißheimer Straße 266, 80809 Schwabing-West</b><br>\n    Rating: 3.928314321525685<br>\n    PLZ: 80809\n    ');
+        
+        markers[51] = L.marker([48.1523153, 11.5507269], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Exklusiver Altbau-Erstbezug mit Balkon in ruhiger Bestlage Max</b><br>\n    Rating: 3.926101746825679<br>\n    PLZ: 80335\n    ');
+        
+        markers[52] = L.marker([48.0949529, 11.4766194], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Schöne  5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage</b><br>\n    Rating: 3.922521215547468<br>\n    PLZ: 81475\n    ');
+        
+        markers[53] = L.marker([48.1321209, 11.6740683], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>traumhaft schöne Maisonettewohnung mit pfiffigem Grundriss Leonhardiweg 52, 81829 Trudering-Riem</b><br>\n    Rating: 3.91628940989813<br>\n    PLZ: 81829\n    ');
+        
+        markers[54] = L.marker([48.113, 11.647], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>WG Neugründung - 4 Schlafzimmer - Ramersdorf Zieglerstraße xx, 81735 München</b><br>\n    Rating: 3.90826318176259<br>\n    PLZ: 81735\n    ');
+        
+        markers[55] = L.marker([48.1106688, 11.6068616], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Großzügige 5-Zimmer-Wohnung mit zwei Balkonen in ruhiger Lage von München-Solln</b><br>\n    Rating: 3.900885547958511<br>\n    PLZ: 81669\n    ');
+        
+        markers[56] = L.marker([48.11, 11.618], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Sonniger Wohntraum mit Alpenblick: 4 Zimmer, Pool &amp; Sauna inklusive! 81737 München</b><br>\n    Rating: 3.889035616473041<br>\n    PLZ: 81737\n    ');
+        
+        markers[57] = L.marker([48.0949529, 11.4766194], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Exklusive Mietwohnung mit Dachterrasse &amp; Parkblick in ruhiger Lage in Pasing</b><br>\n    Rating: 3.888709511503984<br>\n    PLZ: 81475\n    ');
+        
+        markers[58] = L.marker([48.127, 11.632], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Neubau Erstbezug: 4-Zimmer-Wohnung mit Balkon 81673 Berg am Laim</b><br>\n    Rating: 3.882636509608904<br>\n    PLZ: 81673\n    ');
+        
+        markers[59] = L.marker([48.172, 11.528], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Möblierte 5-Zimmer-Wohnung mit Balkon auf 130qm in Neuhausen - für Familien, Home Office, WGs 80637 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.879375051982282<br>\n    PLZ: 80637\n    ');
+        
+        markers[60] = L.marker([48.113, 11.647], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Befristete 4-Zimmer-Wohnung mit Balkon Karl-Marx-Ring, 81735 München</b><br>\n    Rating: 3.874114921616547<br>\n    PLZ: 81735\n    ');
+        
+        markers[61] = L.marker([48.118, 11.661], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug nach Sanierung - moderne 4-Zimmer-Dachgeschosswohnung mit Dachterrasse</b><br>\n    Rating: 3.866505458259633<br>\n    PLZ: 81825\n    ');
+        
+        markers[62] = L.marker([48.141, 11.502], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Laim: Große 4-Zimmer-Wohnung mit Balkon Agnes-Bernauer-Str. 65, 80687 Laim</b><br>\n    Rating: 3.851270110292191<br>\n    PLZ: 80687\n    ');
+        
+        markers[63] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4 Zi-Whg nahe BMW und Luitpoldpark Hanselmannstraße, 80809 Milbertshofen-Am Hart</b><br>\n    Rating: 3.847636509608904<br>\n    PLZ: 80809\n    ');
+        
+        markers[64] = L.marker([48.144161, 11.620593], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>WG-taugliche 4-Zimmer-Wohnung in Bogenhausen Buschingstraße 18, 81677 Bogenhausen</b><br>\n    Rating: 3.834088625209541<br>\n    PLZ: 81677\n    ');
+        
+        markers[65] = L.marker([48.113, 11.647], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Großzügige 4 Zimmer Wohnung mit Wohnküche – hell &amp; ruhig in München Ramersdorf Segenstraße, 81735 München gestern Details anzeigen</b><br>\n    Rating: 3.831083978969088<br>\n    PLZ: 81735\n    ');
+        
+        markers[66] = L.marker([48.117, 11.539], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Deine neue WG in München: 4 Zimmer komplett möbliert | Nahe Festwiese 81373 Sendling</b><br>\n    Rating: 3.819262347984527<br>\n    PLZ: 81373\n    ');
+        
+        markers[67] = L.marker([48.127, 11.632], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Urbaner Wohntraum – Möblierte 4-Zimmer-Wohnung mit Dachterrasse &amp; stilvollem Ambiente</b><br>\n    Rating: 3.812106998800253<br>\n    PLZ: 81673\n    ');
+        
+        markers[68] = L.marker([48.113, 11.647], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Moderne 4-Zimmer Wohnung in München mit Balkon! Karl-Marx-Ring 55, 81735 München</b><br>\n    Rating: 3.807525613900737<br>\n    PLZ: 81735\n    ');
+        
+        markers[69] = L.marker([48.1106688, 11.6068616], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Stilvoll modernisierte 4-Zimmer-Wohnung in München Görzerstraße 28, 81669 Ramersdorf-Perlach</b><br>\n    Rating: 3.80093109185869<br>\n    PLZ: 81669\n    ');
+        
+        markers[70] = L.marker([48.164, 11.622], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Schöne 4-Zimmer-Wohnung mit sonnigem Balkon und viel Raum zum Leben 81925 Bogenhausen</b><br>\n    Rating: 3.797410911261328<br>\n    PLZ: 81925\n    ');
+        
+        markers[71] = L.marker([48.164, 11.622], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Schöne 4-Zimmer-Wohnung mit sonnigem Balkon und viel Raum zum Leben 81925 München regionalimmobilien24.de</b><br>\n    Rating: 3.797410911261328<br>\n    PLZ: 81925\n    ');
+        
+        markers[72] = L.marker([48.12, 11.573], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Befristet 1 Jahr: Exklusive 4-Zimmer-Erdgeschosswohnung mit großer Terrasse in München-Harlaching 81543 Untergiesing-Harlaching</b><br>\n    Rating: 3.755895119641873<br>\n    PLZ: 81543\n    ');
+        
+        markers[73] = L.marker([48.113, 11.647], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>KOPIE - 3,5 Zimmer Whg. An Studenten-WG zu vermieten! Bürgschaft der Eltern erforderlich! Kurt-Eisner-Straße 44, 81735 München</b><br>\n    Rating: 3.731759340506946<br>\n    PLZ: 81735\n    ');
+        
+        markers[74] = L.marker([48.149, 11.533], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Charmante 4-Zi.-Altbauwohnung mit Fischgrätparkett, 2 Bädern, Hobbyraum nähe Hirschgarten 80634 München regionalimmobilien24.de</b><br>\n    Rating: 3.727914657191084<br>\n    PLZ: 80634\n    ');
+        
+        markers[75] = L.marker([48.13, 11.573], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-EG-Wohnung mit Terrasse nahe Roecklplatz /Dreimühlen 80469 Ludwigs</b><br>\n    Rating: 3.72314955250344<br>\n    PLZ: 80469\n    ');
+        
+        markers[76] = L.marker([48.1385144, 11.5387824], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Großzügige Altbauwohnung Fäustlestraße 14, 80339 Schwanthalerhöhe</b><br>\n    Rating: 3.71812398222983<br>\n    PLZ: 80339\n    ');
+        
+        markers[77] = L.marker([48.13, 11.573], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung mit Balkon nähe Gärtnerplatz, München 80469 Ludwigs</b><br>\n    Rating: 3.688839271993099<br>\n    PLZ: 80469\n    ');
+        
+        markers[78] = L.marker([48.15, 11.583], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Luxuriöse 4-Zimmer Dachterrassenwohnung mit Alpenblick Fritz-Bauer-Straße 31, 81249 Aubing-Lochhausen-Langwied</b><br>\n    Rating: 3.683561464593747<br>\n    PLZ: 81249\n    ');
+        
+        markers[79] = L.marker([48.197, 11.572], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Schöne 5-Zimmer-Wohnung im Münchner Norden Graslilienanger 14, 80937 München</b><br>\n    Rating: 3.668088099047525<br>\n    PLZ: 80937\n    ');
+        
+        markers[80] = L.marker([48.138, 11.615], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug im Neubau in Bogenhausen 81677 Bogenhausen</b><br>\n    Rating: 3.666937870684497<br>\n    PLZ: 81677\n    ');
+        
+        markers[81] = L.marker([48.179, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wohntraum im Dachgeschoss: 4,5 Zimmer, Galerie und ein toller Blick auf den Olympiaturm! Schleißheimer Str. 252, 80809 Schwabing-West</b><br>\n    Rating: 3.65229962596709<br>\n    PLZ: 80809\n    ');
+        
+        markers[82] = L.marker([48.1106688, 11.6068616], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4 Zimmer Penthouse-Wohnung mit großer Dachterrasse im schönen Obermenzing</b><br>\n    Rating: 3.628754752214497<br>\n    PLZ: 81669\n    ');
+        
+        markers[83] = L.marker([48.148, 11.463], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Möbliert: Stimmiges Wohnambiente mit überwiegend neuer Möblierung</b><br>\n    Rating: 3.624516182193012<br>\n    PLZ: 81241\n    ');
+        
+        markers[84] = L.marker([48.148, 11.463], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Stilvoll renovierte 4-Zimmer-Wohnung mit Garten</b><br>\n    Rating: 3.624516182193012<br>\n    PLZ: 81241\n    ');
+        
+        markers[85] = L.marker([48.092, 11.539], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Familien-Wohnung mit zwei Balkonen Becker-Gundahl-Str. 20, 81479 München</b><br>\n    Rating: 3.622162688461308<br>\n    PLZ: 81479\n    ');
+        
+        markers[86] = L.marker([48.122, 11.545], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>NEU: Büro/ Atelierräume/Ladengeschäft/ Loft (Souterrain) im Schlachthofviertel 80337 Ludwigs</b><br>\n    Rating: 3.596003415772586<br>\n    PLZ: 80337\n    ');
+        
+        markers[87] = L.marker([48.2091245, 11.5596368], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wunderschöne 4-Zimmer-Wohnung mit Dachterrasse in München Reschreiterstraße 12, 80933 München</b><br>\n    Rating: 3.588096314901641<br>\n    PLZ: 80933\n    ');
+        
+        markers[88] = L.marker([48.215822, 11.5462481], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Moderne 5-Zimmer DG-Wohnung in Feldmoching Morigglstraße 12, 80995 Feldmoching-Hasenbergl</b><br>\n    Rating: 3.57253682084595<br>\n    PLZ: 80995\n    ');
+        
+        markers[89] = L.marker([48.116, 11.579], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Helle 4 Zimmer Helle 4 Zimmer Wohnung - Loggia mit Ausblick über ruhigen grünen Innenhof Watzmannstraße, 81541 Obergiesing</b><br>\n    Rating: 3.560299024358475<br>\n    PLZ: 81541\n    ');
+        
+        markers[90] = L.marker([48.127, 11.632], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Teilmöblierte, top ausgestattete 4-Zimmer-Wohnung mit traumhafter Terrasse Hermann-Weinhauser-Str. 41, 81673 Berg am Laim</b><br>\n    Rating: 3.551007125250931<br>\n    PLZ: 81673\n    ');
+        
+        markers[91] = L.marker([48.118, 11.661], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Schöne 5-Zimmer-Wohnung - Gartenstadt Trudering - Top Lage 81825 Trudering-Riem</b><br>\n    Rating: 3.523098265661518<br>\n    PLZ: 81825\n    ');
+        
+        markers[92] = L.marker([48.127, 11.632], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Penthouse mit drei Himmelsrichtungen und großem Süd-Balkon 81673 Berg am Laim</b><br>\n    Rating: 3.520778800611521<br>\n    PLZ: 81673\n    ');
+        
+        markers[93] = L.marker([48.2143282, 11.5611369], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>*Platz für die ganze Familie im Neubau* Harpprechtstraße 13, 80933 München</b><br>\n    Rating: 3.483290230819559<br>\n    PLZ: 80933\n    ');
+        
+        markers[94] = L.marker([48.149, 11.533], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Helle 4-Zimmer-Altbauwohnung mit Balkon in Neuhausen 80634 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.477872166523575<br>\n    PLZ: 80634\n    ');
+        
+        markers[95] = L.marker([48.15, 11.583], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Hoch hinaus wohnen - mit Fernblick über München Forst-Kasten-Allee 123b, 81475 München</b><br>\n    Rating: 3.471796596789228<br>\n    PLZ: 81475\n    ');
+        
+        markers[96] = L.marker([48.148, 11.463], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Helle, familienfreundliche Wohnung in ruhiger Lage Münchens</b><br>\n    Rating: 3.426380982862679<br>\n    PLZ: 81241\n    ');
+        
+        markers[97] = L.marker([48.0983263, 11.5286777], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Familientraum * 4,5-Zi. mit 2 Bädern und Terrasse * Baujahr 2024 * 105 m² Hofmannstraße 33, 81379 München gestern Details anzeigen</b><br>\n    Rating: 3.422461878045217<br>\n    PLZ: 81379\n    ');
+        
+        markers[98] = L.marker([48.1518272, 11.4471196], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>frisch renovierte, helle 4-Zimmerwohnung Varnhagenstraße 41c, 81241 Aubing-Lochhausen-Langwied</b><br>\n    Rating: 3.419837083263823<br>\n    PLZ: 81241\n    ');
+        
+        markers[99] = L.marker([48.0981218, 11.49703], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Viel Freiraum in Forstenried: 4-Zimmer-Loft mit Berg- und Weitblick Schaffhauser Straße 12, 81476 München</b><br>\n    Rating: 3.412679091636077<br>\n    PLZ: 81476\n    ');
+        
+        markers[100] = L.marker([48.15, 11.583], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>*Erstbezug* - A+ 4-Zimmer Reihenhaus nahe U5, Smart Home, PV-Anlage mit 9,6 Kwh Batterie, Wallbox, 81739 München</b><br>\n    Rating: 3.411164939612633<br>\n    PLZ: 81739\n    ');
+        
+        markers[101] = L.marker([48.199654, 11.5898509], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Gepflegte 4-Zimmer-Wohnung in München Am Hart Paracelsusstraße 14, 80939 München</b><br>\n    Rating: 3.389391162401238<br>\n    PLZ: 80939\n    ');
+        
+        markers[102] = L.marker([48.138, 11.507], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung über den Dächern der Stadt 80686 Sendling-Westpark</b><br>\n    Rating: 3.372700399291173<br>\n    PLZ: 80686\n    ');
+        
+        markers[103] = L.marker([48.119, 11.492], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wohnen auf der Sonnenseite: 4 Zimmer mit großer Dachterrasse Hans-Grässel-Weg 13b, 81375 Hadern</b><br>\n    Rating: 3.369122966914325<br>\n    PLZ: 81375\n    ');
+        
+        markers[104] = L.marker([48.14, 11.68], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Viel Platz für den Alltag in dieser 4-Zimmer-Wohnung in Trudering 81829 Trudering-Riem</b><br>\n    Rating: 3.327412588201367<br>\n    PLZ: 81829\n    ');
+        
+        markers[105] = L.marker([48.171807, 11.594109], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Soxhletstraße 6, 80805 München Soxhletstraße, 80805 Schwabing-Freimann</b><br>\n    Rating: 3.321910930600703<br>\n    PLZ: 80805\n    ');
+        
+        markers[106] = L.marker([48.1649718, 11.6276777], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Helle, ruhige 114qm 4 Zimmer in Oberfoehring incl Garage – Quiet 114sqm 4 room top floor Wesendonkstrasse 15a, 81925 Bogenhausen</b><br>\n    Rating: 3.22187547632303<br>\n    PLZ: 81925\n    ');
+        
+        markers[107] = L.marker([48.083, 11.504], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Großzügige 5-Zimmer-Wohnung mit zwei Balkonen in ruhiger Lage von München-Solln 81477 München regionalimmobilien24.de</b><br>\n    Rating: 3.203063397450213<br>\n    PLZ: 81477\n    ');
+        
+        markers[108] = L.marker([48.083, 11.562], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Gartentraum: 4-Zimmer-EG-Wohnung mit parkähnlichem Garten Benediktenwandstraße, 81545 München</b><br>\n    Rating: 3.194930495909123<br>\n    PLZ: 81545\n    ');
+        
+        markers[109] = L.marker([48.16, 11.493], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Viel Platz mit 4 Zimmern in Nederling Stuberstraße, 80638 Neuhausen-Nymphenburg</b><br>\n    Rating: 3.169419097466425<br>\n    PLZ: 80638\n    ');
+        
+        markers[110] = L.marker([48.1445678, 11.4451348], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Viel Platz auf 4,5 Zimmern in Pasing Neufeldstraße 81243, 81243 Pasing-Obermenzing</b><br>\n    Rating: 3.151971714561597<br>\n    PLZ: 81243\n    ');
+        
+        markers[111] = L.marker([48.118, 11.661], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug 4,5-Zimmer-Wohnung in München-Trudering Hochkönigstraße, 81825 Trudering-Riem</b><br>\n    Rating: 3.121002943912246<br>\n    PLZ: 81825\n    ');
+        
+        markers[112] = L.marker([48.185, 11.464], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Möblierte 5-Zimmer-Wohnung mit Balkon auf 130qm in Neuhausen - für Familien, Home Office, WGs</b><br>\n    Rating: 3.113724513146348<br>\n    PLZ: 80999\n    ');
+        
+        markers[113] = L.marker([48.148, 11.463], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Maisonettewohnung mit 6 Zimmern in Pasing 81241 Pasing-Obermenzing</b><br>\n    Rating: 3.105500629790035<br>\n    PLZ: 81241\n    ');
+        
+        markers[114] = L.marker([48.12, 11.5], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4 Zi Luxus DG Wohnung in Großhadern, Terrasse, voll möbliert, Duplex Chrysanthemenstraße, 81377 Hadern</b><br>\n    Rating: 3.095907950420656<br>\n    PLZ: 81377\n    ');
+        
+        markers[115] = L.marker([48.166, 11.467], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Von Privat zu Vermieten: TOP drei Zimmer + Wohnküche und Privatgarten 81247 München</b><br>\n    Rating: 3.010752520324805<br>\n    PLZ: 81247\n    ');
+        
+        markers[116] = L.marker([48.1480379, 11.4623899], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Helle, großzügige 4-Zimmer Wohnung mit Dachterrasse Am Schützeneck 4a, 81241 Pasing-Obermenzing</b><br>\n    Rating: 3.000130668912956<br>\n    PLZ: 81241\n    ');
+        
+        markers[117] = L.marker([48.1971407, 11.4620936], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Stilvolle 4-Zimmer-Wohnung in familienfreundlichem Quartier! Jetzt Umzugsbonus sichern Am Kesselhaus 10, 80999 Allach-Untermenzing</b><br>\n    Rating: 2.996502882141589<br>\n    PLZ: 80999\n    ');
+        
+        markers[118] = L.marker([48.1971407, 11.4620936], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Umzugsbonus sichern - Wohntraum in familiärer Lage! Am Kesselhaus 10, 80999 Allach-Untermenzing</b><br>\n    Rating: 2.996192012114022<br>\n    PLZ: 80999\n    ');
+        
+        markers[119] = L.marker([48.185, 11.464], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Helle 4-Zimmer Dachgeschosswohnung, ruhige Lage in Allach Franz-Albert-Str. 31a, 80999 München</b><br>\n    Rating: 2.983553600359741<br>\n    PLZ: 80999\n    ');
+        
+        markers[120] = L.marker([48.183, 11.478], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Penthouse mit großer Dachterrasse und Hobbyraum Am Hartmannshofer Bächl, 80997 Moosach</b><br>\n    Rating: 2.980665850583913<br>\n    PLZ: 80997\n    ');
+        
+        markers[121] = L.marker([48.14, 11.68], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Maisonette-Wohnung mit Dachterrasse Maria-Montessori-Strasse 39, 81829 München</b><br>\n    Rating: 2.974020825812937<br>\n    PLZ: 81829\n    ');
+        
+        markers[122] = L.marker([48.0866604, 11.5105489], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Exklusive 4-Zimmer-Wohnung mit 310qm Privatgarten Glötzleweg 13, 81477 München</b><br>\n    Rating: 2.968398318367028<br>\n    PLZ: 81477\n    ');
+        
+        markers[123] = L.marker([48.14, 11.68], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Lichtdurchflutete 4-Zimmer-Maisonette mit großer Dachterrasse 81829 Trudering-Riem</b><br>\n    Rating: 2.934875072224913<br>\n    PLZ: 81829\n    ');
+        
+        markers[124] = L.marker([48.1793294, 11.5642899], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Top WG-Wohnung für 3 Studierende oder junge Berufstätige. Frei ab 1. Juli. Riesenfeldstraße 30, 80809 Milbertshofen-Am Hart</b><br>\n    Rating: 2.929368131971151<br>\n    PLZ: 80809\n    ');
+        
+        markers[125] = L.marker([48.147, 11.451], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Am Pasinger Stadtpark- 4- Zi. Whg.- grün und ruhig wohnen Pfeivestlstraße, 81243 Pasing-Obermenzing</b><br>\n    Rating: 2.928898728812551<br>\n    PLZ: 81243\n    ');
+        
+        markers[126] = L.marker([48.1066119, 11.672332], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Erstbezug: sehr attraktive 4 Zimmerwohnung plus Hobbyraum und Privatgarten in Trudering Mondseestraße 11, 81827 Trudering-Riem</b><br>\n    Rating: 2.906576506368724<br>\n    PLZ: 81827\n    ');
+        
+        markers[127] = L.marker([48.204, 11.559], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Gemütliche Familienwohnung mit Garten im Münchner Norden 80935 Feldmoching-Hasenbergl</b><br>\n    Rating: 2.898640843603348<br>\n    PLZ: 80935\n    ');
+        
+        markers[128] = L.marker([48.147, 11.451], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wunderschöne, ruhige 4,5-Zimmer-Wohnung mit Balkon für 2 Jahre 81243 Pasing-Obermenzing</b><br>\n    Rating: 2.886625140064334<br>\n    PLZ: 81243\n    ');
+        
+        markers[129] = L.marker([48.166, 11.467], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4 Zimmer Penthouse-Wohnung mit großer Dachterrasse im schönen Obermenzing 81247 München</b><br>\n    Rating: 2.870283415658129<br>\n    PLZ: 81247\n    ');
+        
+        markers[130] = L.marker([48.204, 11.559], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Ruhige Garten Wohnung in München-Lerchenau 80935 Feldmoching-Hasenbergl</b><br>\n    Rating: 2.82594331451981<br>\n    PLZ: 80935\n    ');
+        
+        markers[131] = L.marker([48.115, 11.697], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Gepflegte 4-Zimmer-Wohnung mit Balkon und Einbauküche in Waldtrudering, München 81827 Trudering-Riem</b><br>\n    Rating: 2.776593176565809<br>\n    PLZ: 81827\n    ');
+        
+        markers[132] = L.marker([48.222, 11.548], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Wohnung mit 2 Terrassen in München-Feldmoching 80933 München</b><br>\n    Rating: 2.755085274779914<br>\n    PLZ: 80933\n    ');
+        
+        markers[133] = L.marker([48.148, 11.463], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Laim: Große 4-Zimmer-Wohnung mit Balkon</b><br>\n    Rating: 2.719363414059874<br>\n    PLZ: 81241\n    ');
+        
+        markers[134] = L.marker([48.215208, 11.4898617], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>*Erstbezug - Whg. 2 - EG* Raum für Familie &amp; Leben – elegante 4-Zimmer-Wohnung im EG</b><br>\n    Rating: 2.71088554795851<br>\n    PLZ: 80995\n    ');
+        
+        markers[135] = L.marker([48.185, 11.464], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>lichtdurchflutete 4-Zi.-Dachterrassenwohng. im Forum Allach Maria-Sibylla-Merian-Straße 12, 80999 München</b><br>\n    Rating: 2.645375108307471<br>\n    PLZ: 80999\n    ');
+        
+        markers[136] = L.marker([48.185, 11.464], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>4-Zimmer-Wohnung Dachgeschosswohnung in München-Allach 80999 Allach-Untermenzing</b><br>\n    Rating: 2.642569387434887<br>\n    PLZ: 80999\n    ');
+        
+        markers[137] = L.marker([48.14, 11.68], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>***Modern möblierte 4-Zimmer-Wohnung mit Balkon in Riem 81829 München immobilo</b><br>\n    Rating: 2.591985867754878<br>\n    PLZ: 81829\n    ');
+        
+        markers[138] = L.marker([48.185, 11.464], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Herrlicher Blick über die Baumwipfel 80999 Allach-Untermenzing</b><br>\n    Rating: 2.513801663504424<br>\n    PLZ: 80999\n    ');
+        
+        markers[139] = L.marker([48.148, 11.463], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Zuhause mit vier Zimmern in München Pasing Landsbergerstr 435, 81241 Pasing-Obermenzing</b><br>\n    Rating: 2.501315213472157<br>\n    PLZ: 81241\n    ');
+        
+        markers[140] = L.marker([48.166, 11.467], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Neuwertige 4-Zimmer-Dachgeschosswohnung mit Balkon und Loggia in grüner Lage 81247 München</b><br>\n    Rating: 2.376179392001415<br>\n    PLZ: 81247\n    ');
+        
+        markers[141] = L.marker([48.185, 11.464], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Design trifft Komfort: Neubau-Maisonette mit 4 Zimmern &amp; großer Terrasse Achwaldstraße, 80999 Allach-Untermenzing</b><br>\n    Rating: 2.264270476458548<br>\n    PLZ: 80999\n    ');
+        
+        markers[142] = L.marker([48.1702436, 11.4821179], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Wohnen mit Charakter: Großzügige 4-Zimmer-Wohnung in Obermenzing Menzinger Str. 115, 80999 München</b><br>\n    Rating: 2.209410930600703<br>\n    PLZ: 80999\n    ');
+        
+        markers[143] = L.marker([48.215208, 11.4898617], {
+        icon: L.divIcon({
+            className: "",
+            html: `
+            <div class="marker-wrapper">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#00dbaf">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+                
+    <div class="marker-new-badge">NEW</div>
+    
+            </div>
+            `,
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+        }).addTo(markerLayer).bindPopup('\n    <b>Traumhaftes (Wohn-) Loft/ Atelierräume/Ladengeschäft/Büro (Souterrain) im Schlachthofviertel</b><br>\n    Rating: 2.033164163196025<br>\n    PLZ: 80995\n    ');
+        
 
 const layerControl = L.control.layers(null, {
   "Historical price / room": historyLayer,
